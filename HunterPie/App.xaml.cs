@@ -120,6 +120,8 @@ namespace HunterPie
 
             ScanManager.Stop();
 
+            ContextInitializer.Unload(_context);
+
             _process = null;
             _context = null;
 
@@ -151,7 +153,7 @@ namespace HunterPie
 
             WidgetManager.Hook(context);
 
-            GamePatchers.Run(context);
+            ContextInitializer.Initialize(context);
 
             Dispatcher.InvokeAsync(() => WidgetInitializers.Initialize(context));
             ScanManager.Start();

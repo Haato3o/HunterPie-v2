@@ -64,8 +64,19 @@ namespace HunterPie.GUI.Parts.Sidebar
 
         public static void Add(params ISideBarElement[] elements)
         {
-            foreach (ISideBarElement element in elements)
-                _elements.Add(element);
+            Application.Current.Dispatcher.Invoke(() =>
+            {
+                foreach (ISideBarElement element in elements)
+                    _elements.Add(element);
+            });
+        }
+
+        public static void Remove(ISideBarElement element)
+        {
+            Application.Current.Dispatcher.Invoke(() =>
+            {
+                _elements.Remove(element);
+            });
         }
 
         private void OnLeftMouseButtonDown(object sender, MouseButtonEventArgs e)

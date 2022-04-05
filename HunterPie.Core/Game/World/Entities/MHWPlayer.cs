@@ -218,5 +218,10 @@ namespace HunterPie.Core.Game.World.Entities
 
             return;
         }
+
+        public IGear GetCurrentGear()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -13,6 +13,7 @@
            d:DataContext="{d:DesignInstance Type=viewmodels:MonstersViewModel}"
            x:TypeArguments="viewmodels:MonstersViewModel">
     <UserControl.Resources>
+        <viewmodels:MockMonstersViewModel x:Key="MockMonstersViewModel"/>
         <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
         <converters:OrientationConverter x:Key="OrientationConverter"/>
         <converters:DynamicMonsterBarSizeConverter x:Key="DynamicMonsterBarSizeConverter"/>
@@ -22,7 +23,8 @@
     </UserControl.Resources>
     <Grid>
         <ItemsControl ItemsSource="{Binding Monsters}"
-                      HorizontalContentAlignment="Center">
+                      HorizontalContentAlignment="Center"
+                      d:DataContext="{StaticResource MockMonstersViewModel}">
             <ItemsControl.Style>
                 <Style TargetType="ItemsControl">
                     <Style.Triggers>

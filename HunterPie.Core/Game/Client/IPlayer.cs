@@ -26,5 +26,7 @@ namespace HunterPie.Core.Game.Client
         public event EventHandler<EventArgs> OnWeaponChange;
         public event EventHandler<IAbnormality> OnAbnormalityStart;
         public event EventHandler<IAbnormality> OnAbnormalityEnd;
+
+        public IGear GetCurrentGear();
     }
 }

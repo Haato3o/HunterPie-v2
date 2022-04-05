@@ -10,6 +10,7 @@ using HunterPie.Core.Game.Enums;
 using HunterPie.Core.Game.Rise.Definitions;
 using HunterPie.Core.Game.Rise.Entities.Activities;
 using HunterPie.Core.Game.Rise.Entities.Party;
+using HunterPie.Core.Game.Rise.Entities.Player;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,7 +31,6 @@ namespace HunterPie.Core.Game.Rise.Entities
         
         #endregion
 
-
         public string Name
         {
             get => _name;
@@ -47,9 +47,9 @@ namespace HunterPie.Core.Game.Rise.Entities
                 }
             }
         }
-
+        
         public int HighRank { get; private set; }
-
+        
         public int StageId
         {
             get => _stageId;
@@ -85,7 +85,9 @@ namespace HunterPie.Core.Game.Rise.Entities
         public MHRWirebug[] Wirebugs { get; } = { new(), new(), new() };
 
         public MHRArgosy Argosy { get; } = new();
+        
         public MHRTrainingDojo TrainingDojo { get; } = new();
+        
         public MHRMeowmasters Meowmasters { get; } = new();
 
         public event EventHandler<EventArgs> OnLogin;
@@ -105,8 +107,21 @@ namespace HunterPie.Core.Game.Rise.Entities
         
         public MHRPlayer(IProcessManager process) : base(process) { }
 
-        // TODO: Add DTOs for middlewares
+        public IGear GetCurrentGear()
+        {
+            MHREquipmentData data = DerefEquipment();
+            return new MHRGear
+            {
+                Helm = new MHREquipment { Id = data.Helm.Id, Decorations = data.Helm.Decorations, Level = data.Helm.Level },
+                Armor = new MHREquipment { Id = data.Armor.Id, Decorations = data.Armor.Decorations, Level = data.Armor.Level },
+                Gloves = new MHREquipment { Id = data.Gloves.Id, Decorations = data.Gloves.Decorations, Level = data.Gloves.Level },
+                Belt = new MHREquipment { Id = data.Belt.Id, Decorations = data.Belt.Decorations, Level = data.Belt.Level },
+                Legs = new MHREquipment { Id = data.Legs.Id, Decorations = data.Legs.Decorations, Level = data.Legs.Level },
+            };
+        }
 
+        #region Scannables
+        // TODO: Add DTOs for middlewares
         [ScannableMethod]
         private void ScanStageData()
         {
@@ -489,6 +504,9 @@ namespace HunterPie.Core.Game.Rise.Entities
             _party.Size = membersCount;
         }
 
+        #endregion
+
+        #region Helpers
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private MHRBuddyData DerefBuddyData(long buddyPtr)
         {
@@ -564,5 +582,55 @@ namespace HunterPie.Core.Game.Rise.Entities
                 this.Dispatch(OnAbnormalityStart, (IAbnormality)abnorm);
             }
         }
+
+        #endregion
+
+        #region Gear helpers
+        private MHREquipmentData DerefEquipment()
+        {
+            long gearPtr = _process.Memory.Read(
+                AddressMap.GetAbsolute("GEAR_ADDRESS"), 
+                AddressMap.Get<int[]>("GEAR_OFFSETS")
+            );
+            MHRGearStructure equipments = _process.Memory.Read<MHRGearStructure>(gearPtr + 0x20);
+
+            return new MHREquipmentData
+            {
+                Weapon = DerefEquippedWeapon(equipments.Weapon),
+                Helm = DerefEquippedGear(equipments.Helm),
+                Armor = DerefEquippedGear(equipments.Armor),
+                Gloves = DerefEquippedGear(equipments.Gloves),
+                Belt = DerefEquippedGear(equipments.Belt),
+                Legs = DerefEquippedGear(equipments.Legs),
+            };
+        }
+
+        public MHRWeaponRaw DerefEquippedWeapon(long weapon)
+        {
+            MHREquipmentStructure structure = _process.Memory.Read<MHREquipmentStructure>(weapon);
+            int[] decorations = _process.Memory.Read<int>(structure.Extras + 0x20, 3);
+            int rampageId = _process.Memory.Read<int>(structure.RampageSkill + 0x20);
+
+            return new MHRWeaponRaw
+            {
+                Id = structure.Id,
+                Decorations = decorations,
+                Rampage = rampageId
+            };
+        }
+
+        public MHREquipmentRaw DerefEquippedGear(long equipment)
+        {
+            MHREquipmentStructure structure = _process.Memory.Read<MHREquipmentStructure>(equipment);
+            int[] decorations = _process.Memory.Read<int>(structure.Extras + 0x20, 3);
+
+            return new MHREquipmentRaw
+            {
+                Id = structure.Id,
+                Decorations = decorations,
+                Level = structure.Level
+            };
+        }
+        #endregion
     }
 }

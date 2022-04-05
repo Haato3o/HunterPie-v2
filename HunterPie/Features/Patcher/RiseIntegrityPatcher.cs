@@ -63,5 +63,7 @@ namespace HunterPie.Features.Patcher
                 }
             }
         }
+
+        public void Unload(Context context) { }
     }
 }
