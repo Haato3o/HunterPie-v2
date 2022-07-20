@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
-<!-- French (France) translation by Schneitizel S. Sekai and Tibo -->
+<!-- French (France) translation by Schneitizel S. Sekai, Tibo and RedNesto -->
 
 <Strings lang="French">
 	<Ailments>
@@ -12,18 +12,164 @@
 			<Ailment Id="AILMENT_POISON" String="Poison"/>
 			<Ailment Id="AILMENT_BLAST" String="Fléau-explosion"/>
 			<Ailment Id="AILMENT_EXHAUST" String="Léthargie"/>
-			<Ailment Id="AILMENT_MOUNT" String="Chevauchée"/>
+			<Ailment Id="AILMENT_MOUNT" String="Montée"/>
+			<Ailment Id="AILMENT_RIDE" String="Chevauchée"/>
 			<Ailment Id="AILMENT_FLASH" String="Flash"/>
 			<Ailment Id="AILMENT_WATER" String="Fléau-Eau"/>
 			<Ailment Id="AILMENT_FIRE" String="Fléau-Feu"/>
 			<Ailment Id="AILMENT_ICE" String="Fléau-Glace"/>
 			<Ailment Id="AILMENT_THUNDER" String="Fléau-Foudre"/>
+			<Ailment Id="AILMENT_DUNG" String="Capsule de bouse"/>
+			<Ailment Id="AILMENT_TRANQUILIZE" String="Tranquillisé"/>
+			<Ailment Id="AILMENT_KNOCKDOWN" String="À terre"/>
+			<Ailment Id="AILMENT_SHOCKTRAP" String="Piège électrochoc"/>
+			<Ailment Id="AILMENT_PITFALLTRAP" String="Piège à fosse"/>
+			<Ailment Id="AILMENT_VINETRAP" String="Piège à lianes"/>
+			<Ailment Id="AILMENT_ELDERSEAL" String="Sceaux des anciens"/>
+			<Ailment Id="AILMENT_SMOKING" String="Fumée"/>
+			<Ailment Id="AILMENT_FELYNETRAP" String="Piège Palico"/>
+			<Ailment Id="AILMENT_CLAW" String="Grappin"/>
+			<Ailment Id="AILMENT_CLAWFLINCH" String="Vacillement grappin"/>
+			<Ailment Id="AILMENT_BANISHINGBALL" String="Capsule puante"/>
 			<Ailment Id="STATUS_ENRAGE" String="Enragé"/>
 		</Rise>
 	</Ailments>
+	<Abnormalities>
+		<Abnormality Id="ABNORMALITY_UNKNOWN" String="Inconnu"/>
+		<Abnormality Id="ABNORMALITY_SELF_IMPROVEMENT" String="Auto-amélioration"/>
+		<Abnormality Id="ABNORMALITY_ATTACK_UP" String="Bonus attaque (P)"/>
+		<Abnormality Id="ABNORMALITY_ATTACK_UP_L" String="Bonus attaque (G)"/>
+		<Abnormality Id="ABNORMALITY_HEALTH_BOOST" String="Bonus vie (P)"/>
+		<Abnormality Id="ABNORMALITY_HEALTH_BOOST_L" String="Bonus vie (G)"/>
+		<Abnormality Id="ABNORMALITY_DEFENSE_UP" String="Bonus défense (P)"/>
+		<Abnormality Id="ABNORMALITY_DEFENSE_UP_L" String="Bonus défense (G)"/>
+		<Abnormality Id="ABNORMALITY_TOOL_USE_RED" String="Durabilité outils (P)"/>
+		<Abnormality Id="ABNORMALITY_TOOL_USE_RED_L" String="Durabilité outils (G)"/>
+		<Abnormality Id="ABNORMALITY_HEALTH_REC" String="Récup. vie (P)"/>
+		<Abnormality Id="ABNORMALITY_HEALTH_REC_L" String="Récup. vie (G)"/>
+		<Abnormality Id="ABNORMALITY_AFFINITY_UP" String="Bonus affinité"/>
+		<Abnormality Id="ABNORMALITY_ELEMENTAL_ATTACK_UP" String="Bonus attaque élémentaire"/>
+		<Abnormality Id="ABNORMALITY_ATTACK_DEF_UP" String="Bonus attaque + défense"/>
+		<Abnormality Id="ABNORMALITY_ATTACK_AFFINITY_UP" String="Bonus attaque + affinité"/>
+		<Abnormality Id="ABNORMALITY_KNOCKBACK_NEG" String="Anti-chutes"/>
+		<Abnormality Id="ABNORMALITY_EARPLUG" String="Protection ouïe (P)"/>
+		<Abnormality Id="ABNORMALITY_EARPLUG_PLUS" String="Protection ouïe (G)"/>
+		<Abnormality Id="ABNORMALITY_TREMORS_NEG" String="Anti-séisme"/>
+		<Abnormality Id="ABNORMALITY_DEEP_RESISTANCE" String="Immunité boue/eau/neige"/>
+		<Abnormality Id="ABNORMALITY_FIRE_RESISTANCE" String="Bonus rés. feu (P)"/>
+		<Abnormality Id="ABNORMALITY_FIRE_RESISTANCE_L" String="Bonus rés. feu (G)"/>
+		<Abnormality Id="ABNORMALITY_WATER_RESISTANCE" String="Bonus rés. eau (P)"/>
+		<Abnormality Id="ABNORMALITY_WATER_RESISTANCE_L" String="Bonus rés. eau (G)"/>
+		<Abnormality Id="ABNORMALITY_THUNDER_RESISTANCE" String="Bonus rés. foudre (P)"/>
+		<Abnormality Id="ABNORMALITY_THUNDER_RESISTANCE_L" String="Bonus rés. foudre (G)"/>
+		<Abnormality Id="ABNORMALITY_ICE_RESISTANCE" String="Bonus rés. glace (P)"/>
+		<Abnormality Id="ABNORMALITY_ICE_RESISTANCE_L" String="Bonus rés. glace (G)"/>
+		<Abnormality Id="ABNORMALITY_DRAGON_RESISTANCE" String="Bonus rés. dragon (P)"/>
+		<Abnormality Id="ABNORMALITY_DRAGON_RESISTANCE_L" String="Bonus rés. dragon (G)"/>
+		<Abnormality Id="ABNORMALITY_ALL_RES_UP" String="Bonus résistance fléaux"/>
+		<Abnormality Id="ABNORMALITY_WIND_PRESSURE" String="Anti-bourrasque"/>
+		<Abnormality Id="ABNORMALITY_WIND_PRESSURE_PLUS" String="Anti-bourrasque total"/>
+		<Abnormality Id="ABNORMALITY_ABNORM_ATTACK_UP" String="Bonus attaque élémentaire (afflictions)"/>
+		<Abnormality Id="ABNORMALITY_MAX_STAM_RECOVERY" String="Bonus : end. max / récup. vie"/>
+		<Abnormality Id="ABNORMALITY_EXT_HEALTH_RECOVERY" String="Récup. vie : durée étendue"/>
+		<Abnormality Id="ABNORMALITY_STUN_NEG" String="Anti-étourdissement"/>
+		<Abnormality Id="ABNORMALITY_PARALYSIS_NEG" String="Anti-paralysie"/>
+		<Abnormality Id="ABNORMALITY_BLIGHT_NEG" String="Anti-fléau"/>
+		<Abnormality Id="ABNORMALITY_AILMENTS_NEG" String="Anti-afflictions"/>
+		<Abnormality Id="ABNORMALITY_DIVINE_PROTECTION" String="Protection divine"/>
+		<Abnormality Id="ABNORMALITY_SCOUTFLY" String="Bonus naviciole"/>
+		<Abnormality Id="ABNORMALITY_HEALTH_REGEN" String="Régénération de vie"/>
+		<Abnormality Id="ABNORMALITY_STAMINA_USE_RED" String="Bonus endurance (P)"/>
+		<Abnormality Id="ABNORMALITY_STAMINA_USE_RED_L" String="Bonus endurance (G)"/>
+		<Abnormality Id="ABNORMALITY_STAMINA_REC_UP" String="Récupération endurance +"/>
+		<Abnormality Id="ABNORMALITY_SHARPNESS_RED" String="Réduc. perte de tranchant"/>
+		<Abnormality Id="ABNORMALITY_ENV_NEG" String="Dégâts environ. annulés"/>
+		<Abnormality Id="ABNORMALITY_SONIC_BARRIER" String="Onde sonique"/>
+		<Abnormality Id="ABNORMALITY_INFERNAL_MELODY" String="Mélodie infernale"/>
+		<Abnormality Id="ABNORMALITY_SPEED_EVADE_UP" String="Bonus : vitesse / invulnérabilité"/>
+		<Abnormality Id="ABNORMALITY_ALL_RES_ELEMENT_ATTACK" String="Bonus : efficacité élém."/>
+
+		<Abnormality Id="ABNORMALITY_RESUSCITATE" String="Réanimation"/>
+		<Abnormality Id="ABNORMALITY_WINDPROOF" String="Anti-bourrasque"/>
+
+		<Abnormality Id="ABNORMALITY_MIGHT_SEED" String="Graine de force"/>
+		<Abnormality Id="ABNORMALITY_MIGHT_PILL" String="Philtre du diable"/>
+		<Abnormality Id="ABNORMALITY_DEMONDRUG" String="Potion du démon"/>
+		<Abnormality Id="ABNORMALITY_ARMORSKIN" String="Potion de pierre"/>
+		<Abnormality Id="ABNORMALITY_COOLDRINK" String="Boisson fraîche"/>
+		<Abnormality Id="ABNORMALITY_HOTDRINK" String="Boisson chaude"/>
+		<Abnormality Id="ABNORMALITY_BUTTERFLAME" String="Feupillon"/>
+		<Abnormality Id="ABNORMALITY_CUTTERFLY" String="Coupillon"/>
+		<Abnormality Id="ABNORMALITY_ADAMANT_SEED" String="Graine de ténacité"/>
+		<Abnormality Id="ABNORMALITY_CLOTHFLY" String="Tissinsecte"/>
+		<Abnormality Id="ABNORMALITY_DASH_JUICE" String="Potion de vitalité"/>
+		<Abnormality Id="ABNORMALITY_DEMON_POWDER" String="Poudre du démon"/>
+		<Abnormality Id="ABNORMALITY_HARDSHELL_POWDER" String="Poudre de pierre"/>
+		<Abnormality Id="ABNORMALITY_NATURAL_HEALING" String="Amerinsecte"/>
+		<Abnormality Id="ABNORMALITY_REDLAMPSQUID" String="Calampar rouge"/>
+		<Abnormality Id="ABNORMALITY_YELLOWLAMPSQUID" String="Calampar jaune"/>
+		<Abnormality Id="ABNORMALITY_GOURMET_FISH" String="Poisson gourmet"/>
+		<Abnormality Id="ABNORMALITY_IMMUNITY" String="Immunité"/>
+		<Abnormality Id="ABNORMALITY_GO_FIGHT_WIN" String="Danse Felyne"/>
+		<Abnormality Id="ABNORMALITY_POWER_DRUM" String="Tambour de guerre"/>
+		<Abnormality Id="ABNORMALITY_ROUSING_ROAR" String="Méga-rugissement"/>
+		<Abnormality Id="ABNORMALITY_DEMON_AMMO" String="Munition démon"/>
+		<Abnormality Id="ABNORMALITY_ARMOR_AMMO" String="Munition peau-de-pierre"/>
+		<Abnormality Id="ABNORMALITY_ARC_SHOT_BRACE" String="Tir de barrage: Résister"/>
+		<Abnormality Id="ABNORMALITY_ARC_SHOT_AFFINITY" String="Tir de barrage: Affinité"/>
+		<Abnormality Id="ABNORMALITY_WIGGLY_LITCHY" String="Chenille-litchi"/>
+		<Abnormality Id="ABNORMALITY_ASTERA_JERKY" String="Viande d'Astera"/>
+		<Abnormality Id="ABNORMALITY_HEALTH_REGEN" String="Récup. vie"/>
+		<Abnormality Id="ABNORMALITY_COLD_RES" String="Rés. froid"/>
+		<Abnormality Id="ABNORMALITY_SNOWMAN_HEAD" String="Tête de bonhomme de neige"/>
+		<Abnormality Id="ABNORMALITY_POWERCONE" String="Énergicône"/>
+		<Abnormality Id="ABNORMALITY_ICE_RES" String="Résistance glace"/>
+		<Abnormality Id="ABNORMALITY_FOOD_TIMER" String="Temps pour manger"/>
+		<Abnormality Id="ABNORMALITY_RUBY_WIREBUG" String="Filoptère rubis"/>
+		<Abnormality Id="ABNORMALITY_GOLD_WIREBUG" String="Filoptère doré"/>
+
+		<Abnormality Id="ABNORMALITY_DANGO_BULKER" String="Dango blindé"/>
+		<Abnormality Id="ABNORMALITY_DANGO_BOOSTER" String="Dango booster"/>
+		<Abnormality Id="ABNORMALITY_DANGO_GLUTTON" String="Dango glouton"/>
+
+		<Abnormality Id="ABNORMALITY_FORTIFY" String="Jamais vaincu"/>
+		<Abnormality Id="ABNORMALITY_COUNTERSTRIKE" String="Contre-attaque"/>
+		<Abnormality Id="ABNORMALITY_LATENTPOWER" String="Pouvoir latent"/>
+		<Abnormality Id="ABNORMALITY_AFFINITY_SLIDING" String="Roi de la glisse"/>
+		<Abnormality Id="ABNORMALITY_PROTECTIVE_POLISH" String="Acier trempé"/>
+		<Abnormality Id="ABNORMALITY_OFFENSIVE_GUARD" String="Garde offensive"/>
+		<Abnormality Id="ABNORMALITY_ELEMENT_ACCELERATION" String="Accélération élémentaire"/>
+		<Abnormality Id="ABNORMALITY_ADRENALINE" String="Adrénaline"/>
+		<Abnormality Id="ABNORMALITY_COOL_CAT" String="Cool Cat"/>
+		<Abnormality Id="ABNORMALITY_FROSTCRAFT" String="Nuée de givre"/>
+		<Abnormality Id="ABNORMALITY_COALESCENCE" String="Union"/>
+		<Abnormality Id="ABNORMALITY_EVASION_MANTLE" String="Cape évasion (attaque"/>
+		<Abnormality Id="ABNORMALITY_AFFINITTY_BOOSTER" String="Amplificateur affinité"/>
+
+		<Abnormality Id="ABNORMALITY_POISON" String="Poison"/>
+		<Abnormality Id="ABNORMALITY_VENOM" String="Poison Vorace"/>
+		<Abnormality Id="ABNORMALITY_DEF_DOWN" String="Défense -"/>
+		<Abnormality Id="ABNORMALITY_RES_DOWN" String="Résistance -"/>
+		<Abnormality Id="ABNORMALITY_STENCH" String="Puanteur"/>
+		<Abnormality Id="ABNORMALITY_HELLFIRE" String="Fléau-Feu de l'enfer"/>
+		<Abnormality Id="ABNORMALITY_BLAST" String="Fléau-Explosion"/>
+		<Abnormality Id="ABNORMALITY_BLASTSCOURGE" String="Supplice-Explosion"/>
+		<Abnormality Id="ABNORMALITY_FIRE" String="Fléau-Feu"/>
+		<Abnormality Id="ABNORMALITY_WATER" String="Fléau-Eau"/>
+		<Abnormality Id="ABNORMALITY_ICE" String="Fléau-Glace"/>
+		<Abnormality Id="ABNORMALITY_THUNDER" String="Fléau-Foudre"/>
+		<Abnormality Id="ABNORMALITY_DRAGON" String="Fléau-Dragon"/>
+		<Abnormality Id="ABNORMALITY_BUBBLES_PLUS" String="Fléau-Bulles"/>
+		<Abnormality Id="ABNORMALITY_BLEED" String="Hémorragie"/>
+		<Abnormality Id="ABNORMALITY_EFFLUVIA" String="Effluves"/>
+		<Abnormality Id="ABNORMALITY_FRENZY_BUILDUP" String="Furie (infecté)"/>
+		<Abnormality Id="ABNORMALITY_FRENZY" String="Furie"/>
+		<Abnormality Id="ABNORMALITY_WEBBED" String="Cocon"/>
+	</Abnormalities>
 	<Monsters>
 		<Shared>
 			<Part Id="PART_UNKNOWN" String="???"/>
+			<Part Id="PART_TO_BE_MAPPED" String="Inconnue"/>
 			<Part Id="PART_HEAD" String="Tête"/>
 			<Part Id="PART_TORSO" String="Torse"/>
 			<Part Id="PART_L_WING" String="Aile Gauche"/>
@@ -61,11 +207,14 @@
 			<Part Id="PART_LEGS" String="Pattes"/>
 			<Part Id="PART_SHELL" String="Carapace"/>
 			<Part Id="PART_CLAW" String="Griffe"/>
+			<Part Id="PART_R_CLAW" String="Griffe Gauche"/>
+			<Part Id="PART_L_CLAW" String="Griffe Droite"/>
 			<Part Id="PART_L_FORELEG" String="Patte Avant Gauche"/>
 			<Part Id="PART_R_FORELEG" String="Patte Avant Droite"/>
 			<Part Id="PART_L_H_LEG" String="Patte Arrière Gauche"/>
 			<Part Id="PART_R_H_LEG" String="Patte Arrière Droite"/>
-			<Part Id="PART_CHEST" String="Abdomen"/>
+			<Part Id="PART_ABDOMEN" String="Abdomen"/>
+			<Part Id="PART_CHEST" String="Torse"/>
 			<Part Id="PART_TAIL_TIP" String="Bout de la Queue"/>
 			<Part Id="PART_MUD_BALL" String="Boule de Boue"/>
 			<Part Id="PART_LOWER_TORSO" String="Torse Inférieur"/>
@@ -78,6 +227,77 @@
 			<Part Id="PART_THUNDERBALLS" String="Boules de Tonnerre"/>
 			<Part Id="PART_ROCK" String="Pierre"/>
 			<Part Id="PART_POT" String="Pot"/>
+			<Part Id="PART_WING_CLAW" String="Patte Ailée"/>
+			<Part Id="PART_FORELEG" String="Patte Avant"/>
+			<Part Id="PART_H_LEG" String="Patte Arrière"/>
+			<Part Id="PART_ANTENNA" String="Antenne"/>
+			<Part Id="PART_CREST" String="Crête"/>
+			<Part Id="PART_THROAT" String="Gorge"/>
+			<Part Id="PART_BIG_FLINCH" String="Tir de mitraille"/>
+			<Part Id="PART_HORNS" String="Cornes"/>
+			<Part Id="PART_HORN" String="Corne"/>
+			<Part Id="PART_KNOCKDOWN" String="À terre"/>
+			<Part Id="PART_HORNS_2" String="Cornes #2"/>
+			<Part Id="PART_RAGE" String="Rage"/>
+			<Part Id="PART_L_LIMBS" String="Membre Gauche"/>
+			<Part Id="PART_R_LIMBS" String="Membre Droit"/>
+			<Part Id="PART_LIMBS" String="Membres"/>
+			<Part Id="PART_COUNTERATTACK" String="Contre-attaque"/>
+			<Part Id="PART_JAW" String="Mâchoire"/>
+			<Part Id="PART_EXPLOSION_WEAKENING" String="Affaiblissement (Nova)"/>
+			<Part Id="PART_CHARGE" String="Charge Suppressible"/>
+			<Part Id="PART_FIN" String="Ailettes"/>
+			<Part Id="PART_INFLATED_TAIL" String="Queue Gonflée"/>
+			<Part Id="PART_SILVER_SPIKES_HEAD" String="Pics d'Argent (Tête"/>
+			<Part Id="PART_SILVER_SPIKES_L_ARM" String="Pics d'Argent (Bras Gauche)"/>
+			<Part Id="PART_SILVER_SPIKES_R_ARM" String="Pics d'Argent (Bras Droit)"/>
+			<Part Id="PART_SILVER_SPIKES_L_WING" String="Pics d'Argent (Aile Gauche)"/>
+			<Part Id="PART_SILVER_SPIKES_R_WING" String="Pics d'Argent (Aile Droite)"/>
+			<Part Id="PART_EXHAUST_ORGAN_CENTRAL" String="Crystal (Centre)"/>
+			<Part Id="PART_EXHAUST_ORGAN_HEAD" String="Crystal (Tête)"/>
+			<Part Id="PART_EXHAUST_ORGAN_CRATER" String="Crystal (Cratère)"/>
+			<Part Id="PART_EXHAUST_ORGAN_REAR" String="Crystal (Arrière)"/>
+			<Part Id="PART_REPEL" String="Repousser"/>
+			<Part Id="PART_WEAK_L_SHELL" String="Carapace Gauche"/>
+			<Part Id="PART_WEAK_R_SHELL" String="Carapace Droite"/>
+			<Part Id="PART_BALLOON" String="Ballon"/>
+			<Part Id="PART_SKY_FALL" String="Chute"/>
+			<Part Id="PART_L_BONE" String="Os Gauche"/>
+			<Part Id="PART_R_BONE" String="Os Droit"/>
+			<Part Id="PART_EMISSIONS" String="Effluves"/>
+			<Part Id="PART_HORNS_GOLD" String="Cornes Dorées"/>
+			<Part Id="PART_MANE_GOLD" String="Crinière Dorées"/>
+			<Part Id="PART_L_CHEST_GOLD" String="Torse Gauche Doré"/>
+			<Part Id="PART_R_CHEST_GOLD" String="Torse Droit Doré"/>
+			<Part Id="PART_L_ARM_GOLD" String="Bras Gauche Doré"/>
+			<Part Id="PART_R_ARM_GOLD" String="Bras Droit Doré"/>
+			<Part Id="PART_L_LEG_GOLD" String="Patte Gauche Dorée"/>
+			<Part Id="PART_R_LEG_GOLD" String="Patte Droite Dorée"/>
+			<Part Id="PART_L_TAIL_GOLD" String="Queue Dorée (Gauche)"/>
+			<Part Id="PART_R_TAIL_GOLD" String="Queue Dorée (Droite)"/>
+			<Part Id="PART_GLOWING_HEAD" String="Tête Brillante"/>
+			<Part Id="PART_GLOWING_TAIL" String="Queue Brillante"/>
+			<Part Id="PART_EMERGE_SNOW_HEAD" String="Sortie de Neige (Tête)"/>
+			<Part Id="PART_EMERGE_SNOW_BODY" String="Sortie de Neige (Corps)"/>
+			<Part Id="PART_EMERGE_SNOW_TAIL" String="Sortie de Neige (Queue)"/>
+			<Part Id="PART_HEAD_SNOW" String="Tête (Neige)"/>
+			<Part Id="PART_BODY_SNOW" String="Corps (Neige)"/>
+			<Part Id="PART_TAIL_SNOW" String="Queue (Neige)"/>
+			<Part Id="PART_HEAD_ICE" String="Tête (Glace)"/>
+			<Part Id="PART_BODY_ICE" String="Corps (Glace)"/>
+			<Part Id="PART_WINGS_ICE" String="Ailes (Glace)"/>
+			<Part Id="PART_ARMS_ICE" String="Bras (Glace)"/>
+			<Part Id="PART_HEAD_ROCK" String="Tête (Roche)"/>
+			<Part Id="PART_CHEST_ROCK" String="Corps (Roche)"/>
+			<Part Id="PART_L_NECK_ROCK" String="Cou Gauche (Roche)"/>
+			<Part Id="PART_R_NECK_ROCK" String="Cou Droit (Roche)"/>
+			<Part Id="PART_TAIL_ROCK" String="Queue (Roche)"/>
+			<Part Id="PART_L_WING_ROCK" String="Aile Gauche (Roche)"/>
+			<Part Id="PART_R_WING_ROCK" String="Aile Droite (Roche)"/>
+			<Part Id="PART_L_ARM_ROCK" String="Bras Gauche (Roche)"/>
+			<Part Id="PART_R_ARM_ROCK" String="Bras Droit (Roche)"/>
+			<Part Id="PART_BODY_LEGS" String="Corps et Jambes"/>
+			<Part Id="PART_ANTLERS" String="Bois"/>
 		</Shared>
 		<Rise>
 			<Monster Id="0" String="Rathian"/>
@@ -126,11 +346,103 @@
 			<Monster Id="43" String="Jyuratodus"/>
 			<Monster Id="44" String="Tobi-Kadachi"/>
 			<Monster Id="45" String="Bazelgeuse"/>
-			<Monster Id="46" String="Toadversary"/>
+			<Monster Id="46" String="Combatracien"/>
+			<Monster Id="78" String="Hermitaur Daimyo"/>
+			<Monster Id="79" String="Ceanataur Shogun"/>
+			<Monster Id="80" String="Rajang Orage"/>
+			<Monster Id="82" String="Gore Magala"/>
+			<Monster Id="83" String="Shagaru Magala"/>
+			<Monster Id="84" String="Seregios"/>
+			<Monster Id="85" String="Astalos"/>
+			<Monster Id="87" String="Magnamalo Enragé"/>
+			<Monster Id="88" String="Bishaten Sanguin"/>
+			<Monster Id="89" String="Somnacanth Aurore"/>
+			<Monster Id="90" String="Rakna-Kadaki de Feu"/>
+			<Monster Id="91" String="Almudron Magma"/>
+			<Monster Id="93" String="Malzeno"/>
+			<Monster Id="94" String="Lunagaron"/>
+			<Monster Id="95" String="Garangolm"/>
+			<Monster Id="96" String="Gaismagorm"/>
+			<Monster Id="97" String="Espinas"/>
 		</Rise>
+		<World>
+			<Monster Id="0" String="Anjanath"/>
+			<Monster Id="1" String="Rathalos"/>
+			<Monster Id="4" String="Zorah Magdaros"/>
+			<Monster Id="7" String="Grand Jagras"/>
+			<Monster Id="9" String="Rathian"/>
+			<Monster Id="10" String="Rathian Sakura"/>
+			<Monster Id="11" String="Rathalos Azur"/>
+			<Monster Id="12" String="Diablos"/>
+			<Monster Id="13" String="Diablos Noire"/>
+			<Monster Id="14" String="Kirin"/>
+			<Monster Id="15" String="Behemoth"/>
+			<Monster Id="16" String="Kushala Daora"/>
+			<Monster Id="17" String="Lunastra"/>
+			<Monster Id="18" String="Teostra"/>
+			<Monster Id="19" String="Lavasioth"/>
+			<Monster Id="20" String="Deviljho"/>
+			<Monster Id="21" String="Barroth"/>
+			<Monster Id="22" String="Uragaan"/>
+			<Monster Id="23" String="Leshen"/>
+			<Monster Id="24" String="Pukei-Pukei"/>
+			<Monster Id="25" String="Nergigante"/>
+			<Monster Id="26" String="Xeno'jiiva"/>
+			<Monster Id="27" String="Kulu-Ya-Ku"/>
+			<Monster Id="28" String="Tzitzi-Ya-Ku"/>
+			<Monster Id="29" String="Jyuratodus"/>
+			<Monster Id="30" String="Tobi-Kadachi"/>
+			<Monster Id="31" String="Paolumu"/>
+			<Monster Id="32" String="Legiana"/>
+			<Monster Id="33" String="Grand Girros"/>
+			<Monster Id="34" String="Odogaron"/>
+			<Monster Id="35" String="Radobaan"/>
+			<Monster Id="36" String="Vaal Hazak"/>
+			<Monster Id="37" String="Dodogama"/>
+			<Monster Id="38" String="Kulve Taroth"/>
+			<Monster Id="39" String="Bazelgeuse"/>
+			<Monster Id="51" String="Vieux Leshen"/>
+			<Monster Id="61" String="Tigrex"/>
+			<Monster Id="62" String="Nargacuga"/>
+			<Monster Id="63" String="Barioth"/>
+			<Monster Id="64" String="Deviljho Carnage"/>
+			<Monster Id="65" String="Brachydios"/>
+			<Monster Id="66" String="Glavenus"/>
+			<Monster Id="67" String="Glavenus Acide"/>
+			<Monster Id="68" String="Anjanath Tonnerre"/>
+			<Monster Id="69" String="Pukei-Pukei Corail"/>
+			<Monster Id="70" String="Nergigante Chaos"/>
+			<Monster Id="71" String="Tobi-Kadachi Vipère"/>
+			<Monster Id="72" String="Paolumu Belladone"/>
+			<Monster Id="73" String="Legiana Blizzard"/>
+			<Monster Id="74" String="Odogaron Désastre"/>
+			<Monster Id="75" String="Vaal Hazak Fléau"/>
+			<Monster Id="76" String="Bazelgeuse Vulcan"/>
+			<Monster Id="77" String="Beotodus"/>
+			<Monster Id="78" String="Banbaro"/>
+			<Monster Id="79" String="Velkhana"/>
+			<Monster Id="80" String="Namielle"/>
+			<Monster Id="81" String="Shara Ishvalda"/>
+			<Monster Id="87" String="Alatreon"/>
+			<Monster Id="88" String="Rathian d'Or"/>
+			<Monster Id="89" String="Rathalos d'Argent"/>
+			<Monster Id="90" String="Yian Garuga"/>
+			<Monster Id="91" String="Rajang"/>
+			<Monster Id="92" String="Rajang Orage"/>
+			<Monster Id="93" String="Tigrex Berserk"/>
+			<Monster Id="94" String="Zinogre"/>
+			<Monster Id="95" String="Zinogre Stygien"/>
+			<Monster Id="96" String="Brachydios Tempête"/>
+			<Monster Id="97" String="Safi'jiiva"/>
+			<Monster Id="98" String="Mannequin d'entraînement"/>
+			<Monster Id="99" String="Yian Garuga Balafré"/>
+			<Monster Id="100" String="Barioth Crocgivre"/>
+			<Monster Id="101" String="Fatalis"/>
+		</World>
 	</Monsters>
 	<Stages>
 		<Rise>
+			<Stage Id="-2" String="Écran de Chargement"/>
 			<Stage Id="-1" String="Menu Principal"/>
 			<Stage Id="0" String="Village"/>
 			<Stage Id="1" String="Chambre"/>
@@ -138,66 +450,61 @@
 			<Stage Id="3" String="Grand-Camp"/>
 			<Stage Id="4" String="Bivouac Grand-Camp"/>
 			<Stage Id="5" String="Aire d'Entraînement"/>
+			<Stage Id="6" String="Elgado"/>
+			<Stage Id="7" String="Chambre d'Elgado"/>
+			<Stage Id="11" String="Poste de Commandement d'Elgado"/>
 			<Stage Id="199" String="Choix du Personnage"/>
 			<Stage Id="201" String="Temple Oublié"/>
 			<Stage Id="202" String="Plaines de Sable"/>
-			<Stage Id="203" String="Forêt Innondée"/>
+			<Stage Id="203" String="Forêt Inondée"/>
 			<Stage Id="204" String="Archipel de Glace"/>
 			<Stage Id="205" String="Caverne de Lave"/>
 			<Stage Id="207" String="Forteresse Rouge"/>
 			<Stage Id="209" String="Sources Infernales"/>
 			<Stage Id="210" String="Arène"/>
 			<Stage Id="211" String="Palais de Coraux"/>
+			<Stage Id="212" String="Jungle"/>
+			<Stage Id="213" String="Citadelle"/>
+			<Stage Id="215" String="Abysses Dévorantes"/>
 		</Rise>
+		<World>
+			<Stage Id="0" String="Menu Principal"/>
+			<Stage Id="101" String="Forêt ancienne"/>
+			<Stage Id="102" String="Désert des termites"/>
+			<Stage Id="103" String="Plateau de corail"/>
+			<Stage Id="104" String="Val putride"/>
+			<Stage Id="105" String="Terre des anciens"/>
+			<Stage Id="106" String="Grand ravin"/>
+			<Stage Id="107" String="Grand ravin"/>
+			<Stage Id="108" String="Givre éternel"/>
+			<Stage Id="109" String="Fief glorieux"/>
+			<Stage Id="201" String="Arène spéciale"/>
+			<Stage Id="202" String="Arène"/>
+			<Stage Id="203" String="Garde-provisions Seliana"/>
+			<Stage Id="301" String="Astera"/>
+			<Stage Id="302" String="Grand-Pont"/>
+			<Stage Id="303" String="Poste de recherche"/>
+			<Stage Id="305" String="Seliana"/>
+			<Stage Id="306" String="Grand-Salle"/>
+			<Stage Id="401" String="Introduction"/>
+			<Stage Id="403" String="Rivière éternelle"/>
+			<Stage Id="405" String="Croisée des destins"/>
+			<Stage Id="406" String="Forêt ancienne"/>
+			<Stage Id="409" String="Cavernes d&apos;El Dorado"/>
+			<Stage Id="411" String="Garde-provisions Seliana"/>
+			<Stage Id="412" String="Berceau oublié"/>
+			<Stage Id="413" String="Berceau oublié"/>
+			<Stage Id="415" String="Vallée secrète"/>
+			<Stage Id="416" String="Vallée secrète"/>
+			<Stage Id="417" String="Fort Schrade"/>
+			<Stage Id="501" String="Dortoir"/>
+			<Stage Id="502" String="Quartiers privés"/>
+			<Stage Id="503" String="Suite royale"/>
+			<Stage Id="504" String="Aire d&apos;entraînement"/>
+			<Stage Id="505" String="Sanctuaire des cinq"/>
+			<Stage Id="506" String="Chambre (Seliana)"/>
+		</World>
 	</Stages>
-	
-	<Abnormalities>
-        <Abnormality Id="ABNORMALITY_UNKNOWN" String="Inconnue"/>
-        <Abnormality Id="ABNORMALITY_SELF_IMPROVEMENT" String="Auto-amélioration"/>
-        <Abnormality Id="ABNORMALITY_ATTACK_UP" String="Attaque +"/>
-        <Abnormality Id="ABNORMALITY_DEFENSE_UP" String="Défense +"/>
-        <Abnormality Id="ABNORMALITY_AFFINITY_UP" String="Affinité +"/>
-        <Abnormality Id="ABNORMALITY_ELEMENTAL_ATTACK_UP" String="Attaque Élémentaire +"/>
-        <Abnormality Id="ABNORMALITY_ATTACK_DEF_UP" String="Bonus attaque + défense"/>
-        <Abnormality Id="ABNORMALITY_ATTACK_AFFINITY_UP" String="Attaque et Affinité +"/>
-        <Abnormality Id="ABNORMALITY_KNOCKBACK_NEG" String="Anti-chutes"/>
-        <Abnormality Id="ABNORMALITY_EARPLUG" String="Protection ouïe (P)"/>
-        <Abnormality Id="ABNORMALITY_EARPLUG_PLUS" String="Protection ouïe (G)"/>
-        <Abnormality Id="ABNORMALITY_TREMORS_NEG" String="Anti-séisme"/>
-        <Abnormality Id="ABNORMALITY_WIND_PRESSURE_PLUS" String="Immunité à bourrasque"/>
-        <Abnormality Id="ABNORMALITY_STUN_NEG" String="Anti-étourdissement"/>
-        <Abnormality Id="ABNORMALITY_BLIGHT_NEG" String="Anti-fléau"/>
-        <Abnormality Id="ABNORMALITY_DIVINE_PROTECTION" String="Protection divine"/>
-        <Abnormality Id="ABNORMALITY_HEALTH_REGEN" String="Régénération de vie"/>
-        <Abnormality Id="ABNORMALITY_STAMINA_USE_RED" String="Réduc. consom. endurance"/>
-        <Abnormality Id="ABNORMALITY_STAMINA_REC_UP" String="Récupération d'endurance +"/>
-        <Abnormality Id="ABNORMALITY_SHARPNESS_RED" String="Réduc. perte de tranchant"/>
-        <Abnormality Id="ABNORMALITY_ENV_NEG" String="Dégâts environ. annulés"/>
-        <Abnormality Id="ABNORMALITY_SONIC_BARRIER" String="Barrière Sonique"/>
-        <Abnormality Id="ABNORMALITY_INFERNAL_MELODY" String="Mélodie Infernale"/>
-        
-        <Abnormality Id="ABNORMALITY_MIGHT_SEED" String="Graine de Force"/>
-        <Abnormality Id="ABNORMALITY_ADAMANT_SEED" String="Graine de Ténacité"/>
-        <Abnormality Id="ABNORMALITY_CLOTHFLY" String="Tissinsecte"/>
-        <Abnormality Id="ABNORMALITY_DASH_JUICE" String="Potion de Vitalité"/>
-        <Abnormality Id="ABNORMALITY_DEMON_POWDER" String="Poudre du Démon"/>
-        <Abnormality Id="ABNORMALITY_HARDSHELL_POWDER" String="Poudre de Pierre"/>
-        <Abnormality Id="ABNORMALITY_NATURAL_HEALING" String="Amerinsecte"/>
-
-        <Abnormality Id="ABNORMALITY_POISON" String="Poison"/>
-        <Abnormality Id="ABNORMALITY_VENOM" String="Poison Vorace"/>
-        <Abnormality Id="ABNORMALITY_DEF_DOWN" String="Défense -"/>
-        <Abnormality Id="ABNORMALITY_RES_DOWN" String="Résistance -"/>
-        <Abnormality Id="ABNORMALITY_STENCH" String="Puanteur"/>
-        <Abnormality Id="ABNORMALITY_HELLFIRE" String="Fléau-Feu de l'enfer"/>
-        <Abnormality Id="ABNORMALITY_BLAST" String="Fléau-Explosion"/>
-        <Abnormality Id="ABNORMALITY_FIRE" String="Fléau-Feu"/>
-        <Abnormality Id="ABNORMALITY_WATER" String="Fléau-Eau"/>
-        <Abnormality Id="ABNORMALITY_ICE" String="Fléau-Glace"/>
-        <Abnormality Id="ABNORMALITY_THUNDER" String="Fléau-Foudre"/>
-        <Abnormality Id="ABNORMALITY_DRAGON" String="Fléau-Dragon"/>
-        <Abnormality Id="ABNORMALITY_BUBBLES_PLUS" String="Fléau-Bulles"/>
-    </Abnormalities>
 
 	<Client>
 		<Tabs>
@@ -211,31 +518,79 @@
 				 String="Greffons"/>
 			<Tab Id="SETTINGS_STRING"
 				 String="Paramètres"/>
+			<Tab Id="PATREON_STRING"
+				 String="Patreon"/>
 		</Tabs>
 		<Generics>
+			<Generic Id="HUNTERPIE_LAUNCH_GAME"
+					 String="LANCER LE JEU"/>
 			<Generic Id="HUNTERPIE_IS_LATEST_VERSION"
 					 String="HunterPie est à jour !"/>
 			<Generic Id="HUNTERPIE_NOT_LATEST_VERSION"
 					 String="Il y a une nouvelle version de HunterPie disponible !"/>
+			<Generic Id="HUNTERPIE_CURRENT_SELECTED_CONFIG"
+					 String="Configuration pour :"/>
 		</Generics>
 		<Integrations>
-			<Discord Id="DRPC_RISE_CHARACTER_STRING_FORMAT"
-					 String="{Character} | RC: {HighRank}"/>
-			<Discord Id="DRPC_RISE_STATE_MAIN_MENU"
+			<!-- Shared between games -->
+			<Discord Id="DRPC_STATE_HUNTING"
+					 String="Chasse {Monster} ({Percentage}%)"/>
+			<Discord Id="DRPC_STATE_HUNTING_NO_HEALTH"
+					 String="Chasse {Monster}"/>
+			<Discord Id="DRPC_STATE_MAIN_MENU"
 					 String="Dans le Menu Principal"/>
-			<Discord Id="DRPC_RISE_STATE_IDLE"
-					 String="En attente"/>
+			<Discord Id="DRPC_STATE_LOADING"
+					 String="Dans un Chargement"/>
+			<Discord Id="DRPC_STATE_IDLE"
+					 String="Se Détend"/>
+			<Discord Id="DRPC_STATE_EXPLORING"
+					 String="Explore"/>
+			<Discord Id="DRPC_PARTY_STATE_SOLO_STRING"
+					 String="Seul"/>
+			<Discord Id="DRPC_PARTY_STATE_GROUP_STRING"
+					 String="En Groupe"/>
+
+			<!-- Rise -->
+			<Discord Id="DRPC_RISE_CHARACTER_STRING_FORMAT"
+					 String="{Character} | RC: {HighRank} | RM: {MasterRank}"/>
 			<Discord Id="DRPC_RISE_STATE_PRACTICE"
 					 String="S'entraîne"/>
 			<Discord Id="DRPC_RISE_STATE_RAMPAGE"
 					 String="Repousse la Calamité"/>
 			<Discord Id="DRPC_RISE_STATE_CHAR_SELECTION"
 					 String="Choisit un Personnage"/>
-			<Discord Id="DRPC_RISE_STATE_EXPLORING"
-					 String="Explore"/>
-			<Discord Id="DRPC_RISE_STATE_HUNTING"
-					 String="Chasse {Monster} ({Percentage}%)"/>
+
+			<!-- World -->
+			<Discord Id="DRPC_WORLD_CHARACTER_STRING_FORMAT"
+					 String="{Character} | RC: {HighRank} | RM: {MasterRank}"/>
+			<Discord Id="DRPC_WORLD_STATE_PRACTICE"
+					 String="S'entraîne"/>
 		</Integrations>
+		<Enums>
+			<Enum Id="SORT_BY_LOWEST_TIMER_STRING"
+				  String="Croissant"/>
+			<Enum Id="SORT_BY_HIGHEST_TIMER_STRING"
+				  String="Décroissant"/>
+			<Enum Id="SORT_BY_DISABLED_STRING"
+				  String="Aucun"/>
+
+			<Enum Id="ORIENTATION_HORIZONTAL_STRING"
+				  String="Horizontal"/>
+			<Enum Id="ORIENTATION_VERTICAL_STRING"
+				  String="Vertical"/>
+
+			<Enum Id="RELATIVE_TO_QUEST_STRING"
+				  String="Relatif à la quête"/>
+			<Enum Id="RELATIVE_TO_JOIN_STRING"
+				  String="Relatif à l'arrivée"/>
+			<Enum Id="RELATIVE_TO_FIRST_HIT_STRING"
+				  String="Relatif au premier coup"/>
+
+			<Enum Id="PLOT_TOTAL_DAMAGE_STRING"
+				  String="Dégâts Totaux"/>
+			<Enum Id="PLOT_DPS_STRING"
+				  String="Dégâts par Secondes"/>
+		</Enums>
 		<Settings>
 			<Setting Id="CLIENT_STRING"
 					 String="Client"
@@ -246,12 +601,49 @@
 			<Setting Id="OVERLAY_STRING"
 					 String="Superposition"
 					 Description="Configurations de superposition"/>
+			<Setting Id="ABNORMALITY_TRAY_STRING"
+					 String="Barre d'Effets"
+					 Description="Configuration des barres d'effets"/>
 			<Setting Id="MONSTER_WIDGET_STRING"
 					 String="Infos des Monstres"
 					 Description="Configurations du widget de monstres"/>
+			<Setting Id="WIREBUG_WIDGET_STRING"
+					 String="Filoptère"
+					 Description="Configurations du widget de filoptères"/>
+			<Setting Id="ACTIVITIES_WIDGET_STRING"
+					 String="Activités"
+					 Description="Configurations du widget d'activités"/>
+			<Setting Id="METER_WIDGET_STRING"
+					 String="Compteur de Dégâts"
+					 Description="Configurations du widget du Compteur de Dégâts"/>
+			<Setting Id="CHAT_WIDGET_STRING"
+					 String="Chat"
+					 Description="Configurations du widget du chat"/>
+			<Setting Id="SPECIALIZED_TOOL_WIDGET_STRING"
+					 String="Outils Spéciaux"
+					 Description="Configurations du widget d'outils spéciaux"/>
 			<Setting Id="DEV_TOOLS_STRING"
 					 String="Options de Développeur"
 					 Description="Outils de développement avancés"/>
+
+			<Setting Id="ABNORMALITY_SONGS_STRING"
+					 String="Mélodies"
+					 Description="Effets des mélodies"/>
+			<Setting Id="ABNORMALITY_CONSUMABLES_STRING"
+					 String="Consommables"
+					 Description="Effets de consommables"/>
+			<Setting Id="ABNORMALITY_DEBUFFS_STRING"
+					 String="Debuffs"
+					 Description="Effets de debuff"/>
+			<Setting Id="ABNORMALITY_PALICO_STRING"
+					 String="Orchestre"
+					 Description="Effets d'orchestres"/>
+			<Setting Id="ABNORMALITY_SKILLS_STRING"
+					 String="Armure"
+					 Description="Effets d'armures"/>
+			<Setting Id="ABNORMALITY_FOODS_STRING"
+					 String="Nourriture"
+					 Description="Effets de nourriture"/>
 
 			<Setting Id="ENABLE_SELF_UPDATE"
 					 String="Activer les mises à jour automatiques"
@@ -263,11 +655,26 @@
 					 String="Jeton Support"
 					 Description="Jeton de Support pour obtenir les mises à jour de la version bêta."/>
 			<Setting Id="LANGUAGE_STRING"
-					 String="Langage"
-					 Description="Langage par défaut de HunterPie."/>
+					 String="Langue"
+					 Description="Langue par défaut de HunterPie."/>
+			<Setting Id="DEFAULT_RUN_GAME_TYPE"
+					 String="Jeu par Défaut"
+					 Description="Jeu à lancer, change aussi les options pour afficher celles appropriées au jeu sélectionné."/>
 			<Setting Id="MINIMIZE_TO_SYSTEM_TRAY_STRING"
 					 String="Minimiser dans la barre des tâches"
 					 Description="Si cette option est activée, HunterPie sera minimisé dans la zone de la barre des tâches."/>
+			<Setting Id="SEAMLESS_STARTUP_STRING"
+					 String="Démarrage Transparent"
+					 Description="Si activé, HunterPie n'ouvrira pas sa fenêtre principale au démarrage."/>
+			<Setting Id="SEAMLESS_SHUTDOWN_STRING"
+					 String="Arrêt Transparent"
+					 Description="Si activé, HunterPie ne demandera pas de confirmation à l'arrêt."/>
+			<Setting Id="SHUTDOWN_ON_GAME_EXIT"
+					 String="Fermer à l'Arrêt du Jeu"
+					 Description="Si activé, HunterPie se fermera automatiquement à l'arrêt du jeu."/>
+			<Setting Id="RENDERING_FPS_STRING"
+					 String="Taux de Rafraîchissement"
+					 Description="Taux de rafraîchissement de HunterPie, plus il est haut plus les animations seront fluides. Baisser cette option devrait améliorer les performances."/>
 			<Setting Id="RENDERING_STRATEGY_STRING"
 					 String="Stratégie de Rendu"
 					 Description="La stratégie de rendu par défaut de HunterPie. Logiciel utilisera votre CPU pour rendre la superposition, Matériel utilisera votre carte graphique."/>
@@ -275,8 +682,8 @@
 					 String="Délai de scan de la mémoire (millisecondes)"
 					 Description="Le délai pour le scanner de HunterPie. En mettant un nombre faible, HunterPie sera extrêmement fluide, mais utilisera plus le CPU."/>
 			<Setting Id="DEV_ENABLE_FEATURE_FLAG"
-					 String="Activer les évenements des fonctions de développement"
-					 Description="Si activé, HunterPie vous permettra d'activer les évenements des fonctionnalités en cours de développement."/>
+					 String="Activer les évènements des fonctions de développement"
+					 Description="Si activé, HunterPie vous permettra d'activer les évènements des fonctionnalités en cours de développement."/>
 
 			<Setting Id="DRPC_ENABLE_RICH_PRESENCE"
 					 String="Activer Discord Rich Presence"
@@ -291,13 +698,19 @@
 			<Setting Id="OVERLAY_KEYBINDING_TOGGLE_DESIGN_MODE"
 					 String="[Hot Key] Basculer vers le mode de conception"
 					 Description="Raccourci clavier pour activer et désactiver le mode de conception."/>
-			
+			<Setting Id="OVERLAY_HIDE_WHEN_GAME_UNFOCUS_STRING"
+					 String="Cacher les widgets quand le jeu n'a pas le focus"
+					 Description="Si activé, tous les widgets seront cachés quand le jeu n'est pas au premier plan."/>
+
 			<Setting Id="INITIALIZE_WIDGET_STRING"
 					 String="Initialiser le widget"
 					 Description="Si cette option est activée, HunterPie initialisera toujours ce widget. Désactivez cette option si vous ne voulez pas de ce widget."/>
 			<Setting Id="ENABLE_WIDGET_STRING"
 					 String="Afficher le widget"
 					 Description="Si cette option est activée, HunterPie affichera toujours ce widget lorsqu'il y a des données à afficher."/>
+			<Setting Id="HIDE_WHEN_UI_VISIBLE_STRING"
+					 String="Cacher quand l'ATH est visible"
+					 Description="Si activé, HunterPie cachera ce widget quand l'ATH est visible (ex.: à la fin des quêtes, dans un camp, en parlant aux PNJs, etc...)"/>
 			<Setting Id="WIDGET_POSITION"
 					 String="Position du widget"
 					 Description="Contrôle la position de ce widget."/>
@@ -307,13 +720,22 @@
 			<Setting Id="WIDGET_SCALE"
 					 String="Échelle du widget"
 					 Description="Contrôle l'échelle linéaire de ce widget, plus la valeur est élevée, plus le widget sera grand."/>
-			
+			<Setting Id="ORIENTATION_STRING"
+					 String="Orientation"
+					 Description="Orientation de ce widget."/>
+
+			<Setting Id="MONSTER_WIDGET_SHOW_ONLY_TARGET_STRING"
+					 String="N'afficher que la cible"
+					 Description="Si activé, HunterPie n'affichera que le monstre que vous ciblez."/>
 			<Setting Id="MONSTER_WIDGET_ENABLE_STAMINA_STRING"
 					 String="Afficher l'endurance des monstres"
 					 Description="Si cette option est activée, HunterPie affichera l'endurance des monstres sous leurs barres de santé."/>
 			<Setting Id="MONSTER_WIDGET_MAX_WIDTH_STRING"
 					 String="Largeur maximale du widget de monstres"
 					 Description="Contrôle la largeur maximale de la barre de santé des monstres."/>
+			<Setting Id="MONSTER_WIDGET_MIN_WIDTH_STRING"
+					 String="Largeur minimale du widget de monstres"
+					 Description="Contrôle la largeur minimale de la barre de santé des monstres. Cette largeur sera utilisée pour calculer la taille de ces barres si cette option est activée."/>
 			<Setting Id="MONSTER_WIDGET_ENABLE_PARTS_STRING"
 					 String="Afficher les parties du monstre ciblé"
 					 Description="Si activée, les parties du monstre ciblé seront affichées."/>
@@ -332,6 +754,73 @@
 			<Setting Id="MONSTER_WIDGET_AUTO_HIDE_AILMENTS_DELAY_STRING"
 					 String="Délai pour masquer les altérations inactives"
 					 Description="Délai à attendre pour masquer une altération devenue inactive."/>
+			<Setting Id="MONSTER_WIDGET_DYNAMIC_RESIZE_STRING"
+					 String="Redimensionnement dynamique des barres de santé"
+					 Description="Si activé, HunterPie redimensionnera toutes les barres de santé en fonctionne du nombre de barres de santé visibles à ce moment."/>
+			<Setting Id="MONSTER_WIDGET_HIDE_UNKNOWN_PARTS_STRING"
+					 String="Cacher les partie de monstre inconnues"
+					 Description="Si activé, HunterPie cachera les parties inconnues (celles nommées &quot;???&quot;)."/>
+
+			<Setting Id="ABNORMALITY_TRAYS_STRING"
+					 String="Barres d'Effets"
+					 Description="Configurations des barres d'effets."/>
+			<Setting Id="ABNORMALITY_TRAY_NAME_STRING"
+					 String="Nom de la Barre d'Effets"
+					 Description="Le nom de cette barre d'effets."/>
+			<Setting Id="ABNORMALITY_TRAY_MAX_SIZE_STRING"
+					 String="Taille maximale"
+					 Description="La taille maximale de cette barre."/>
+			<Setting Id="ABNORMALITY_TRAY_SORT_BY_STRING"
+					 String="Trier par"
+					 Description="L'algorithme à utiliser pour trier les effets."/>
+			<Setting Id="SORT_BY_LOWEST_TIMER_STRING"
+					 String="Plus Petit Temps"/>
+			<Setting Id="SORT_BY_HIGHEST_TIMER_STRING"
+					 String="Plus Grand Temps"/>
+			<Setting Id="SORT_BY_DISABLED_STRING"
+					 String="Désactivé"/>
+
+			<Setting Id="WIREBUG_WIDGET_PATCH_IN_GAME_HUD_STRING"
+					 String="Correction de la Visée avec Filoptère"
+					 Description="Si activé, HunterPie modifiera le jeu pour ne plus cacher le réticule quand vous désactivez l'affichage des filoptères dans l'ATH."/>
+
+			<Setting Id="ACTIVITIES_ENABLE_ARGOSY_STRING"
+					 String="Montrer l'Argosy"
+					 Description="Si activé, HunterPie affichera les données de l'Argosy."/>
+			<Setting Id="ACTIVITIES_ENABLE_TRAINING_DOJO_STRING"
+					 String="Montrer le Dojo Pilpoil"
+					 Description="Si activé, HunterPie affichera les données du Dojo Pilpoil."/>
+
+			<Setting Id="DAMAGE_METER_ENABLE_SHOULD_HIGHLIGHT_MYSELF"
+					 String="Me mettre en valeur"
+					 Description="Si activé, votre nom sera mis en valeur."/>
+			<Setting Id="DAMAGE_METER_ENABLE_SHOULD_BLUR_NAMES"
+					 String="Flouter les noms"
+					 Description="Si activé, les noms de tout le monde seront floutés."/>
+			<Setting Id="DAMAGE_METER_ENABLE_DPS_PLOT"
+					 String="Afficher le graphique de dégâts"
+					 Description="Si activé, le graphique de dégâts sera visible."/>
+			<Setting Id="DAMAGE_METER_DPS_CALCULATION_STRATEGY_STRING"
+					 String="Stratégie de calcul des dégâts par seconde"
+					 Description="Détermine la stratégie utilisée pour calculer les dégâts par seconde.&#x0a;- RelativeToQuest: Démarre au début de la quête&#x0a;- RelativeToJoin: Démarre quand le joueur rejoint la partie&#x0a;- RelativeToFirstHit: Démarre quand le joueur touche le monstre pour la première fois"/>
+			<Setting Id="DAMAGE_METER_DAMAGE_PLOT_STRATEGY_STRING"
+					 String="Stratégie d'affichage du graphique"
+					 Description="Détermine la stratégie à utiliser pour afficher les données du graphique.&#x0a;- DamagePerSecond: les dégâts par seconde seront utilisés&#x0a;- TotalDamage: Le total de dégâts sera utilisé"/>
+			<Setting Id="DAMAGE_METER_SELF_COLOR_STRING"
+					 String="Ma couleur"
+					 Description="La couleur de votre joueur dans le compteur de dégâts."/>
+			<Setting Id="DAMAGE_METER_PLAYER_1_COLOR_STRING"
+					 String="Couleur du chef de quête"
+					 Description="La couleur du chef de group dans le compteur de dégâts."/>
+			<Setting Id="DAMAGE_METER_PLAYER_2_COLOR_STRING"
+					 String="Couleur du deuxième joueur"
+					 Description="La couleur du deuxième joueur dans le compteur de dégâts."/>
+			<Setting Id="DAMAGE_METER_PLAYER_3_COLOR_STRING"
+					 String="Couleur du troisième joueur"
+					 Description="La couleur du troisième joueur dans le compteur de dégâts."/>
+			<Setting Id="DAMAGE_METER_PLAYER_4_COLOR_STRING"
+					 String="Couleur du quatrième joueur"
+					 Description="La couleur du quatrième joueur dans le compteur de dégâts."/>
 
 			<Setting Id="DEV_MOCK_MONSTER_WIDGET_STRING"
 					 String="Développeur : Mock Monster widget"/>
@@ -339,25 +828,20 @@
 					 String="Développeur : Mock Damage Meter widget"/>
 			<Setting Id="DEV_MOCK_ABNORMALITY_WIDGET_STRING"
 					 String="Développeur : Mock Abnormalities widget"/>
+			<Setting Id="DEV_MOCK_WIREBUG_WIDGET_STRING"
+					 String="Développeur : Mock Wirebug widget"/>
+			<Setting Id="DEV_MOCK_ACTIVITIES_WIDGET_STRING"
+					 String="Développeur : Mock Activities widget"/>
+			<Setting Id="DEV_MOCK_CHAT_WIDGET_STRING"
+					 String="Développeur : Mock Chat widget"/>
+			<Setting Id="DEV_MOCK_SPECIALIZED_TOOL_WIDGET_STRING"
+					 String="Développeur : Mock Specialized Tool widget"/>
 			<Setting Id="DEV_POOGIE_API_HOST_STRING"
 					 String="Développeur : Poogie API Host"/>
-					 
-			<Setting Id="ABNORMALITY_TRAYS_STRING"
-					String="Paramètres de fléaux"
-					Description="Configurations des paramètres des fléaux."/>
-			<Setting Id="ABNORMALITY_TRAY_NAME_STRING"
-					String="Noms des paramètres de fléaux"
-					Description="Nom pour cette barre de fléaux."/>    
-					
-			<Setting Id="ABNORMALITY_SONGS_STRING"
-					String="Musiques"
-					Description="Effets de musiques"/>
-			<Setting Id="ABNORMALITY_CONSUMABLES_STRING"
-					String="Consommables"
-					Description="Effets d'objets consommables"/>
-			<Setting Id="ABNORMALITY_DEBUFFS_STRING"
-					String="Malus"
-					Description="Effets de malus"/>   
+			<Setting Id="DEV_LOG_LEVEL"
+					 String="Développeur : Log level"/>
+			<Setting Id="DEV_PRESENTATION_TRACER_LEVEL"
+					 String="Développeur : UI rendering tracer level"/>
 		</Settings>
 	</Client>
 </Strings>
