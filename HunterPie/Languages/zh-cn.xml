@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
+<!--
+Translated by Neo#1234，由灵魂复苏翻译，有问题可以进HunterPie Discord联系Neo#1234~ -->
+
+
 <Strings lang="Simplified Chinese">
 	<Ailments>
 		<Rise>
@@ -317,6 +321,9 @@
 			<Setting Id="SHUTDOWN_ON_GAME_EXIT"
 					 String="与游戏一起退出"
 					 Description="开启后, 当游戏关闭时，HunterPie会自动关闭。"/>
+			<Setting Id="RENDERING_FPS_STRING"
+					 String="渲染帧数"
+					 Description="HunterPie的渲染帧数, 数字越高 动画越流畅。降低此设置应会提高性能表现。"/>
 			<Setting Id="RENDERING_STRATEGY_STRING"
 					 String="渲染模式"
 					 Description="HunterPie的默认渲染模式。Software会使用你的CPU来渲染嵌入界面, Hardware则会使用你的显卡。"/>
