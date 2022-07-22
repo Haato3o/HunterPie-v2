@@ -85,7 +85,6 @@
 		<Abnormality Id="ABNORMALITY_INFERNAL_MELODY" String="Infernal Melody"/>
 		<Abnormality Id="ABNORMALITY_SPEED_EVADE_UP" String="Speed Boost + Evade Window Up"/>
 		<Abnormality Id="ABNORMALITY_ALL_RES_ELEMENT_ATTACK" String="Elemental Effectiveness"/>
-		<Abnormality Id="ABNORMALITY_INFERNAL_MELODY" String="Infernal Melody"/>
 		
 		<Abnormality Id="ABNORMALITY_RESUSCITATE" String="Resuscitate"/>
 		<Abnormality Id="ABNORMALITY_WINDPROOF" String="Windproof"/>
@@ -250,7 +249,6 @@
 			<Part Id="PART_SILVER_SPIKES_L_ARM" String="Silver Spikes (L. Arm)"/>
 			<Part Id="PART_SILVER_SPIKES_R_ARM" String="Silver Spikes (R. Arm)"/>
 			<Part Id="PART_SILVER_SPIKES_L_WING" String="Silver Spikes (L. Wing)"/>
-			<Part Id="PART_SILVER_SPIKES_L_WING" String="Silver Spikes (L. Wing)"/>
 			<Part Id="PART_SILVER_SPIKES_R_WING" String="Silver Spikes (R. Wing)"/>
 			<Part Id="PART_EXHAUST_ORGAN_CENTRAL" String="Exhaust Organ (Central)"/>
 			<Part Id="PART_EXHAUST_ORGAN_HEAD" String="Exhaust Organ (Head)"/>
@@ -297,6 +295,7 @@
 			<Part Id="PART_R_ARM_ROCK" String="Right Arm (Rock)"/>
 			<Part Id="PART_BODY_LEGS" String="Body &amp; Legs"/>
 			<Part Id="PART_ANTLERS" String="Antlers"/>
+			<Part Id="PART_MANE" String="Mane"/>
 		</Shared>
 		<Rise>
 			<Monster Id="0" String="Rathian"/>

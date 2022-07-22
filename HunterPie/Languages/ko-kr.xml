@@ -8,7 +8,7 @@
 			<Ailment Id="AILMENT_STUN" String="기절"/>
 			<Ailment Id="AILMENT_POISON" String="독"/>
 			<Ailment Id="AILMENT_BLAST" String="폭파"/>
-			<Ailment Id="AILMENT_EXHAUST" String="멸기"/>
+			<Ailment Id="AILMENT_EXHAUST" String="기력 감소"/>
 			<Ailment Id="AILMENT_MOUNT" String="올라타기"/>
 			<Ailment Id="AILMENT_RIDE" String="용 조종"/>
 			<Ailment Id="AILMENT_FLASH" String="실명"/>
@@ -85,11 +85,10 @@
 		<Abnormality Id="ABNORMALITY_INFERNAL_MELODY" String="기염의 선율"/>
 		<Abnormality Id="ABNORMALITY_SPEED_EVADE_UP" String="자기 강화 [속]&amp;회피 성능 UP"/>
 		<Abnormality Id="ABNORMALITY_ALL_RES_ELEMENT_ATTACK" String="속성계 효과 UP"/>
-		<Abnormality Id="ABNORMALITY_INFERNAL_MELODY" String="기염의 선율"/>
-		
+
 		<Abnormality Id="ABNORMALITY_RESUSCITATE" String="꿀벌레 근성"/>
 		<Abnormality Id="ABNORMALITY_WINDPROOF" String="풍압 무효"/>
-		
+
 		<Abnormality Id="ABNORMALITY_MIGHT_SEED" String="괴력씨앗"/>
 		<Abnormality Id="ABNORMALITY_MIGHT_PILL" String="괴력의 환약"/>
 		<Abnormality Id="ABNORMALITY_DEMONDRUG" String="귀인약"/>
@@ -125,11 +124,11 @@
 		<Abnormality Id="ABNORMALITY_FOOD_TIMER" String="식사 불가"/>
 		<Abnormality Id="ABNORMALITY_RUBY_WIREBUG" String="변환밧줄벌레-홍"/>
 		<Abnormality Id="ABNORMALITY_GOLD_WIREBUG" String="변환밧줄벌레-금"/>
-		
+
 		<Abnormality Id="ABNORMALITY_DANGO_BULKER" String="경단 벌크업"/>
 		<Abnormality Id="ABNORMALITY_DANGO_BOOSTER" String="경단 단기최면술"/>
 		<Abnormality Id="ABNORMALITY_DANGO_GLUTTON" String="경단 배부름"/>
-		
+
 		<Abnormality Id="ABNORMALITY_FORTIFY" String="불굴"/>
 		<Abnormality Id="ABNORMALITY_COUNTERSTRIKE" String="역습"/>
 		<Abnormality Id="ABNORMALITY_LATENTPOWER" String="힘의 해방"/>
@@ -143,7 +142,7 @@
 		<Abnormality Id="ABNORMALITY_COALESCENCE" String="전화위복"/>
 		<Abnormality Id="ABNORMALITY_EVASION_MANTLE" String="회피 복장 (공격력 UP)"/>
 		<Abnormality Id="ABNORMALITY_AFFINITTY_BOOSTER" String="달인의 연통"/>
-		
+
 		<Abnormality Id="ABNORMALITY_POISON" String="독"/>
 		<Abnormality Id="ABNORMALITY_VENOM" String="맹독"/>
 		<Abnormality Id="ABNORMALITY_DEF_DOWN" String="방어력 DOWN"/>
@@ -160,7 +159,7 @@
 		<Abnormality Id="ABNORMALITY_BUBBLES_PLUS" String="거품 상태"/>
 		<Abnormality Id="ABNORMALITY_BLEED" String="열상 상태"/>
 		<Abnormality Id="ABNORMALITY_EFFLUVIA" String="독기 침식 상태"/>
-		<Abnormality Id="ABNORMALITY_FRENZY_BUILDUP" String="광룡증 (침식)"/>
+		<Abnormality Id="ABNORMALITY_FRENZY_BUILDUP" String="광룡 바이러스 감염"/>
 		<Abnormality Id="ABNORMALITY_FRENZY" String="광룡증"/>
 		<Abnormality Id="ABNORMALITY_WEBBED" String="거미줄"/>
 	</Abnormalities>
@@ -191,7 +190,7 @@
 			<Part Id="PART_L_LEG_MUD" String="왼쪽 다리 (진흙)"/>
 			<Part Id="PART_R_LEG_MUD" String="오른쪽 다리 (진흙)"/>
 			<Part Id="PART_TAIL_MUD" String="꼬리 (진흙)"/>
-			<Part Id="PART_SPONGE" String="갈기"/>  <!-- 로아루드로스 -->
+			<Part Id="PART_SPONGE" String="갈기"/>
 			<Part Id="PART_L_LEGS" String="왼쪽 다리"/>
 			<Part Id="PART_R_LEGS" String="오른쪽 다리"/>
 			<Part Id="PART_BODY" String="몸통"/>
@@ -214,7 +213,7 @@
 			<Part Id="PART_ABDOMEN" String="복부"/>
 			<Part Id="PART_CHEST" String="흉부"/>
 			<Part Id="PART_TAIL_TIP" String="꼬리 끝"/>
-			<Part Id="PART_MUD_BALL" String="진흙 공"/>
+			<Part Id="PART_MUD_BALL" String="꼬리의 바위"/>
 			<Part Id="PART_LOWER_TORSO" String="아래쪽 몸통"/>
 			<Part Id="PART_TAIL_WINDSAC" String="꼬리 끝(바람주머니)"/>
 			<Part Id="PART_CHEST_WINDSAC" String="흉부(바람주머니)"/>
@@ -229,6 +228,74 @@
 			<Part Id="PART_FORELEG" String="앞다리"/>
 			<Part Id="PART_H_LEG" String="뒷다리"/>
 			<Part Id="PART_ANTENNA" String="촉각"/>
+			<Part Id="PART_CREST" String="볏"/>
+			<Part Id="PART_THROAT" String="목"/>
+			<Part Id="PART_BIG_FLINCH" String="대경직"/>
+			<Part Id="PART_HORNS" String="뿔"/>
+			<Part Id="PART_HORN" String="뿔"/>
+			<Part Id="PART_KNOCKDOWN" String="병기 대미지 대경직"/>
+			<Part Id="PART_HORNS_2" String="두번째 뿔"/>
+			<Part Id="PART_RAGE" String="분노 해제"/>
+			<Part Id="PART_L_LIMBS" String="왼쪽 앞다리"/>
+			<Part Id="PART_R_LIMBS" String="오른쪽 앞다리"/>
+			<Part Id="PART_LIMBS" String="앞다리"/>
+			<Part Id="PART_COUNTERATTACK" String="반격"/>
+			<Part Id="PART_JAW" String="턱"/>
+			<Part Id="PART_EXPLOSION_WEAKENING" String="속성 대경직"/>
+			<Part Id="PART_CHARGE" String="충전 상태 해제"/>
+			<Part Id="PART_FIN" String="등갑각"/>
+			<Part Id="PART_INFLATED_TAIL" String="팽창된 꼬리"/>
+			<Part Id="PART_SILVER_SPIKES_HEAD" String="머리 (금강 가시)"/>
+			<Part Id="PART_SILVER_SPIKES_L_ARM" String="왼쪽 앞다리 (금강 가시)"/>
+			<Part Id="PART_SILVER_SPIKES_R_ARM" String="오른쪽 앞다리 (금강 가시)"/>
+			<Part Id="PART_SILVER_SPIKES_L_WING" String="왼쪽 날개 (금강 가시)"/>
+			<Part Id="PART_SILVER_SPIKES_R_WING" String="오른쪽 날개 (금강 가시)"/>
+			<Part Id="PART_EXHAUST_ORGAN_CENTRAL" String="배열기관 (중앙)"/>
+			<Part Id="PART_EXHAUST_ORGAN_HEAD" String="배열기관 (머리)"/>
+			<Part Id="PART_EXHAUST_ORGAN_CRATER" String="배열기관 (분화구)"/>
+			<Part Id="PART_EXHAUST_ORGAN_REAR" String="배열기관 (후방)"/>
+			<Part Id="PART_REPEL" String="격퇴"/>
+			<Part Id="PART_WEAK_L_SHELL" String="왼쪽 약한 껍질"/>
+			<Part Id="PART_WEAK_R_SHELL" String="오른쪽 약한 껍질"/>
+			<Part Id="PART_BALLOON" String="목 주머니"/>
+			<Part Id="PART_SKY_FALL" String="격추"/>
+			<Part Id="PART_L_BONE" String="왼쪽 뼈갑옷"/>
+			<Part Id="PART_R_BONE" String="오른쪽 뼈갑옷"/>
+			<Part Id="PART_EMISSIONS" String="독기 발산 기관"/>
+			<Part Id="PART_HORNS_GOLD" String="큰뿔 (황금)"/>
+			<Part Id="PART_MANE_GOLD" String="갈기 (황금)"/>
+			<Part Id="PART_L_CHEST_GOLD" String="왼쪽 가슴 (황금)"/>
+			<Part Id="PART_R_CHEST_GOLD" String="오른쪽 가슴 (황금)"/>
+			<Part Id="PART_L_ARM_GOLD" String="왼쪽 앞다리 (황금)"/>
+			<Part Id="PART_R_ARM_GOLD" String="오른쪽 앞다리 (황금)"/>
+			<Part Id="PART_L_LEG_GOLD" String="왼쪽 뒷다리 (황금)"/>
+			<Part Id="PART_R_LEG_GOLD" String="오른쪽 뒷다리 (황금)"/>
+			<Part Id="PART_L_TAIL_GOLD" String="왼쪽 꼬리 (황금)"/>
+			<Part Id="PART_R_TAIL_GOLD" String="오른쪽 꼬리 (황금)"/>
+			<Part Id="PART_GLOWING_HEAD" String="빛나는 머리"/>
+			<Part Id="PART_GLOWING_TAIL" String="빛나는 꼬리"/>
+			<Part Id="PART_EMERGE_SNOW_HEAD" String="눈 위로 떠오른 머리"/>
+			<Part Id="PART_EMERGE_SNOW_BODY" String="눈 위로 떠오른 몸통"/>
+			<Part Id="PART_EMERGE_SNOW_TAIL" String="눈 위로 떠오른 꼬리"/>
+			<Part Id="PART_HEAD_SNOW" String="머리 (눈)"/>
+			<Part Id="PART_BODY_SNOW" String="몸통 (눈)"/>
+			<Part Id="PART_TAIL_SNOW" String="꼬리 (눈)"/>
+			<Part Id="PART_HEAD_ICE" String="머리 (얼음)"/>
+			<Part Id="PART_BODY_ICE" String="몸통 (얼음)"/>
+			<Part Id="PART_WINGS_ICE" String="날개 (얼음)"/>
+			<Part Id="PART_ARMS_ICE" String="앞다리 (얼음)"/>
+			<Part Id="PART_HEAD_ROCK" String="머리 (바위)"/>
+			<Part Id="PART_CHEST_ROCK" String="가슴 (바위)"/>
+			<Part Id="PART_L_NECK_ROCK" String="왼쪽 목 (바위)"/>
+			<Part Id="PART_R_NECK_ROCK" String="오른쪽 목 (바위)"/>
+			<Part Id="PART_TAIL_ROCK" String="꼬리 (바위)"/>
+			<Part Id="PART_L_WING_ROCK" String="왼쪽 날개 (바위)"/>
+			<Part Id="PART_R_WING_ROCK" String="오른쪽 날개 (바위)"/>
+			<Part Id="PART_L_ARMS_ROCK" String="왼쪽 앞다리 (바위)"/>
+			<Part Id="PART_R_ARMS_ROCK" String="오른쪽 앞다리 (바위)"/>
+			<Part Id="PART_BODY_LEGS" String="몸(+다리)"/>
+			<Part Id="PART_ANTLERS" String="머리 (뿔)"/>
+			<Part Id="PART_MANE" String="갈기"/>
 		</Shared>
 		<Rise>
 			<Monster Id="0" String="리오레이아"/>
@@ -293,7 +360,7 @@
 			<Monster Id="93" String="멜-제나"/>
 			<Monster Id="94" String="루나가론"/>
 			<Monster Id="95" String="가란고르무"/>
-                        <Monster Id="96" String="가이아델름"/>
+			<Monster Id="96" String="가이아델름"/>
 			<Monster Id="97" String="에스피나스"/>
 		</Rise>
 		<World>
@@ -396,7 +463,7 @@
 			<Stage Id="212" String="밀림"/>
 			<Stage Id="222" String="격투장"/>
 			<Stage Id="213" String="요새고원"/>
-                        <Stage Id="215" String="연겁의 나락"/>
+			<Stage Id="215" String="연겁의 나락"/>
 		</Rise>
 		<World>
 			<Stage Id="0" String="메인 메뉴"/>
@@ -449,8 +516,8 @@
 				 String="플러그인"/>
 			<Tab Id="SETTINGS_STRING"
 				 String="설정"/>
-                        <Tab Id="PATREON_STRING"
- 				 String="Patreon"/>
+			<Tab Id="PATREON_STRING"
+				 String="Patreon"/>
 		</Tabs>
 		<Generics>
 			<Generic Id="HUNTERPIE_LAUNCH_GAME"
@@ -470,6 +537,8 @@
 					 String="{Monster} 사냥 중"/>
 			<Discord Id="DRPC_STATE_MAIN_MENU"
 					 String="메인 메뉴"/>
+			<Discord Id="DRPC_STATE_LOADING"
+					 String="로딩 화면"/>
 			<Discord Id="DRPC_STATE_IDLE"
 					 String="휴식 중"/>
 			<Discord Id="DRPC_STATE_EXPLORING"
@@ -481,7 +550,7 @@
 
 			<!-- Rise -->
 			<Discord Id="DRPC_RISE_CHARACTER_STRING_FORMAT"
-					 String="{Character} | HR: {HighRank}"/>
+					 String="{Character} | HR: {HighRank} | MR: {MasterRank}"/>
 			<Discord Id="DRPC_RISE_STATE_PRACTICE"
 					 String="수련장에서 수련 중"/>
 			<Discord Id="DRPC_RISE_STATE_RAMPAGE"
@@ -495,6 +564,31 @@
 			<Discord Id="DRPC_WORLD_STATE_PRACTICE"
 					 String="훈련구역에서 훈련 중"/>
 		</Integrations>
+		<Enums>
+			<Enum Id="SORT_BY_LOWEST_TIMER_STRING"
+ 				  String="짧은 시간 순"/>
+ 			<Enum Id="SORT_BY_HIGHEST_TIMER_STRING"
+ 				  String="긴 시간 순"/>
+ 			<Enum Id="SORT_BY_DISABLED_STRING"
+ 				  String="정렬 안함"/>
+
+ 			<Enum Id="ORIENTATION_HORIZONTAL_STRING"
+ 				  String="가로"/>
+ 			<Enum Id="ORIENTATION_VERTICAL_STRING"
+ 				  String="세로"/>
+
+			<Enum Id="RELATIVE_TO_QUEST_STRING"
+				  String="퀘스트 기준"/>
+			<Enum Id="RELATIVE_TO_JOIN_STRING"
+				  String="참가 기준"/>
+			<Enum Id="RELATIVE_TO_FIRST_HIT_STRING"
+ 				  String="첫 타격 기준"/>
+
+ 			<Enum Id="PLOT_TOTAL_DAMAGE_STRING"
+ 				  String="총 대미지"/>
+ 			<Enum Id="PLOT_DPS_STRING"
+ 				  String="초당 대미지"/>
+		</Enums>
 		<Settings>
 			<Setting Id="CLIENT_STRING"
 					 String="클라이언트"
@@ -517,9 +611,9 @@
 			<Setting Id="ACTIVITIES_WIDGET_STRING"
 					 String="동반자 활동 위젯"
 					 Description="동반자 활동 위젯 설정"/>
-                        <Setting Id="METER_WIDGET_STRING"
- 					 String="대미지 미터 위젯"
- 					 Description="대미지 미터 위젯 설정"/>
+			<Setting Id="METER_WIDGET_STRING"
+				 	 String="대미지 미터 위젯"
+				 	 Description="대미지 미터 위젯 설정"/>
 			<Setting Id="CHAT_WIDGET_STRING"
 					 String="채팅 위젯"
 					 Description="채팅 위젯 설정"/>
@@ -527,7 +621,7 @@
 					 String="특수 장비 위젯"
 					 Description="특수 장비 위젯 설정"/>
 			<Setting Id="DEV_TOOLS_STRING"
-					 String="개발자 도구"
+					 String="개발 도구"
 					 Description="심화 개발 도구"/>
 
 			<Setting Id="ABNORMALITY_SONGS_STRING"
@@ -539,9 +633,9 @@
 			<Setting Id="ABNORMALITY_DEBUFFS_STRING"
 					 String="디버프"
 					 Description="디버프 효과"/>
-            <Setting Id="ABNORMALITY_PALICO_STRING"
-                        String="격려의 음악"
-                        Description="격려의 음악 효과"/>
+			<Setting Id="ABNORMALITY_PALICO_STRING"
+					 String="격려의 음악"
+					 Description="격려의 음악 효과"/>
 			<Setting Id="ABNORMALITY_SKILLS_STRING"
 					 String="장비 스킬"
 					 Description="장비 스킬 효과"/>
@@ -576,6 +670,9 @@
 			<Setting Id="SHUTDOWN_ON_GAME_EXIT"
 					 String="게임 종료 시 닫기"
 					 Description="옵션 활성화 시, 게임이 종료되면 HunterPie를 자동으로 닫습니다."/>
+			<Setting Id="RENDERING_FPS_STRING"
+					 String="렌더링 프레임율"
+					 Description="HunterPie의 렌더 프레임율, 높을수록 애니메이션이 부드러워집니다. 이 값을 낮출수록 성능이 개선됩니다."/>
 			<Setting Id="RENDERING_STRATEGY_STRING"
 					 String="렌더링 방식"
 					 Description="HunterPie의 렌더링 방식입니다. 소프트웨어 렌더링은 CPU를 사용하고, 하드웨어 렌더링은 그래픽 카드를 사용합니다."/>
@@ -583,8 +680,8 @@
 					 String="메모리 스캔 딜레이 (ms 단위)"
 					 Description="HunterPie 스캐너의 딜레이 설정입니다, 낮게 설정할수록 부드럽게 작동하지만, 그만큼 CPU 자원을 많이 사용합니다."/>
 			<Setting Id="DEV_ENABLE_FEATURE_FLAG"
-					 String="개발 중인 기능 표시"
-					 Description="옵션 활성화 시, 개발 중인 기능을 보고 테스트할 수 있습니다."/>
+					 String="개발 기능 플래그 활성화"
+					 Description="옵션 활성화 시, HunterPie는 개발 중인 기능에 대한 기능 플래그를 활성화할 수 있도록 허용합니다."/>
 
 			<Setting Id="DRPC_ENABLE_RICH_PRESENCE"
 					 String="Discord Rich Presence 활성화"
@@ -595,14 +692,14 @@
 			<Setting Id="DRPC_ENABLE_SHOW_MONSTER_HEALTH"
 					 String="타겟 몬스터 체력 표시"
 					 Description="옵션 활성화 시, HunterPie는 Discord 상태창에 타겟 몬스터의 체력을 표시합니다."/>
-			
+
 			<Setting Id="OVERLAY_KEYBINDING_TOGGLE_DESIGN_MODE"
 					 String="[단축키] 디자인 모드 전환"
 					 Description="디자인 모드를 On/Off 할 수 있는 단축키입니다."/>
 			<Setting Id="OVERLAY_HIDE_WHEN_GAME_UNFOCUS_STRING"
 					 String="게임 비활성화 시 위젯 숨기기"
 					 Description="옵션 활성화 시, 게임이 백그라운드 상태일 때 모든 위젯을 자동으로 숨깁니다."/>
-			
+
 			<Setting Id="INITIALIZE_WIDGET_STRING"
 					 String="위젯 사용"
 					 Description="옵션 활성화 시, 위젯을 사용할 수 있도록 불러옵니다. 이 위젯을 원치 않는다면 옵션을 꺼두세요."/>
@@ -624,7 +721,7 @@
 			<Setting Id="ORIENTATION_STRING"
 					 String="방향"
 					 Description="위젯의 배치 방향입니다."/>
-			
+
 			<Setting Id="MONSTER_WIDGET_SHOW_ONLY_TARGET_STRING"
 					 String="타겟 몬스터만 표시"
 					 Description="옵션 활성화 시, HunterPie는 당신의 현재 타겟 몬스터만 표시합니다."/>
@@ -680,7 +777,7 @@
 					 String="긴 시간 순"/>
 			<Setting Id="SORT_BY_DISABLED_STRING"
 					 String="사용 안 함"/>
-			
+
 			<Setting Id="WIREBUG_WIDGET_PATCH_IN_GAME_HUD_STRING"
 					 String="인-게임 밧줄벌레 조준 패치"
 					 Description="옵션 활성화 시, 인-게임 옵션에서 밧줄벌레 게이지 HUD를 비활성화 했을 때도 조준할 수 있도록 패치합니다."/>
@@ -691,33 +788,39 @@
 			<Setting Id="ACTIVITIES_ENABLE_TRAINING_DOJO_STRING"
 					 String="동반자 도장 표시"
 					 Description="옵션 활성화 시, HunterPie가 동반자 도장의 정보를 표시합니다."/>
-			
-			<Setting Id="DAMAGE_METER_ENABLE_SHOULD_HIGHLIGHT_MYSELF"
- 					 String="자신 강조하기"
- 					 Description="옵션 활성화 시, 다른 플레이어들에게서 당신의 이름이 강조됩니다."/>
- 			<Setting Id="DAMAGE_METER_ENABLE_SHOULD_BLUR_NAMES"
- 					 String="이름 흐릿하게"
- 					 Description="옵션 활성화 시, 미터기에서 모두의 이름이 흐릿해집니다."/>
- 			<Setting Id="DAMAGE_METER_ENABLE_DPS_PLOT"
- 					 String="DPS 표시"
- 					 Description="옵션 활성화 시, DPS 그래프가 표시됩니다."/>
- 			<Setting Id="DAMAGE_METER_SELF_COLOR_STRING"
- 					 String="나의 색상"
- 					 Description="대미지 미터에서 당신의 플레이어의 색상입니다."/>
- 			<Setting Id="DAMAGE_METER_PLAYER_1_COLOR_STRING"
- 					 String="파티 리더 색상"
- 					 Description="대미지 미터에서 파티 리더의 색상입니다."/>
- 			<Setting Id="DAMAGE_METER_PLAYER_2_COLOR_STRING"
- 					 String="두번째 플레이어 색상"
- 					 Description="대미지 미터에서 두번째 플레이어의 색상입니다."/>
- 			<Setting Id="DAMAGE_METER_PLAYER_3_COLOR_STRING"
- 					 String="세번째 플레이어 색상"
- 					 Description="대미지 미터에서 세번째 플레이어의 색상입니다."/>
- 			<Setting Id="DAMAGE_METER_PLAYER_4_COLOR_STRING"
- 					 String="네번째 플레이어 색상"
- 					 Description="대미지 미터에서 네번째 플레이어의 색상입니다."/>
 
-            <Setting Id="DEV_MOCK_MONSTER_WIDGET_STRING"
+			<Setting Id="DAMAGE_METER_ENABLE_SHOULD_HIGHLIGHT_MYSELF"
+				 	 String="자신 강조하기"
+				 	 Description="옵션 활성화 시, 다른 플레이어들에게서 당신의 이름이 강조됩니다."/>
+			<Setting Id="DAMAGE_METER_ENABLE_SHOULD_BLUR_NAMES"
+				 	 String="이름 흐릿하게 표시"
+				 	 Description="옵션 활성화 시, 미터기에서 모두의 이름이 흐릿해집니다."/>
+			<Setting Id="DAMAGE_METER_ENABLE_DPS_PLOT"
+				 	 String="DPS 그래프 표시"
+				 	 Description="옵션 활성화 시, DPS 그래프가 표시됩니다."/>
+			<Setting Id="DAMAGE_METER_DPS_CALCULATION_STRATEGY_STRING"
+					 String="DPS 계산 방법"
+					 Description="초당 대미지를 계산하는데 사용할 방법을 결정합니다.&#x0a;- 퀘스트 기준: 퀘스트 경과 시간을 기준으로 계산&#x0a;- 참여 기준: 플레이어가 파티에 참여한 시간을 기준으로 계산&#x0a;- 첫 타격 기준: 몬스터를 처음으로 타격한 시간을 기준으로 계산"/>
+			<Setting Id="DAMAGE_METER_DAMAGE_PLOT_STRATEGY_STRING"
+ 					 String="대미지 표시 방법"
+ 					 Description="그래프에 표시할 대미지를 결정합니다.&#x0a;- 초당 대미지: DPS가 그래프로 표시됩니다&#x0a;- 총 대미지: 총 대미지가 그래프로 표시됩니다"/>
+			<Setting Id="DAMAGE_METER_SELF_COLOR_STRING"
+				 	 String="나의 색상"
+				 	 Description="대미지 미터에서 당신의 플레이어의 색상입니다."/>
+			<Setting Id="DAMAGE_METER_PLAYER_1_COLOR_STRING"
+				 	 String="파티 리더 색상"
+				 	 Description="대미지 미터에서 파티 리더의 색상입니다."/>
+			<Setting Id="DAMAGE_METER_PLAYER_2_COLOR_STRING"
+				 	 String="두번째 플레이어 색상"
+				 	 Description="대미지 미터에서 두번째 플레이어의 색상입니다."/>
+			<Setting Id="DAMAGE_METER_PLAYER_3_COLOR_STRING"
+				 	 String="세번째 플레이어 색상"
+				 	 Description="대미지 미터에서 세번째 플레이어의 색상입니다."/>
+			<Setting Id="DAMAGE_METER_PLAYER_4_COLOR_STRING"
+				 	 String="네번째 플레이어 색상"
+				 	 Description="대미지 미터에서 네번째 플레이어의 색상입니다."/>
+
+			<Setting Id="DEV_MOCK_MONSTER_WIDGET_STRING"
 					 String="개발자: 모의 몬스터 위젯"/>
 			<Setting Id="DEV_MOCK_DAMAGE_WIDGET_STRING"
 					 String="개발자: 모의 대미지 미터 위젯"/>
