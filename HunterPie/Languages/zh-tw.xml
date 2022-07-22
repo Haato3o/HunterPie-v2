@@ -1,9 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
-<!--Translated by elappale#4205
-・If you see any mistakes in the translation or would like to submit your own, by all means join the HunterPie Discord and we can chat about it!
-・翻訳ミスがある場合、もしくは新しく翻訳ファイルを提出する場合は、HunterPieのDiscord鯖へお越しください。#translationsチャンネル、もしくはDMにてお待ちしております！
-・如果您在翻譯中發現任何錯誤或想提交自己的翻譯，請務必加入 HunterPie Discord，與我們一起討論！ 繁體中文翻譯 by TW 究叔叔#8599 -->
+<!--
+・如果您在翻譯中發現任何錯誤或想提交自己的翻譯，請務必加入 HunterPie Discord，與我們一起討論！ 繁體中文翻譯 by TW 究叔叔#8599 
+・如果有人想要提交自己的翻譯也可以在 HunterPie Discord 標記@Ting#6957,我可以幫助你建立Github PR, 這樣也方便@Haato 整合. :) 
+・If any one want to update the zh-tw.xml(traditional Chinese), please @Ting#6957 in HunterPie Discord. I can make the PR for you, also that will be eazy for Haato to merge in HunterPie code. :)
+-->
 
 
 <Strings lang="traditional Chinese">
@@ -27,19 +28,28 @@
 			<Ailment Id="AILMENT_TRANQUILIZE" String="麻醉(捕獲用)"/>
 			<Ailment Id="AILMENT_KNOCKDOWN" String="擊倒"/>
 			<Ailment Id="AILMENT_SHOCKTRAP" String="麻痺陷阱"/>
-			<Ailment Id="AILMENT_PITFALLTRAP" String="落穴陷阱"/>
+			<Ailment Id="AILMENT_PITFALLTRAP" String="地洞"/>
 			<Ailment Id="AILMENT_VINETRAP" String="藤蔓陷阱"/>
+			<Ailment Id="AILMENT_ELDERSEAL" String="龍封力"/>
 			<Ailment Id="AILMENT_SMOKING" String="煙霧"/>
+			<Ailment Id="AILMENT_FELYNETRAP" String="貓式陷阱"/>
+			<Ailment Id="AILMENT_CLAW" String="飛翔爪攻擊"/>
+			<Ailment Id="AILMENT_CLAWFLINCH" String="飛翔爪退縮"/>
+			<Ailment Id="AILMENT_BANISHINGBALL" String="撤退彈"/>
 			<Ailment Id="STATUS_ENRAGE" String="憤怒"/>
 		</Rise>
 	</Ailments>
 	<Abnormalities>
 		<Abnormality Id="ABNORMALITY_UNKNOWN" String="未知異常"/>
 		<Abnormality Id="ABNORMALITY_SELF_IMPROVEMENT" String="自我強化"/>
-		<Abnormality Id="ABNORMALITY_ATTACK_UP" String="攻擊力UP"/>
-		<Abnormality Id="ABNORMALITY_ATTACK_UP_L" String="攻擊力Up (大)"/>
-		<Abnormality Id="ABNORMALITY_DEFENSE_UP" String="防禦力UP"/>
-		<Abnormality Id="ABNORMALITY_DEFENSE_UP_L" String="防禦力UP(大)"/>
+		<Abnormality Id="ABNORMALITY_ATTACK_UP" String="攻擊力UP【小】"/>
+		<Abnormality Id="ABNORMALITY_ATTACK_UP_L" String="攻擊力UP【大】"/>
+		<Abnormality Id="ABNORMALITY_HEALTH_BOOST" String="體力UP【小】"/>
+		<Abnormality Id="ABNORMALITY_HEALTH_BOOST_L" String="體力UP【大】"/>
+		<Abnormality Id="ABNORMALITY_DEFENSE_UP" String="防禦力UP【小】"/>
+		<Abnormality Id="ABNORMALITY_DEFENSE_UP_L" String="防禦力UP【大】"/>
+		<Abnormality Id="ABNORMALITY_HEALTH_REC" String="體力回復【小】"/>
+		<Abnormality Id="ABNORMALITY_HEALTH_REC_L" String="體力回復【大】"/>
 		<Abnormality Id="ABNORMALITY_AFFINITY_UP" String="會心率UP"/>
 		<Abnormality Id="ABNORMALITY_ELEMENTAL_ATTACK_UP" String="屬性攻擊力UP"/>
 		<Abnormality Id="ABNORMALITY_ATTACK_DEF_UP" String="攻擊力、防禦力UP"/>
@@ -48,19 +58,50 @@
 		<Abnormality Id="ABNORMALITY_EARPLUG" String="聽覺保護【小】"/>
 		<Abnormality Id="ABNORMALITY_EARPLUG_PLUS" String="聽覺保護【大】"/>
 		<Abnormality Id="ABNORMALITY_TREMORS_NEG" String="耐震"/>
+		<Abnormality Id="ABNORMALITY_DEEP_RESISTANCE" String="減輕泥&amp;適應水場‧深雪"/>
+		<Abnormality Id="ABNORMALITY_FIRE_RESISTANCE" String="火屬性防禦強化【小】"/>
+		<Abnormality Id="ABNORMALITY_FIRE_RESISTANCE_L" String="火屬性防禦強化【大】"/>
+		<Abnormality Id="ABNORMALITY_WATER_RESISTANCE" String="水屬性防禦強化【小】"/>
+		<Abnormality Id="ABNORMALITY_WATER_RESISTANCE_L" String="水屬性防禦強化【大】"/>
+		<Abnormality Id="ABNORMALITY_THUNDER_RESISTANCE" String="雷屬性防禦強化【小】"/>
+		<Abnormality Id="ABNORMALITY_THUNDER_RESISTANCE_L" String="雷屬性防禦強化【大】"/>
+		<Abnormality Id="ABNORMALITY_ICE_RESISTANCE" String="冰屬性防禦強化【小】"/>
+		<Abnormality Id="ABNORMALITY_ICE_RESISTANCE_L" String="冰屬性防禦強化【大】"/>
+		<Abnormality Id="ABNORMALITY_DRAGON_RESISTANCE" String="龍屬性防禦強化【小】"/>
+		<Abnormality Id="ABNORMALITY_DRAGON_RESISTANCE_L" String="龍屬性防禦強化【大】"/>
+		<Abnormality Id="ABNORMALITY_ALL_RES_UP" String="全屬性耐性UP"/>
 		<Abnormality Id="ABNORMALITY_WIND_PRESSURE_PLUS" String="風壓無效"/>
+		<Abnormality Id="ABNORMALITY_WIND_PRESSURE_PLUS" String="風壓完全無效"/>
+		<Abnormality Id="ABNORMALITY_ABNORM_ATTACK_UP" String="狀態異常攻擊力UP【小】"/>
+		<Abnormality Id="ABNORMALITY_MAX_STAM_RECOVERY" String="最大耐力UP&amp;回復"/>
+		<Abnormality Id="ABNORMALITY_EXT_HEALTH_RECOVERY" String="體力回復速度UP"/>
 		<Abnormality Id="ABNORMALITY_STUN_NEG" String="昏厥無效"/>
+		<Abnormality Id="ABNORMALITY_PARALYSIS_NEG" String="麻痺無效"/>
 		<Abnormality Id="ABNORMALITY_BLIGHT_NEG" String="全狀態異常無效"/>
+		<Abnormality Id="ABNORMALITY_AILMENTS_NEG" String="全屬性異常狀態無效"/>
 		<Abnormality Id="ABNORMALITY_DIVINE_PROTECTION" String="精靈王的加護"/>
+		<Abnormality Id="ABNORMALITY_SCOUTFLY" String="導蟲追蹤強化"/>
 		<Abnormality Id="ABNORMALITY_HEALTH_REGEN" String="體力持續回復"/>
-		<Abnormality Id="ABNORMALITY_STAMINA_USE_RED" String="耐力消耗減少"/>
+		<Abnormality Id="ABNORMALITY_STAMINA_USE_RED" String="耐力消耗減少【小】"/>
+		<Abnormality Id="ABNORMALITY_STAMINA_USE_RED_L" String="耐力消耗減少【大】"/>
 		<Abnormality Id="ABNORMALITY_STAMINA_REC_UP" String="耐力回復速度UP"/>
 		<Abnormality Id="ABNORMALITY_SHARPNESS_RED" String="銳利度消耗減輕"/>
 		<Abnormality Id="ABNORMALITY_ENV_NEG" String="地形傷害無效"/>
 		<Abnormality Id="ABNORMALITY_SONIC_BARRIER" String="滑音節奏"/>
 		<Abnormality Id="ABNORMALITY_INFERNAL_MELODY" String="氣焰的旋律"/>
+		<Abnormality Id="ABNORMALITY_SPEED_EVADE_UP" String="自我強化[速]&amp;迴避性能UP"/>
+		<Abnormality Id="ABNORMALITY_ALL_RES_ELEMENT_ATTACK" String="Elemental Effectiveness"/>
+		<Abnormality Id="ABNORMALITY_INFERNAL_MELODY" String="Infernal Melody"/>
+
+		<Abnormality Id="ABNORMALITY_RESUSCITATE" String="死裡逃生"/>
+		<Abnormality Id="ABNORMALITY_WINDPROOF" String="防風"/>
 
 		<Abnormality Id="ABNORMALITY_MIGHT_SEED" String="怪力種子"/>
+		<Abnormality Id="ABNORMALITY_MIGHT_PILL" String="怪力藥丸"/>
+		<Abnormality Id="ABNORMALITY_DEMONDRUG" String="鬼人藥"/>
+		<Abnormality Id="ABNORMALITY_ARMORSKIN" String="硬化藥"/>
+		<Abnormality Id="ABNORMALITY_COOLDRINK" String="冷飲"/>
+		<Abnormality Id="ABNORMALITY_HOTDRINK" String="熱飲"/>
 		<Abnormality Id="ABNORMALITY_BUTTERFLAME" String="火紅焰蝶"/>
 		<Abnormality Id="ABNORMALITY_CUTTERFLY" String="網切蜻蜓"/>
 		<Abnormality Id="ABNORMALITY_ADAMANT_SEED" String="忍耐種子"/>
@@ -78,15 +119,34 @@
 		<Abnormality Id="ABNORMALITY_ROUSING_ROAR" String="強化咆哮之技"/>
 		<Abnormality Id="ABNORMALITY_DEMON_AMMO" String="鬼人彈"/>
 		<Abnormality Id="ABNORMALITY_ARMOR_AMMO" String="硬化彈"/>
+		<Abnormality Id="ABNORMALITY_WIGGLY_LITCHY" String="耐力雷蟲"/>
+		<Abnormality Id="ABNORMALITY_ASTERA_JERKY" String="星辰肉乾"/>
+		<Abnormality Id="ABNORMALITY_HEALTH_REGEN" String="自動回復[溫泉]"/>
+		<Abnormality Id="ABNORMALITY_COLD_RES" String="寒耐性[溫泉]"/>
+		<Abnormality Id="ABNORMALITY_SNOWMAN_HEAD" String="雪人頭"/>
+		<Abnormality Id="ABNORMALITY_POWERCONE" String="攻擊力UP[鬼毬果]"/>
+		<Abnormality Id="ABNORMALITY_ICE_RES" String="冰耐性UP[冰耐草]"/>
+		<Abnormality Id="ABNORMALITY_FOOD_TIMER" String="飢餓時間"/>
+		<Abnormality Id="ABNORMALITY_RUBY_WIREBUG" String="紅翔蟲"/>
+		<Abnormality Id="ABNORMALITY_GOLD_WIREBUG" String="金翔蟲"/>
 
 		<Abnormality Id="ABNORMALITY_DANGO_BULKER" String="糰子鍛鍊"/>
 		<Abnormality Id="ABNORMALITY_DANGO_BOOSTER" String="糰子短期催眠術"/>
 		<Abnormality Id="ABNORMALITY_DANGO_GLUTTON" String="糰子不知飢"/>
 
+		<Abnormality Id="ABNORMALITY_FORTIFY" String="不屈"/>
 		<Abnormality Id="ABNORMALITY_COUNTERSTRIKE" String="逆襲"/>
 		<Abnormality Id="ABNORMALITY_LATENTPOWER" String="力量解放"/>
 		<Abnormality Id="ABNORMALITY_AFFINITY_SLIDING" String="滑走強化"/>
-
+		<Abnormality Id="ABNORMALITY_PROTECTIVE_POLISH" String="剛刃研磨"/>
+		<Abnormality Id="ABNORMALITY_OFFENSIVE_GUARD" String="攻擊守勢"/>
+		<Abnormality Id="ABNORMALITY_ELEMENT_ACCELERATION" String="屬性加速"/>
+		<Abnormality Id="ABNORMALITY_ADRENALINE" String="振奮"/>
+		<Abnormality Id="ABNORMALITY_COOL_CAT" String="貓的休息術"/>
+		<Abnormality Id="ABNORMALITY_FROSTCRAFT" String="寒氣鍊成"/>
+		<Abnormality Id="ABNORMALITY_COALESCENCE" String="轉禍為福"/>
+		<Abnormality Id="ABNORMALITY_EVASION_MANTLE" String="迴避衣裝 (攻擊+)"/>
+		<Abnormality Id="ABNORMALITY_AFFINITTY_BOOSTER" String="達人煙筒"/>
 
 		<Abnormality Id="ABNORMALITY_POISON" String="中毒"/>
 		<Abnormality Id="ABNORMALITY_VENOM" String="猛毒"/>
@@ -95,12 +155,18 @@
 		<Abnormality Id="ABNORMALITY_STENCH" String="無法使用部分道具 "/>
 		<Abnormality Id="ABNORMALITY_HELLFIRE" String="鬼火異常"/>
 		<Abnormality Id="ABNORMALITY_BLAST" String="爆破異常"/>
+		<Abnormality Id="ABNORMALITY_BLASTSCOURGE" String="強爆破異常狀態"/>
 		<Abnormality Id="ABNORMALITY_FIRE" String="火屬性異常"/>
 		<Abnormality Id="ABNORMALITY_WATER" String="水屬性異常"/>
 		<Abnormality Id="ABNORMALITY_ICE" String="冰屬性異常"/>
 		<Abnormality Id="ABNORMALITY_THUNDER" String="雷屬性異常"/>
 		<Abnormality Id="ABNORMALITY_DRAGON" String="龍屬性異常"/>
 		<Abnormality Id="ABNORMALITY_BUBBLES_PLUS" String="泡沫狀態【大】"/>
+		<Abnormality Id="ABNORMALITY_BLEED" String="裂傷狀態"/>
+		<Abnormality Id="ABNORMALITY_EFFLUVIA" String="瘴氣侵蝕狀態"/>
+		<Abnormality Id="ABNORMALITY_FRENZY_BUILDUP" String="狂龍狀態 (Buildup)"/>
+		<Abnormality Id="ABNORMALITY_FRENZY" String="狂龍狀態"/>
+		<Abnormality Id="ABNORMALITY_WEBBED" String="被網纏住"/>
 	</Abnormalities>
 	<Monsters>
 		<Shared>
@@ -216,8 +282,8 @@
 			<Monster Id="44" String="飛雷龍"/>
 			<Monster Id="45" String="爆鱗龍"/>
 			<Monster Id="46" String="訓練用河童蛙"/>
-			<Monster Id="78" String="大名盾蟹"/>
-			<Monster Id="79" String="將軍鐮蟹"/>
+			<Monster Id="78" String="大名蟹"/>
+			<Monster Id="79" String="將軍蟹"/>
 			<Monster Id="80" String="激昂金獅子"/>
 			<Monster Id="82" String="黑蝕龍"/>
 			<Monster Id="83" String="天迴龍"/>
@@ -234,34 +300,145 @@
 			<Monster Id="96" String="冥淵龍"/>
 			<Monster Id="97" String="棘龍"/>
 		</Rise>
+		<World>
+			<Monster Id="0" String="蠻顎龍"/>
+			<Monster Id="1" String="火龍"/>
+			<Monster Id="4" String="熔山龍"/>
+			<Monster Id="7" String="大凶豺龍"/>
+			<Monster Id="9" String="雌火龍"/>
+			<Monster Id="10" String="櫻火龍"/>
+			<Monster Id="11" String="蒼火龍"/>
+			<Monster Id="12" String="角龍"/>
+			<Monster Id="13" String="黑角龍"/>
+			<Monster Id="14" String="麒麟"/>
+			<Monster Id="15" String="貝希摩斯"/>
+			<Monster Id="16" String="鋼龍"/>
+			<Monster Id="17" String="炎妃龍"/>
+			<Monster Id="18" String="炎王龍"/>
+			<Monster Id="19" String="熔岩龍"/>
+			<Monster Id="20" String="恐暴龍"/>
+			<Monster Id="21" String="土砂龍"/>
+			<Monster Id="22" String="爆鎚龍"/>
+			<Monster Id="23" String="鹿首精"/>
+			<Monster Id="24" String="毒妖鳥"/>
+			<Monster Id="25" String="滅盡龍"/>
+			<Monster Id="26" String="冥燈龍"/>
+			<Monster Id="27" String="搔鳥"/>
+			<Monster Id="28" String="眩鳥"/>
+			<Monster Id="29" String="泥魚龍"/>
+			<Monster Id="30" String="飛雷龍"/>
+			<Monster Id="31" String="浮空龍"/>
+			<Monster Id="32" String="風漂龍"/>
+			<Monster Id="33" String="大凶顎龍"/>
+			<Monster Id="34" String="慘爪龍"/>
+			<Monster Id="35" String="骨鎚龍"/>
+			<Monster Id="36" String="屍套龍"/>
+			<Monster Id="37" String="岩賊龍"/>
+			<Monster Id="38" String="絢輝龍"/>
+			<Monster Id="39" String="爆鱗龍"/>
+			<Monster Id="51" String="古代鹿首精"/>
+			<Monster Id="61" String="轟龍"/>
+			<Monster Id="62" String="迅龍"/>
+			<Monster Id="63" String="冰牙龍"/>
+			<Monster Id="64" String="惶怒恐暴龍"/>
+			<Monster Id="65" String="碎龍"/>
+			<Monster Id="66" String="斬龍"/>
+			<Monster Id="67" String="硫斬龍"/>
+			<Monster Id="68" String="雷顎龍"/>
+			<Monster Id="69" String="水妖鳥"/>
+			<Monster Id="70" String="殲世滅盡龍"/>
+			<Monster Id="71" String="痺毒龍"/>
+			<Monster Id="72" String="浮眠龍"/>
+			<Monster Id="73" String="霜翼風漂龍"/>
+			<Monster Id="74" String="兇爪龍"/>
+			<Monster Id="75" String="霧瘴屍套龍"/>
+			<Monster Id="76" String="紅蓮爆鱗龍"/>
+			<Monster Id="77" String="冰魚龍"/>
+			<Monster Id="78" String="猛牛龍"/>
+			<Monster Id="79" String="冰呪龍"/>
+			<Monster Id="80" String="溟波龍"/>
+			<Monster Id="81" String="天地煌啼龍"/>
+			<Monster Id="87" String="煌黑龍"/>
+			<Monster Id="88" String="金火龍"/>
+			<Monster Id="89" String="銀火龍"/>
+			<Monster Id="90" String="黑狼鳥"/>
+			<Monster Id="91" String="金獅子"/>
+			<Monster Id="92" String="激昂金獅子"/>
+			<Monster Id="93" String="黑轟龍"/>
+			<Monster Id="94" String="雷狼龍"/>
+			<Monster Id="95" String="獄狼龍"/>
+			<Monster Id="96" String="猛爆碎龍"/>
+			<Monster Id="97" String="冥赤龍"/>
+			<Monster Id="98" String="Training Dummy"/>
+			<Monster Id="99" String="戰痕黑狼鳥"/>
+			<Monster Id="100" String="霜刃冰牙龍"/>
+			<Monster Id="101" String="黑龍"/>
+		</World>
 	</Monsters>
 	<Stages>
 		<Rise>
 			<Stage Id="-2" String="讀取中..."/>
-			<Stage Id="-1" String="主選單"></Stage>
-			<Stage Id="0" String="據點"></Stage>
-			<Stage Id="1" String="小屋"></Stage>
-			<Stage Id="2" String="隨從廣場"></Stage>
-			<Stage Id="3" String="集會所"></Stage>
-			<Stage Id="4" String="集會所準備區"></Stage>
-			<Stage Id="5" String="訓練區域"></Stage>
+			<Stage Id="-1" String="主選單"/>
+			<Stage Id="0" String="據點"/>
+			<Stage Id="1" String="小屋"/>
+			<Stage Id="2" String="隨從廣場"/>
+			<Stage Id="3" String="集會所"/>
+			<Stage Id="4" String="集會所準備區"/>
+			<Stage Id="5" String="訓練區域"/>
 			<Stage Id="6" String="艾爾卡多"/>
 			<Stage Id="7" String="房間"/>
 			<Stage Id="11" String="騎士團指揮部"/>
-			<Stage Id="199" String="角色選擇"></Stage>
-			<Stage Id="201" String="大社遺跡"></Stage>
-			<Stage Id="202" String="沙原"></Stage>
-			<Stage Id="203" String="水没林"></Stage>
-			<Stage Id="204" String="寒冷群島"></Stage>
-			<Stage Id="205" String="熔岩洞"></Stage>
-			<Stage Id="207" String="翡葉要塞"></Stage>
-			<Stage Id="209" String="獄泉鄉"></Stage>
-			<Stage Id="210" String="鬥技場"></Stage>
-			<Stage Id="211" String="龍宮要塞遺跡"></Stage>
+			<Stage Id="199" String="角色選擇"/>
+			<Stage Id="201" String="大社遺跡"/>
+			<Stage Id="202" String="沙原"/>
+			<Stage Id="203" String="水没林"/>
+			<Stage Id="204" String="寒冷群島"/>
+			<Stage Id="205" String="熔岩洞"/>
+			<Stage Id="207" String="翡葉要塞"/>
+			<Stage Id="209" String="獄泉鄉"/>
+			<Stage Id="210" String="鬥技場"/>
+			<Stage Id="211" String="龍宮要塞遺跡"/>
 			<Stage Id="212" String="密林"/>
 			<Stage Id="213" String="城塞高地"/>
 			<Stage Id="215" String="淵劫之地獄"/>
 		</Rise>
+		<World>
+			<Stage Id="0" String="主選單"/>
+			<Stage Id="101" String="古代樹森林"/>
+			<Stage Id="102" String="大蟻塚荒地"/>
+			<Stage Id="103" String="陸珊瑚台地"/>
+			<Stage Id="104" String="瘴氣之谷"/>
+			<Stage Id="105" String="龍結晶之地"/>
+			<Stage Id="106" String="大峽谷"/>
+			<Stage Id="107" String="大峽谷"/>
+			<Stage Id="108" String="永霜凍土"/>
+			<Stage Id="109" String="聚魔之地"/>
+			<Stage Id="201" String="特殊鬥技場"/>
+			<Stage Id="202" String="鬥技場"/>
+			<Stage Id="203" String="兵器置放處"/>
+			<Stage Id="301" String="星辰"/>
+			<Stage Id="302" String="星辰集會所"/>
+			<Stage Id="303" String="研究基地"/>
+			<Stage Id="305" String="月辰"/>
+			<Stage Id="306" String="月辰集會所"/>
+			<Stage Id="401" String="Introduction"/>
+			<Stage Id="403" String="地脈迴廊"/>
+			<Stage Id="405" String="地脈收束地"/>
+			<Stage Id="406" String="古代樹森林"/>
+			<Stage Id="409" String="地脈黃金鄉"/>
+			<Stage Id="411" String="兵器置放處"/>
+			<Stage Id="412" String="起源的孤島"/>
+			<Stage Id="413" String="起源的孤島"/>
+			<Stage Id="415" String="幽境之谷"/>
+			<Stage Id="416" String="幽境之谷"/>
+			<Stage Id="417" String="虚黑城"/>
+			<Stage Id="501" String="流通區域"/>
+			<Stage Id="502" String="星辰小屋"/>
+			<Stage Id="503" String="星辰套房"/>
+			<Stage Id="504" String="訓練場"/>
+			<Stage Id="505" String="星辰集會所小屋"/>
+			<Stage Id="506" String="月辰小屋"/>
+		</World>
 	</Stages>
 
 	<Client>
@@ -276,164 +453,190 @@
 				 String="插件"/>
 			<Tab Id="SETTINGS_STRING"
 				 String="設定"/>
+			<Tab Id="PATREON_STRING"
+				 String="Patreon"/>
 		</Tabs>
 		<Generics>
-			<Generic Id="HUNTERPIE_IS_LATEST_VERSION"
-					 String="目前 HunterPie 為最新版本！"/>
-			<Generic Id="HUNTERPIE_NOT_LATEST_VERSION"
-					 String="已有新版本 HunterPie 可更新！"/>
+			<Generic Id="HunterPie _LAUNCH_GAME"
+					 String="啟動遊戲"/>
+			<Generic Id="HunterPie _IS_LATEST_VERSION"
+					 String="目前 HunterPie  為最新版本！"/>
+			<Generic Id="HunterPie _NOT_LATEST_VERSION"
+					 String="已有新版本 HunterPie  可更新！"/>
+			<Generic Id="HunterPie _CURRENT_SELECTED_CONFIG"
+					 String="使用的設定檔:"/>
 		</Generics>
 		<Integrations>
 			<!-- Shared between games -->
 			<Discord Id="DRPC_STATE_HUNTING"
-					 String="正在狩獵 {Monster} ({Percentage}%)"/>
+					 String="狩獵{Monster}中 ({Percentage}%)"/>
 			<Discord Id="DRPC_STATE_HUNTING_NO_HEALTH"
-					 String="正在狩獵 {Monster}"/>
+					 String="狩獵{Monster}中"/>
 			<Discord Id="DRPC_STATE_MAIN_MENU"
 					 String="在主選單"/>
 			<Discord Id="DRPC_STATE_LOADING"
-					 String="讀取中"/>
+					 String="載入中"/>
 			<Discord Id="DRPC_STATE_IDLE"
-					 String="目前閒置"/>
+					 String="放鬆中"/>
 			<Discord Id="DRPC_STATE_EXPLORING"
 					 String="前往探索"/>
 			<Discord Id="DRPC_PARTY_STATE_SOLO_STRING"
-					 String="單人"/>
+					 String="自行遊玩"/>
 			<Discord Id="DRPC_PARTY_STATE_GROUP_STRING"
-					 String="組隊"/>
+					 String="在集會所"/>
 
 			<!-- Rise -->
 			<Discord Id="DRPC_RISE_CHARACTER_STRING_FORMAT"
 					 String="{Character} | HR: {HighRank}"/>
 			<Discord Id="DRPC_RISE_STATE_PRACTICE"
-					 String="正在訓練場練習"/>
+					 String="正在訓練場"/>
 			<Discord Id="DRPC_RISE_STATE_RAMPAGE"
 					 String="正在百龍夜行"/>
 			<Discord Id="DRPC_RISE_STATE_CHAR_SELECTION"
-					 String="在選擇角色"/>
+					 String="選角中"/>
+
+			<!-- World -->
+			<Discord Id="DRPC_WORLD_CHARACTER_STRING_FORMAT"
+					 String="{Character} | HR: {HighRank} | MR: {MasterRank}"/>					 
+			<Discord Id="DRPC_WORLD_STATE_PRACTICE"
+					 String="正在訓練場"/>
 		</Integrations>
 		<Settings>
 			<Setting Id="CLIENT_STRING"
 					 String="客戶端"
-					 Description="客戶端設置"/>
+					 Description="客戶端設定"/>
 			<Setting Id="DISCORD_RPC_STRING"
-					 String="Discord 線上狀態設置"
-					 Description="其他Discord 線上狀態設置"/>
+					 String="Discord線上狀態設定"
+					 Description="其他Discord線上狀態設定"/>
 			<Setting Id="OVERLAY_STRING"
 					 String="覆蓋層"
-					 Description="覆蓋層設置"/>
+					 Description="覆蓋層設定"/>
 			<Setting Id="ABNORMALITY_TRAY_STRING"
 					 String="狀態列"
 					 Description="狀態列設定"/>
 			<Setting Id="MONSTER_WIDGET_STRING"
 					 String="魔物小工具"
-					 Description="魔物小工具配置"/>
+					 Description="魔物小工具設定"/>
 			<Setting Id="WIREBUG_WIDGET_STRING"
 					 String="翔蟲小工具"
-					 Description="翔蟲小工具配置"/>
+					 Description="翔蟲小工具設定"/>
 			<Setting Id="ACTIVITIES_WIDGET_STRING"
-					 String="廣場活動監測"
-					 Description=""/>
+					 String="隨從活動小工具"
+					 Description="隨從活動小工具設定"/>
 			<Setting Id="METER_WIDGET_STRING"
-					 String="傷害測量小工具"
-					 Description="傷害測量小工具"/>
+					 String="傷害小工具"
+					 Description="傷害小工具設定"/>
 			<Setting Id="CHAT_WIDGET_STRING"
-					 String="Chat Widget"
-					 Description="Chat Widget configurations"/>
+					 String="聊天小工具"
+					 Description="聊天小工具設定"/>
 			<Setting Id="SPECIALIZED_TOOL_WIDGET_STRING"
-					 String="Specialized Tool Widget"
-					 Description="Specialized Tool Widget configurations"/>
+					 String="衣裝小工具"
+					 Description="衣裝小工具設定"/>
 			<Setting Id="DEV_TOOLS_STRING"
 					 String="開發工具"
 					 Description="高級開發工具"/>
 
 			<Setting Id="ABNORMALITY_SONGS_STRING"
 					 String="旋律"
-					 Description="狩獵笛的旋律效果"/>
+					 Description="狩獵笛旋律效果"/>
 			<Setting Id="ABNORMALITY_CONSUMABLES_STRING"
-					 String="增幅道具"
-					 Description="增幅道具和環境生物的效果"/>
+					 String="增益(buff)"
+					 Description="增益(buff)效果"/>
 			<Setting Id="ABNORMALITY_DEBUFFS_STRING"
-					 String="Debuff 減益"
-					 Description="Debuff 減益效果"/>]
+					 String="減益(debuff)"
+					 Description="減益(debuff)效果"/>
+			<Setting Id="ABNORMALITY_PALICO_STRING"
+					 String="貓咪演奏"
+					 Description="貓咪演奏效果"/>
 			<Setting Id="ABNORMALITY_SKILLS_STRING"
 					 String="裝備技能"
-					 Description="裝備技能的效果"/>
+					 Description="裝備技能效果"/>
 			<Setting Id="ABNORMALITY_FOODS_STRING"
 					 String="糰子技能"
-					 Description="糰子技能的效果"/>
+					 Description="糰子技能效果"/>
 
 			<Setting Id="ENABLE_SELF_UPDATE"
 					 String="自動更新"
-					 Description="如果啟用，HunterPie 會自動更新到最新版本."/>
+					 Description="如果啟用，HunterPie 會自動更新到最新版本。"/>
 			<Setting Id="ENABLE_SELF_UPDATE_CONFIRMATION"
 					 String="自動更新確認"
 					 Description="如果啟用，HunterPie 將請求自動更新的權限。"/>
 			<Setting Id="SUPPORTER_SECRET_TOKEN_STRING"
 					 String="贊助者代幣"
-					 Description="用於獲取測試版更新的贊助者代幣。"/>
+					 Description="用於獲得測試版更新的贊助者代幣。"/>
 			<Setting Id="LANGUAGE_STRING"
 					 String="語言"
-					 Description="HunterPie的默認語言"/>
+					 Description="HunterPie 的預設語言"/>
+			<Setting Id="DEFAULT_RUN_GAME_TYPE"
+					 String="預設遊戲"
+					 Description="預設要啟動的遊戲，將其更改為另一個遊戲也會更改設定視窗以顯示與該遊戲關聯的設定。"/>
 			<Setting Id="MINIMIZE_TO_SYSTEM_TRAY_STRING"
-					 String="最小化到工具列"
-					 Description="如果啟用，HunterPie 將最小化到工具列。"/>
+					 String="最小化到工作列"
+					 Description="如果啟用，HunterPie 將最小化到工作列。"/>
+			<Setting Id="SEAMLESS_STARTUP_STRING"
+					 String="啟用直接啟動"
+					 Description="如果啟用，HunterPie 將直接啟動，不開啟設定視窗。"/>
+			<Setting Id="SEAMLESS_SHUTDOWN_STRING"
+					 String="啟用直接關閉"
+					 Description="如果啟用，HunterPie 將直接關閉，不顯示確認視窗、"/>
+			<Setting Id="SHUTDOWN_ON_GAME_EXIT"
+					 String="遊戲結束時關閉"
+					 Description="如果啟用，HunterPie 將在遊戲結束時自動關閉。"/>
 			<Setting Id="RENDERING_STRATEGY_STRING"
 					 String="渲染方式"
-					 Description="HunterPie的默認渲染。軟體渲染將使用您的CPU來渲染覆蓋層，硬體渲染將使用您的顯卡來渲染覆蓋層。"/>
+					 Description="HunterPie 的預設渲染。軟體渲染將使用您的CPU來渲染覆蓋層，硬體渲染將使用您的顯卡來渲染覆蓋層。"/>
 			<Setting Id="POLLING_RATE_STRING"
 					 String="記憶體掃描延遲(毫秒)"
-					 Description="HunterPie的掃描延遲, 設置較低的數字會使HunterPie更加平滑，但是會占用更多的CPU資源。"/>
+					 Description="HunterPie 的掃描延遲，設置較低的數字會使HunterPie 更加平滑，但是會占用更多的CPU資源。"/>
 			<Setting Id="DEV_ENABLE_FEATURE_FLAG"
 					 String="開發功能標誌"
-					 Description="如果啟用，HunterPie將允許您啟用開發中的功能標誌。"/>
+					 Description="如果啟用，HunterPie 將允許您啟用開發中的功能標誌。"/>
 
 			<Setting Id="DRPC_ENABLE_RICH_PRESENCE"
 					 String="Discord 線上狀態配置"
-					 Description="如果啟用, HunterPie將在Discord狀態展示您的活動。"/>
+					 Description="如果啟用，HunterPie 將在Discord狀態展示您的活動。"/>
 			<Setting Id="DRPC_ENABLE_SHOW_CHARACTER_INFO"
-					 String="顯示示角色訊息"
-					 Description="如果啟用, HunterPie將會在您的Discord狀態中展示您的角色名稱與等級。"/>
+					 String="顯示角色訊息"
+					 Description="如果啟用，HunterPie 將會在您的Discord狀態中展示您的角色名稱與等級。"/>
 			<Setting Id="DRPC_ENABLE_SHOW_MONSTER_HEALTH"
 					 String="顯示目標魔物的血量"
-					 Description="如果啟用, 當可用時HunterPie將會在您的Discord狀態中顯示目標魔物的血量。"/>
+					 Description="如果啟用，當可用時HunterPie 將會在您的Discord狀態中顯示目標魔物的血量。"/>
 
 			<Setting Id="OVERLAY_KEYBINDING_TOGGLE_DESIGN_MODE"
-					 String="[Hot Key] 切換編輯模式熱鍵"
-					 Description="用於打開和關閉編輯模式的熱鍵。"/>
+					 String="[Hot Key] 切換編輯模式快捷鍵"
+					 Description="用於打開和關閉編輯模式的快捷鍵。"/>
 			<Setting Id="OVERLAY_HIDE_WHEN_GAME_UNFOCUS_STRING"
-					 String="背景執行時隱藏小工具"
-					 Description="啟用時, 當遊戲背景執行時所有小工具會自動隱藏"/>
-			
+					 String="當遊戲不在最上層時隱藏"
+					 Description="如果啟用，當遊戲不在最上層時，所有小工具皆會隱藏。"/>
 
 			<Setting Id="INITIALIZE_WIDGET_STRING"
-					 String="初始化介面"
-					 Description="如果啟用, HunterPie將始終初始化此介面。如果您不需要此介面，請將其關閉。"/>
+					 String="初始化小工具"
+					 Description="如果啟用，HunterPie 將始終初始化此小工具。如果您不需要此小工具，請將其關閉。"/>
 			<Setting Id="ENABLE_WIDGET_STRING"
-					 String="顯示小工具介面"
-					 Description="如果啟用, 只要有可以顯示的數據，HunterPie將會始終顯示此介面。"/>
+					 String="顯示小工具"
+					 Description="如果啟用，只要有可以顯示的數據，HunterPie 將會始終顯示此小工具。"/>
 			<Setting Id="HIDE_WHEN_UI_VISIBLE_STRING"
-					 String="當HUD顯示, 隱藏小工具 "
-					 Description="啟用時,當HUD顯示時會隱藏小工具(例如: 任務結束時, 在帳篷內, 與NPC對話時 等等之類的情況)"/>
+					 String="當HUD可見時隱藏"
+					 Description="如果啟用，當HUD可見時 (例如:任務結束、在帳篷裡、與NPC對話等等)，HunterPie 將會自動隱藏小工具。"/>
 			<Setting Id="WIDGET_POSITION"
-					 String="介面位置"
-					 Description="控制介面的位置。"/>
+					 String="小工具位置"
+					 Description="控制小工具的位置。"/>
 			<Setting Id="WIDGET_OPACITY"
 					 String="不透明度"
-					 Description="控制介面的不透明度。"/>
+					 Description="控制小工具的不透明度。"/>
 			<Setting Id="WIDGET_SCALE"
 					 String="小工具比例"
-					 Description="調整小工具介面的線性比例，數值越高，介面就越大。"/>
+					 Description="調整小工具的線性比例，數值越高，小工具就越大。"/>
 			<Setting Id="ORIENTATION_STRING"
 					 String="小工具排列"
 					 Description="在小工具顯示多種魔物時，更改小工具橫向或直向的排列。"/>
 
 			<Setting Id="MONSTER_WIDGET_SHOW_ONLY_TARGET_STRING"
 					 String="狩獵目標鎖定"
-					 Description="啟用時，只會顯示已鎖定的指定魔物。"/>
+					 Description="如果啟用，只會顯示已鎖定的指定魔物。"/>
 			<Setting Id="MONSTER_WIDGET_ENABLE_STAMINA_STRING"
 					 String="魔物耐力"
-					 Description="如果啟用，HunterPie 將在其生命值條下方顯示魔物的耐力。"/>
+					 Description="如果啟用，HunterPie  將在其生命值條下方顯示魔物的耐力。"/>
 			<Setting Id="MONSTER_WIDGET_MAX_WIDTH_STRING"
 					 String="魔物小工具最大寬度"
 					 Description="調整魔物血條的最大寬度。"/>
@@ -442,28 +645,28 @@
 					 Description="調整魔物血條的最小寬度。如果啟用「自動調整魔物血條寬距」，它將根據此設置自動更改。"/>
 			<Setting Id="MONSTER_WIDGET_ENABLE_PARTS_STRING"
 					 String="魔物部位顯示"
-					 Description="如果啟用，將啟用魔物部位。"/>
+					 Description="如果啟用，將顯示魔物部位。"/>
 			<Setting Id="MONSTER_WIDGET_AUTO_HIDE_PARTS_STRING"
-					 String="自動隱藏魔物的部位"
+					 String="自動隱藏魔物部位"
 					 Description="如果啟用，閒置的魔物部位將在 X 秒後隱藏。"/>
 			<Setting Id="MONSTER_WIDGET_AUTO_HIDE_PARTS_DELAY_STRING"
-					 String="延後隱藏魔物閒置的部位"
-					 Description="延後隱藏已變為閒置的部位。"/>
+					 String="魔物部位顯示時間"
+					 Description="魔物部位顯示的時間，時間結束會自動隱藏 (若開啟自動隱藏)。"/>
 			<Setting Id="MONSTER_WIDGET_ENABLE_AILMENTS_STRING"
-					 String="魔物狀態異常顯示"
-					 Description="如果啟用，魔物狀態異常顯示將被啟用。"/>
+					 String="魔物異常狀態顯示"
+					 Description="如果啟用，將顯示魔物異常狀態。"/>
 			<Setting Id="MONSTER_WIDGET_AUTO_HIDE_AILMENTS_STRING"
-					 String="自動隱藏魔物的狀態異常"
-					 Description="如果啟用，閒置的魔物部位將在 X 秒後隱藏。"/>
+					 String="自動隱藏魔物狀態異常"
+					 Description="如果啟用，閒置的魔物異常狀態將在 X 秒後隱藏。"/>
 			<Setting Id="MONSTER_WIDGET_AUTO_HIDE_AILMENTS_DELAY_STRING"
-					 String="延後隱藏魔物閒置的異常狀態"
-					 Description="延後隱藏已變為閒置的異常狀態。"/>
+					 String="魔物異常狀態顯示時間"
+					 Description="魔物異常狀態顯示的時間，時間結束會自動隱藏 (若開啟自動隱藏)。"/>
 			<Setting Id="MONSTER_WIDGET_DYNAMIC_RESIZE_STRING"
 					 String="自動調整魔物血條寬距"
-					 Description="啟用時，它會根據顯示的魔物數量自動調整魔物血條的長度。"/>
+					 Description="如果啟用，它會根據顯示的魔物數量自動調整魔物血條的長度。"/>
 			<Setting Id="MONSTER_WIDGET_HIDE_UNKNOWN_PARTS_STRING"
-					 String="隱藏未知的魔物部位"
-					 Description="啟用時，會隱藏未知部位"/>
+					 String="隱藏未知魔物部位"
+					 Description="如果啟用，HunterPie 將隱藏未知部位 (被標記為 &quot;???&quot;)。"/>
 
 			<Setting Id="ABNORMALITY_TRAYS_STRING"
 					 String="Buff∕Debuff 工具列"
@@ -483,6 +686,37 @@
 					 String="最長時間"/>
 			<Setting Id="SORT_BY_DISABLED_STRING"
 					 String="禁用"/>
+			<Setting Id="ACTIVITIES_ENABLE_ARGOSY_STRING"
+					 String="顯示交易船"
+					 Description="如果啟用，HunterPie 將顯示交易船資訊。"/>
+			<Setting Id="ACTIVITIES_ENABLE_TRAINING_DOJO_STRING"
+					 String="顯示隨從道場"
+					 Description="如果啟用，HunterPie 將顯示隨從道場資訊。"/>
+
+			<Setting Id="DAMAGE_METER_ENABLE_SHOULD_HIGHLIGHT_MYSELF"
+					 String="強調自己"
+					 Description="如果啟用，您的名字將會被強調顯示。"/>
+			<Setting Id="DAMAGE_METER_ENABLE_SHOULD_BLUR_NAMES"
+					 String="模糊名字"
+					 Description="如果啟用，所有人的名字將被模糊處理。"/>
+			<Setting Id="DAMAGE_METER_ENABLE_DPS_PLOT"
+					 String="顯示DPS圖表"
+					 Description="如果啟用，DPS圖表將會顯示。"/>
+			<Setting Id="DAMAGE_METER_SELF_COLOR_STRING"
+					 String="我的顏色"
+					 Description="您所顯示的顏色。"/>
+			<Setting Id="DAMAGE_METER_PLAYER_1_COLOR_STRING"
+					 String="第一位玩家(隊長)的顏色"
+					 Description="第一位玩家(隊長)所顯示的顏色。"/>
+			<Setting Id="DAMAGE_METER_PLAYER_2_COLOR_STRING"
+					 String="第二位玩家的顏色"
+					 Description="第二位玩家所顯示的顏色。"/>
+			<Setting Id="DAMAGE_METER_PLAYER_3_COLOR_STRING"
+					 String="第三位玩家的顏色"
+					 Description="第三位玩家所顯示的顏色。"/>
+			<Setting Id="DAMAGE_METER_PLAYER_4_COLOR_STRING"
+					 String="第四位玩家的顏色"
+					 Description="第四位玩家所顯示的顏色。"/>
 
 			<Setting Id="DEV_MOCK_MONSTER_WIDGET_STRING"
 					 String="開發人員：模擬魔物功能"/>
