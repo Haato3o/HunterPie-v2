@@ -137,6 +137,21 @@ def extract_crown(monster) -> OrderedDict:
     
     return crowns
 
+def extract_weaknesses(monster) -> OrderedDict:
+    weaknesses = OrderedDict(Weakness = [])
+
+    if monster["Weaknesses"] is None:
+        return OrderedDict()
+        
+    for weakness in monster["Weaknesses"]["Weakness"]:
+        v2_weakness = OrderedDict()
+        weakness_id: str =  weakness["@ID"]
+        v2_weakness["@Name"] = weakness_id.removeprefix("ELEMENT_").lower().capitalize()
+        weaknesses["Weakness"].append(v2_weakness)
+
+    return weaknesses
+
+
 def get_equivalent_v2_name(partId: str) -> str:
     if partId not in v2_part_names:
         logger.info("Missing name for %s", partId)
@@ -165,13 +180,14 @@ def extract_parts(monster) -> List[OrderedDict]:
 
     return parts
 
-def iterate_monsters(monsters: OrderedDict) -> OrderedDict:
+def iterate_monsters(monsters: OrderedDict) -> List[OrderedDict]:
     monster_list = []
 
     for monster in monsters:
         node = OrderedDict()
         node["@Id"] = monster["@GameID"]
         node["Crowns"] = extract_crown(monster)
+        node["Weaknesses"] = extract_weaknesses(monster)
         node["Parts"] = extract_parts(monster)
         monster_list.append(node)
 

@@ -19,7 +19,8 @@ namespace HunterPie.Core.System.Windows
     {
 
         protected Thread pooler;
-        private bool isProcessForeground;
+        private bool _isProcessForeground;
+        private bool _shouldPauseThread;
         protected bool ShouldPollProcess = true;
        
         private IMemory memory; 
@@ -39,18 +40,18 @@ namespace HunterPie.Core.System.Windows
         public bool IsRunning { get; private set; }
         public bool IsProcessForeground
         {
-            get => isProcessForeground;
+            get => _isProcessForeground;
             private set
             {
-                if (isProcessForeground != value)
+                if (_isProcessForeground != value)
                 {
-                    isProcessForeground = value;
+                    _isProcessForeground = value;
 
                     this.Dispatch(
                         value ? OnGameFocus 
                               : OnGameUnfocus, 
                         new ProcessEventArgs(Name)
-                        );
+                    );
                 }
             }
         }
@@ -73,21 +74,27 @@ namespace HunterPie.Core.System.Windows
         {
             while (ShouldPollProcess)
             {
+                if (_shouldPauseThread)
+                {
+                    try { Thread.Sleep(Timeout.Infinite); }
+                    catch(ThreadInterruptedException) { continue;  }
+                }
+
                 PollProcessInfo();
-                Thread.Sleep(80);
+                Thread.Sleep(150);
             }
         }
 
         private void PollProcessInfo()
         {
-            Process mhProcess = Process.GetProcessesByName(Name)
-                .FirstOrDefault(process => !string.IsNullOrEmpty(process?.MainWindowTitle));
-
-            if (Process?.HasExited ?? false)
+            if (Process is not null && Process!.HasExited)
             {
                 OnProcessExit();
                 return;
             }
+
+            Process mhProcess = Process.GetProcessesByName(Name)
+                .FirstOrDefault(process => !string.IsNullOrEmpty(process?.MainWindowTitle));
 
             if (mhProcess is null)
                 return;
@@ -136,5 +143,12 @@ namespace HunterPie.Core.System.Windows
             this.Dispatch(OnGameClosed, new(Name));
         }
 
+        public void Pause() => _shouldPauseThread = true;
+
+        public void Resume()
+        {
+            _shouldPauseThread = false;
+            pooler.Interrupt();
+        }
     }
 }

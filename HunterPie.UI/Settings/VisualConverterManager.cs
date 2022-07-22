@@ -15,8 +15,6 @@ using Localization = HunterPie.Core.Client.Localization.Localization;
 using System.Xml;
 using HunterPie.Core.Domain.Enums;
 using HunterPie.Core.Client;
-using HunterPie.Core.Domain.Mapper;
-using HunterPie.Core.Client.Configuration.Enums;
 
 namespace HunterPie.UI.Settings
 {

@@ -17,5 +17,6 @@ namespace HunterPie.Core.Game.World
             Process = process;
         }
 
+        public override void Dispose() {}
     }
 }

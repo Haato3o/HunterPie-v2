@@ -1,7 +1,10 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:sys="clr-namespace:System;assembly=mscorlib"
-                    xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf">
+                    xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+                    xmlns:converters="clr-namespace:HunterPie.UI.Architecture.Converters;assembly=HunterPie.UI">
+    <!-- Converters -->
+    <converters:EnumToStringConverter x:Key="EnumToStringConverter"/>
     <!-- Colors -->
     <LinearGradientBrush x:Key="HUNTERPIE_ACCENT_COLOR" EndPoint="1,1" StartPoint="0,1">
         <GradientStop Color="#FF4B8EEE"/>
@@ -47,6 +50,7 @@
     <SolidColorBrush x:Key="BUTTON_ICON_FOREGROUND">WhiteSmoke</SolidColorBrush>
 
     <SolidColorBrush x:Key="LOGGER_LEVEL_INFO">#5cb7f2</SolidColorBrush>
+    <SolidColorBrush x:Key="LOGGER_LEVEL_NATIVE">#e84ad3</SolidColorBrush>
     <SolidColorBrush x:Key="LOGGER_LEVEL_DEBUG">#35cc76</SolidColorBrush>
     <SolidColorBrush x:Key="LOGGER_LEVEL_WARN">#E6CF5E</SolidColorBrush>
     <SolidColorBrush x:Key="LOGGER_LEVEL_ERROR">#e65e5e</SolidColorBrush>
@@ -197,8 +201,8 @@
     </LinearGradientBrush>
 
     <!-- Font -->
-    <FontFamily x:Key="HUNTERPIE_DEFAULT_FONT">pack://application:,,,/HunterPie.UI;component/Resources/#Work Sans</FontFamily>
-        
+    <FontFamily x:Key="HUNTERPIE_DEFAULT_FONT">Work Sans</FontFamily>
+
     <!-- Constants -->
     <sys:Double x:Key="HUNTERPIE_SIDEBAR_WIDTH">300</sys:Double>
 
@@ -689,5 +693,14 @@
             </Setter.Value>
         </Setter>
     </Style>
+
+    <Style TargetType="{x:Type TextBlock}">
+        <Setter Property="FontFamily" Value="{StaticResource HUNTERPIE_DEFAULT_FONT}"/>
+    </Style>
+
+    <DataTemplate x:Key="DATA_TEMPLATE_SETTINGS_ENUM_ELEMENT">
+        <TextBlock Text="{Binding ., Mode=OneTime, Converter={StaticResource EnumToStringConverter}}"
+                   FontFamily="{StaticResource HUNTERPIE_DEFAULT_FONT}"/>
+    </DataTemplate>
     
 </ResourceDictionary>

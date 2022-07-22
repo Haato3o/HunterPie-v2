@@ -1,13 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
 
   <PropertyGroup>
-    <TargetFramework>net5.0-windows</TargetFramework>
+    <TargetFramework>net6.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
-	<UseWindowsForms>true</UseWindowsForms>
+    <UseWindowsForms>true</UseWindowsForms>
     <Configurations>Debug;Release;Deploy</Configurations>
-    <AssemblyVersion>2.1.1.143</AssemblyVersion>
-    <FileVersion>2.1.1.143</FileVersion>
-    <Version>2.1.0.0</Version>
+    <AssemblyVersion>2.2.1.322</AssemblyVersion>
+    <FileVersion>2.2.1.322</FileVersion>
+    <Version>2.2.0.0</Version>
+    <LangVersion>10.0</LangVersion>
  </PropertyGroup>
 
   <ItemGroup>
@@ -29,21 +30,6 @@
     <Resource Include="Resources\Colors.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Resource>
-    <Resource Include="Resources\WorkSans-ExtraLight.ttf">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Resources\WorkSans-Light.ttf">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Resources\WorkSans-Medium.ttf">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Resources\WorkSans-Regular.ttf">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Resources\WorkSans-SemiBold.ttf">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
     <Resource Include="Resources\Abnormalities.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -57,6 +43,21 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Assets\Fonts\WorkSans-ExtraLight.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\Fonts\WorkSans-Light.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\Fonts\WorkSans-Medium.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\Fonts\WorkSans-SemiBold.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\Fonts\WorkSans.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Assets\Monsters\Icons\em001_01_ID.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

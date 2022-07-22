@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HunterPie.Core.Client.Localization;
+using System;
 using System.Globalization;
 using System.Windows.Data;
 
@@ -8,12 +9,15 @@ namespace HunterPie.UI.Architecture.Converters
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            return Enum.GetName(value.GetType(), value);
+            if (!value.GetType().IsEnum)
+                return null;
+
+            return Localization.GetEnumString(value);
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            return Enum.Parse(targetType, (string)value);
+            throw new NotImplementedException();
         }
     }
 }

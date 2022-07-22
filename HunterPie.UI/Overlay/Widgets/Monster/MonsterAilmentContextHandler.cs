@@ -17,6 +17,11 @@ namespace HunterPie.UI.Overlay.Widgets.Monster
             HookEvents();
         }
 
+        ~MonsterAilmentContextHandler()
+        {
+            UnhookEvents();
+        }
+
         private void HookEvents()
         {
             Context.OnTimerUpdate += OnTimerUpdate;
@@ -62,12 +67,6 @@ namespace HunterPie.UI.Overlay.Widgets.Monster
             Buildup = Context.BuildUp;
             MaxTimer = Context.MaxTimer;
             Timer = Context.Timer;
-        }
-
-        protected override void DisposeResources()
-        {
-            base.DisposeResources();
-            UnhookEvents();
         }
     }
 }

@@ -17,6 +17,11 @@ namespace HunterPie.UI.Overlay.Widgets.Monster
             Update();
         }
 
+        ~MonsterPartContextHandler()
+        {
+            UnhookEvents();
+        }
+
         private void HookEvents()
         {
             Context.OnHealthUpdate += OnHealthUpdate;
@@ -72,12 +77,6 @@ namespace HunterPie.UI.Overlay.Widgets.Monster
             Health = e.Health;
 
             IsPartBroken = MaxHealth <= 0 || Health == MaxHealth && (Breaks > 0 || Flinch != MaxFlinch);
-        }
-
-        protected override void DisposeResources()
-        {
-            base.DisposeResources();
-            UnhookEvents();
         }
 
         private void Update()

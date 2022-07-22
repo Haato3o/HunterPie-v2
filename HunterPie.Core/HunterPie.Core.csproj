@@ -1,12 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <Authors>Haato</Authors>
     <Configurations>Debug;Release;Deploy</Configurations>
-    <Version>2.1.0.0</Version>
-    <AssemblyVersion>2.1.1.68</AssemblyVersion>
-    <FileVersion>2.1.1.68</FileVersion>
+    <Version>2.2.0.0</Version>
+    <AssemblyVersion>2.2.1.130</AssemblyVersion>
+    <FileVersion>2.2.1.130</FileVersion>
+    <LangVersion>10.0</LangVersion>
  </PropertyGroup>
 
   <ItemGroup>

@@ -40,6 +40,9 @@ namespace HunterPie.Core.Client.Configuration
         [SettingField("RENDERING_STRATEGY_STRING", requiresRestart: true)]
         public Observable<RenderingStrategy> Render { get; set; } = RenderingStrategy.Software;
 
+        [SettingField("RENDERING_FPS_STRING", requiresRestart: true)]
+        public Range RenderFramePerSecond { get; set; } = new Range(60, 60, 1, 1);
+
         [SettingField("POLLING_RATE_STRING")]
         public Range PollingRate { get; set; } = new(100, 1000, 1, 1);
 

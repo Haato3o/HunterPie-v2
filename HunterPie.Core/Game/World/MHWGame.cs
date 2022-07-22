@@ -18,7 +18,6 @@ namespace HunterPie.Core.Game.World
     {
         private readonly MHWPlayer _player;
         private readonly Dictionary<long, IMonster> _monsters = new();
-        private readonly IProcessManager _process;
         private bool _isMouseVisible;
         private float _timeElapsed;
         private int _deaths;
@@ -73,9 +72,8 @@ namespace HunterPie.Core.Game.World
             }
         }
 
-        public MHWGame(IProcessManager process)
+        public MHWGame(IProcessManager process) : base(process)
         {
-            _process = process;
             _player = new(process);
 
             ScanManager.Add(_player, this);
@@ -185,5 +183,7 @@ namespace HunterPie.Core.Game.World
 
             this.Dispatch(OnMonsterDespawn, monster);
         }
+
+        public void Dispose() {}
     }
 }

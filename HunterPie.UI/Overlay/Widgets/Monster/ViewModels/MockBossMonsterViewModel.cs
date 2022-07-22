@@ -1,26 +1,32 @@
 ﻿using HunterPie.Core.Client.Configuration.Overlay;
 using HunterPie.Core.Game.Enums;
+using HunterPie.UI.Architecture.Test;
 using System;
-using System.Timers;
 
 namespace HunterPie.UI.Overlay.Widgets.Monster.ViewModels
 {
     internal class MockBossMonsterViewModel : BossMonsterViewModel
     {
-        private Timer timer = new(1000);
         private readonly MonsterWidgetConfig _mockConfig;
 
         public MockBossMonsterViewModel(MonsterWidgetConfig config) : base(config)
         {
             _mockConfig = config;
+            InitMock();
+        }
+
+        private void InitMock()
+        {
             MockParts();
             MockAilments();
-            timer.Elapsed += (_, __) =>
+            MockWeakenesses();
+
+            MockBehavior.Run(() =>
             {
                 for (int i = 0; i < Parts.Count / 2; i++)
                 {
                     var part = Parts[i];
-                    
+
                     if (!part.IsPartBroken)
                         part.Health -= Math.Min(20, part.MaxHealth);
 
@@ -44,8 +50,7 @@ namespace HunterPie.UI.Overlay.Widgets.Monster.ViewModels
                     if (part.Flinch < 0)
                         part.Flinch = part.MaxFlinch;
                 }
-            };
-            timer.Start();
+            });
         }
 
         private void MockParts()
@@ -127,6 +132,18 @@ namespace HunterPie.UI.Overlay.Widgets.Monster.ViewModels
                         MaxBuildup = 100.0
                     }
                 );
+            }
+        }
+
+        private void MockWeakenesses()
+        {
+            Random random = new();
+
+            for (int i = 0; i < 2; i++)
+            {
+                int maxElements = Enum.GetValues(typeof(Element)).Length - 1;
+                Element randomElement = (Element)random.Next(maxElements);
+                Weaknesses.Add(randomElement);
             }
         }
     }

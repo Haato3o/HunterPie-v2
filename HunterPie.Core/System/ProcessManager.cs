@@ -36,16 +36,36 @@ namespace HunterPie.Core.System
 
         private static void OnGameClosedCallback(object sender, ProcessEventArgs e)
         {
-            _game = GameProcess.None;
-            OnProcessClosed?.Invoke(sender, new((IProcessManager)sender, e.ProcessName));
+            if (sender is IProcessManager manager)
+            {
+                ResumeAllPollingThreads(manager);
+                _game = GameProcess.None;
+                OnProcessClosed?.Invoke(sender, new(manager, e.ProcessName));
+            }
         }
 
         private static void OnGameStartCallback(object sender, ProcessEventArgs e)
         {
-            if (sender is IProcessManager process)
-                _game = process.Game;
+            if (sender is IProcessManager manager)
+            {
+                PauseAllPollingThreads(manager);
+                _game = manager.Game;
+                OnProcessFound?.Invoke(sender, new((IProcessManager)sender, e.ProcessName));
+            }
+        }
 
-            OnProcessFound?.Invoke(sender, new((IProcessManager)sender, e.ProcessName));
+        private static void PauseAllPollingThreads(IProcessManager activeManager)
+        {
+            foreach (IProcessManager manager in Managers)
+                if (manager != activeManager)
+                    manager.Pause();
+        }
+
+        private static void ResumeAllPollingThreads(IProcessManager activeManager)
+        {
+            foreach (IProcessManager manager in Managers)
+                if (manager != activeManager)
+                    manager.Resume();
         }
     }
 }

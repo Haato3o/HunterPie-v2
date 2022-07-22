@@ -1,0 +1,19 @@
+#include "../../../pch.h"
+#include "RiseUtils.h"
+
+#define MAX_SUNBREAK_BIG_MONSTER_ID 97
+#define MIN_SUNBREAK_BIG_MONSTER_ID 78
+#define MAX_BIG_MONSTER_ID 46
+#define MIN_BIG_MONSTER_ID 0
+#define VANILLA_MONSTERS_MASK 0b11111111111111111111111111111111111111111111111l
+#define SUNBREAK_MONSTERS_MASK 0b11111011111011110111
+
+bool Games::Rise::Utils::IsBigMonster(int32_t id)
+{
+    if (id >= MIN_SUNBREAK_BIG_MONSTER_ID && id <= MAX_SUNBREAK_BIG_MONSTER_ID)
+        return (SUNBREAK_MONSTERS_MASK >> (id - MIN_SUNBREAK_BIG_MONSTER_ID)) & 1;
+    else if (id >= MIN_BIG_MONSTER_ID && id <= MAX_BIG_MONSTER_ID)
+        return (VANILLA_MONSTERS_MASK >> id) & 1;
+
+    return false;
+}

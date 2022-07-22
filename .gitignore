@@ -6,6 +6,8 @@ obj
 packages
 
 x64
+HunterPie.Native/Debug
+Release
 
 .env
 

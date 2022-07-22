@@ -27,5 +27,10 @@ namespace HunterPie.Core.Game.Rise.Definitions
         public bool IsVillage() => Type == 4;
         public bool IsHuntingZone() => Type >= 5 && Type <= 11;
         public bool IsLoadingScreen() => Type == 12;
+
+        public bool IsIrrelevantStage()
+        {
+            return IsMainMenu() || IsSelectingCharacter() || IsLoadingScreen();
+        }
     }
 }

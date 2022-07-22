@@ -12,6 +12,7 @@
         public float unk4;
         public float Timer;
         public float MaxTimer;
+        public float unk5;
         public int Counter;
     }
 }

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
@@ -88,5 +89,19 @@ namespace HunterPie.Core.Client.Localization
         public static XmlNodeList QueryMany(string query) => _instance.document.SelectNodes(query);
         public static string QueryString(string query) => _instance.document.SelectSingleNode(query)?.Attributes["String"]?.Value;
         public static string QueryDescription(string query) => Query(query)?.Attributes["Description"]?.Value;
+
+        public static string GetEnumString(object enumValue)
+        {
+            MemberInfo memberInfo = enumValue.GetType()
+                                             .GetMember(enumValue.ToString())
+                                             .First();
+
+            LocalizationAttribute? attribute = memberInfo.GetCustomAttribute<LocalizationAttribute>();
+
+            if (attribute is null)
+                return enumValue.ToString();
+
+            return QueryString(attribute.XPath);
+        }
     }
 }

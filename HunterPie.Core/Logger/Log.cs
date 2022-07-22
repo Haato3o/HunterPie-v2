@@ -81,6 +81,46 @@ namespace HunterPie.Core.Logger
             }
         }
 
+        public static async void Native(string message)
+        {
+            if (ClientConfig.Config.Development.ClientLogLevel > LogLevel.Info)
+                return;
+
+            try
+            {
+                await _semaphore.WaitAsync();
+
+                foreach (ILogger logger in Instance._io)
+                    await logger.Native(message);
+
+            }
+            catch { }
+            finally
+            {
+                _semaphore.Release();
+            }
+        }
+
+        public static async void Native(string format, params object[] args)
+        {
+            if (ClientConfig.Config.Development.ClientLogLevel > LogLevel.Info)
+                return;
+
+            try
+            {
+                await _semaphore.WaitAsync();
+
+                foreach (ILogger logger in Instance._io)
+                    await logger.Native(format, args);
+
+            }
+            catch { }
+            finally
+            {
+                _semaphore.Release();
+            }
+        }
+
         public static async void Info(string message)
         {
             if (ClientConfig.Config.Development.ClientLogLevel > LogLevel.Info)

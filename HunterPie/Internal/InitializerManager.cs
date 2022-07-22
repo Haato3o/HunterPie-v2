@@ -11,16 +11,17 @@ namespace HunterPie.Internal
     {
         private static HashSet<IInitializer> _initializers = new()
         {
+            new CustomFontsInitializer(),
             // Core
             new LocalConfigInitializer(),
             new ClientConfigMigrationInitializer(),
             new ClientConfigInitializer(),
             new ConfigManagerInitializer(),
-            new HunterPieLoggerInitializer(),
             new FeatureFlagsInitializer(),
+            new NativeLoggerInitializer(),
+            new HunterPieLoggerInitializer(),
             new MapperFactoryInitializer(),
 
-            new NativeLoggerInitializer(),
             new ExceptionCatcherInitializer(),
             new DialogManagerInitializer(),
             new UITracerInitializer(),

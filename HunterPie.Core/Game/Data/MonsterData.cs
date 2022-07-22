@@ -1,4 +1,5 @@
 ﻿using HunterPie.Core.Game.Data.Schemas;
+using HunterPie.Core.Game.Enums;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -63,12 +64,14 @@ namespace HunterPie.Core.Game.Data
 
                 
                 MonsterSizeSchema sizeSchema = ParseSize(monster);
+                Element[] weaknesses = ParseWeakness(monster);
 
                 MonsterDataSchema schema = new()
                 {
                     Id = int.Parse(monster.Attributes["Id"].Value),
                     Size = sizeSchema,
-                    Parts = partsArray
+                    Parts = partsArray,
+                    Weaknesses = weaknesses
                 };
 
                 Monsters.Add(schema.Id, schema);
@@ -141,6 +144,23 @@ namespace HunterPie.Core.Game.Data
             };
         }
         
+        private static Element[] ParseWeakness(XmlNode monster)
+        {
+            XmlNodeList weaknesses = monster.SelectNodes("Weaknesses/Weakness");
+            Element[] elements = new Element[weaknesses.Count];
+
+            for (int i = 0; i < weaknesses.Count; i++)
+            {
+                XmlNode weakness = weaknesses[i];
+
+                Enum.TryParse(typeof(Element), weakness.Attributes["Name"]?.Value, out object element);
+
+                elements[i] = (Element)element;
+            }
+
+            return elements;
+        }
+
         public static MonsterDataSchema? GetMonsterData(int id)
         {
             if (!Monsters.ContainsKey(id))

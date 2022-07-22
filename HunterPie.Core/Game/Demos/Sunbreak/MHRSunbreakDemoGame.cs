@@ -109,5 +109,7 @@ namespace HunterPie.Core.Game.Demos.Sunbreak
 
             this.Dispatch(OnMonsterDespawn, monster);
         }
+
+        public void Dispose() {}
     }
 }

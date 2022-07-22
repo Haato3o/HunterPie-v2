@@ -5,7 +5,7 @@
              xmlns:converters="clr-namespace:HunterPie.UI.Architecture.Converters"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:HunterPie.UI.Overlay.Widgets.Damage.View"
-             xmlns:viewmodels="clr-namespace:HunterPie.UI.Overlay.Widgets.Damage.ViewModel"
+             xmlns:viewmodels="clr-namespace:HunterPie.UI.Overlay.Widgets.Damage.ViewModels"
              d:DataContext="{d:DesignInstance Type=viewmodels:PlayerViewModel}"
              Margin="0,0,0,2"
              mc:Ignorable="d"

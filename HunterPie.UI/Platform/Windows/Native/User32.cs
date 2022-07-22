@@ -20,7 +20,12 @@ namespace HunterPie.UI.Platform.Windows.Native
         [DllImport("user32.dll")]
         public static extern bool SetWindowPos(IntPtr hWnd, int hWndInsertAfter, int X, int Y, int cx, int cy, uint uFlags);
 
+        [DllImport("user32.dll", CharSet = CharSet.Auto)]
+        public static extern IntPtr SendMessage(IntPtr hWnd, uint Msg, nuint wParam, [MarshalAs(UnmanagedType.LPWStr)] string lParam);
+
         public const int GWL_EXSTYLE = (-20);
+        public const long HWND_BROADCAST = 0xFFFF;
+        public const int WM_FONTCHANGE = 0x001D;
 
         [Flags]
         public enum EX_WINDOW_STYLES : int

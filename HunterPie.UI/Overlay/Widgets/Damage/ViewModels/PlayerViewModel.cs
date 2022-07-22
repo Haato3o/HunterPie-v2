@@ -1,10 +1,11 @@
 ﻿using HunterPie.Core.Architecture;
 using HunterPie.Core.Client.Configuration.Overlay;
 using HunterPie.Core.Game.Enums;
+using HunterPie.UI.Architecture;
 
-namespace HunterPie.UI.Overlay.Widgets.Damage.ViewModel
+namespace HunterPie.UI.Overlay.Widgets.Damage.ViewModels
 {
-    public class PlayerViewModel : Bindable
+    public class PlayerViewModel : ViewModel
     {
         private DamageMeterWidgetConfig _config;
         private string _name;

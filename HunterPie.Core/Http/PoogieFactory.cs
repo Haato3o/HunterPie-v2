@@ -10,6 +10,7 @@ namespace HunterPie.Core.Http
         const string CLIENT_ID = "X-Client-Id";
         const string APP_VERSION = "X-App-Version";
         const string CLIENT_TYPE = "X-HunterPie-Client";
+        const string USER_AGENT = "User-Agent";
 
         public readonly static string[] Hosts =
         {
@@ -40,12 +41,20 @@ namespace HunterPie.Core.Http
             return builder.WithTimeout(TimeSpan.FromSeconds(5))
                           .WithHeader(CLIENT_ID, clientId)
                           .WithHeader(APP_VERSION, ClientInfo.Version.ToString())
-                          .WithHeader(CLIENT_TYPE, "v2");
+                          .WithHeader(CLIENT_TYPE, "v2")
+                          .WithHeader(USER_AGENT, GetUserAgent());
         }
 
         public static PoogieBuilder Docs()
         {
             return new PoogieBuilder(Documentation);
+        }
+
+        private static string GetUserAgent()
+        {
+            string clientVersion = ClientInfo.Version.ToString();
+            string platformVersion = Environment.OSVersion.ToString();
+            return $"HunterPie/{clientVersion} ({platformVersion})";
         }
     }
 }

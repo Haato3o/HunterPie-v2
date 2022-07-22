@@ -24,7 +24,7 @@ namespace HunterPie
         {
             Log.Info("Initializing HunterPie GUI");
 
-            Timeline.DesiredFrameRateProperty.OverrideMetadata(typeof(Timeline), new FrameworkPropertyMetadata { DefaultValue = 60 });
+            Timeline.DesiredFrameRateProperty.OverrideMetadata(typeof(Timeline), new FrameworkPropertyMetadata { DefaultValue = (int)ClientConfig.Config.Client.RenderFramePerSecond.Current });
         }
 
         protected override void OnClosing(CancelEventArgs e)
@@ -33,7 +33,7 @@ namespace HunterPie
             {
                 NativeDialogResult result = DialogManager.Info(
                     "Confirmation", 
-                    "Are you sure you want to exit HunterPie?", 
+                    "Are you sure you want to exit HunterPie?",
                     NativeDialogButtons.Accept | NativeDialogButtons.Cancel
                 );
 

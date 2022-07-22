@@ -9,6 +9,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Features\Tools\Localization\Views\LocalizableStringView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="GUI\Parts\Account\View\AccountView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -32,6 +35,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Features\Tools\Localization\Views\LocalizableStringView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="GUI\Parts\Account\View\AccountView.xaml">
       <SubType>Designer</SubType>
     </Page>

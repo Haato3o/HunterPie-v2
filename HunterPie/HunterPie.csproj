@@ -2,19 +2,20 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net5.0-windows</TargetFramework>
+    <TargetFramework>net6.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
-	<UseWindowsForms>true</UseWindowsForms>
+    <UseWindowsForms>true</UseWindowsForms>
     <StartupObject></StartupObject>
-	<Deterministic>true</Deterministic>
-	<ApplicationIcon>Resources\Icon.ico</ApplicationIcon>
-	<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-	<Authors>Haato</Authors>
-	<Version>1.0.0</Version>
-	<DebugType>full</DebugType>
-	<SignAssembly>False</SignAssembly>
-	<PlatformTarget>AnyCPU</PlatformTarget>
-	<Nullable>disable</Nullable>
+    <Deterministic>true</Deterministic>
+    <ApplicationIcon>Resources\Icon.ico</ApplicationIcon>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <Authors>Haato</Authors>
+    <Version>1.0.0</Version>
+    <DebugType>full</DebugType>
+    <SignAssembly>False</SignAssembly>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Nullable>disable</Nullable>
+    <LangVersion>10.0</LangVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
@@ -40,6 +41,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\HunterPie.Core\HunterPie.Core.csproj" />
+    <ProjectReference Include="..\HunterPie.Native\HunterPie.Native.vcxproj" />
     <ProjectReference Include="..\HunterPie.UI\HunterPie.UI.csproj" />
   </ItemGroup>
 

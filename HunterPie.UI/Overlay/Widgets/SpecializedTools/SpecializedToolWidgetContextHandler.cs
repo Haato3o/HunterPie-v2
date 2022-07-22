@@ -47,6 +47,7 @@ namespace HunterPie.UI.Overlay.Widgets.SpecializedTools
             ToolContext.OnChange -= OnChange;
             ToolContext.OnCooldownUpdate -= OnCooldownUpdate;
             ToolContext.OnTimerUpdate -= OnTimerUpdate;
+            WidgetManager.Unregister<SpecializedToolView, SpecializedToolWidgetConfig>(View);
         }
 
         private void UpdateData()

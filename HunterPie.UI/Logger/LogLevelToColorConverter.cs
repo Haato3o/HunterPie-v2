@@ -1,7 +1,6 @@
 ﻿using HunterPie.UI.Assets.Application;
 using System;
 using System.Globalization;
-using System.Windows;
 using System.Windows.Data;
 
 namespace HunterPie.UI.Logger
@@ -15,6 +14,9 @@ namespace HunterPie.UI.Logger
             {
                 case LogLevel.Debug:
                     colorName = "LOGGER_LEVEL_DEBUG";
+                    break;
+                case LogLevel.Native:
+                    colorName = "LOGGER_LEVEL_NATIVE";
                     break;
                 case LogLevel.Info:
                     colorName = "LOGGER_LEVEL_INFO";

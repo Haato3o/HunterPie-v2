@@ -2,22 +2,25 @@
 using HunterPie.Core.Game.Enums;
 using HunterPie.UI.Architecture.Graphs;
 using HunterPie.UI.Architecture.Test;
+using LiveCharts;
 using LiveCharts.Defaults;
 using System;
+using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Media;
 
-namespace HunterPie.UI.Overlay.Widgets.Damage.ViewModel
+namespace HunterPie.UI.Overlay.Widgets.Damage.ViewModels
 {
     public class MockMeterViewModel : MeterViewModel
     {
         private int totalDamage = 0;
-        private readonly DamageMeterWidgetConfig _mockConfig;
+        private static readonly DamageMeterWidgetConfig _mockConfig = new();
+        public readonly List<ChartValues<ObservablePoint>> _playerChartValues = new();
 
-        public MockMeterViewModel()
+        public MockMeterViewModel() : base(_mockConfig)
         {
             InHuntingZone = true;
-            
+
             MockPlayers();
             MockPlayerSeries();
 
@@ -78,10 +81,7 @@ namespace HunterPie.UI.Overlay.Widgets.Damage.ViewModel
                     player.Percentage = player.Damage / (double)Math.Max(1, totalDamage) * 100;
                     player.IsIncreasing = lastDps < player.DPS;
 
-                    if (PlayerChartValues[i - 1].Count > 50)
-                        PlayerChartValues[i - 1].RemoveAt(0);
-
-                    PlayerChartValues[i - 1].Add(new ObservablePoint(TimeElapsed, player.DPS));
+                    _playerChartValues[i - 1].Add(new ObservablePoint(TimeElapsed, player.DPS));
                     totalDamage += hit;
                     i++;
                 }
@@ -91,6 +91,13 @@ namespace HunterPie.UI.Overlay.Widgets.Damage.ViewModel
             TimeElapsed = newTime;
         }
 
+        private void InterpolatePoints(ChartValues<ObservablePoint> points)
+        {
+            for (int i = points.Count - 1; i > 0; i -= 2)
+            {
+                points.RemoveAt(i);
+            }
+        }
 
         private void MockPlayerSeries()
         {
@@ -98,9 +105,9 @@ namespace HunterPie.UI.Overlay.Widgets.Damage.ViewModel
             LinearSeriesCollectionBuilder builder = new();
             foreach (PlayerViewModel player in Players)
             {
-                PlayerChartValues.Add(new());
+                _playerChartValues.Add(new());
                 Color color = (Color)ColorConverter.ConvertFromString(player.Color);
-                builder.AddSeries(PlayerChartValues[i], player.Name, color);
+                builder.AddSeries(_playerChartValues[i], player.Name, color);
                 i++;
             }
             Series = builder.Build();

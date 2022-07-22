@@ -1,11 +1,12 @@
 ﻿using HunterPie.Core.Architecture;
+using HunterPie.Core.Client.Configuration.Enums;
 using HunterPie.Core.Domain.Enums;
 using HunterPie.Core.Settings;
 using HunterPie.Core.Settings.Types;
 
 namespace HunterPie.Core.Client.Configuration.Overlay
 {
-    [SettingsGroup("METER_WIDGET_STRING", "ICON_METER", availableGames: GameProcess.MonsterHunterWorld)]
+    [SettingsGroup("METER_WIDGET_STRING", "ICON_METER", availableGames: GameProcess.MonsterHunterWorld | GameProcess.MonsterHunterRise)]
     public class DamageMeterWidgetConfig : IWidgetSettings, ISettings
     {
         [SettingField("INITIALIZE_WIDGET_STRING", requiresRestart: true)]
@@ -22,6 +23,13 @@ namespace HunterPie.Core.Client.Configuration.Overlay
 
         [SettingField("DAMAGE_METER_ENABLE_SHOULD_BLUR_NAMES")]
         public Observable<bool> ShouldBlurNames { get; set; } = false;
+
+        [SettingField("DAMAGE_METER_DPS_CALCULATION_STRATEGY_STRING")]
+
+        public Observable<DPSCalculationStrategy> DpsCalculationStrategy { get; set; } = DPSCalculationStrategy.RelativeToJoin;
+
+        [SettingField("DAMAGE_METER_DAMAGE_PLOT_STRATEGY_STRING")]
+        public Observable<DamagePlotStrategy> DamagePlotStrategy { get; set; } = Enums.DamagePlotStrategy.DamagePerSecond;
 
         [SettingField("DAMAGE_METER_SELF_COLOR_STRING")]
         public Color PlayerSelf { get; set; } = "#FF725AC1";

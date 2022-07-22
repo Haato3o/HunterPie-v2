@@ -14,5 +14,10 @@ namespace HunterPie.Core.Game.Demos.Sunbreak
             Game = new MHRSunbreakDemoGame(process);
             Process = process;
         }
+
+        public override void Dispose()
+        {
+            
+        }
     }
 }

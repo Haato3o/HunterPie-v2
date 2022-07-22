@@ -70,6 +70,7 @@ namespace HunterPie.Integrations.Discord
                         ? Localization.QueryString("//Strings/Client/Integrations/Discord[@Id='DRPC_RISE_CHARACTER_STRING_FORMAT']")
                             .Replace("{Character}", game.Player.Name)
                             .Replace("{HighRank}", game.Player.HighRank.ToString())
+                            .Replace("{MasterRank}", game.Player.MasterRank.ToString())
                         : null,
                     SmallImageKey = game.Player.WeaponId switch
                     {

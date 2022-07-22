@@ -28,6 +28,7 @@ namespace HunterPie.UI.Overlay.Widgets.Monster
         {
             Context.OnHealthChange += OnHealthUpdate;
             Context.OnStaminaChange += OnStaminaUpdate;
+            Context.OnCaptureThresholdChange += OnCaptureThresholdChange;
             Context.OnEnrageStateChange += OnEnrageStateChange;
             Context.OnSpawn += OnSpawn;
             Context.OnDeath += OnDespawn;
@@ -36,12 +37,14 @@ namespace HunterPie.UI.Overlay.Widgets.Monster
             Context.OnNewPartFound += OnNewPartFound;
             Context.OnNewAilmentFound += OnNewAilmentFound;
             Context.OnCrownChange += OnCrownChange;
+            Context.OnWeaknessesChange += OnWeaknessesChange;
         }
 
         private void UnhookEvents()
         {
             Context.OnHealthChange -= OnHealthUpdate;
             Context.OnStaminaChange -= OnStaminaUpdate;
+            Context.OnCaptureThresholdChange -= OnCaptureThresholdChange;
             Context.OnEnrageStateChange -= OnEnrageStateChange;
             Context.OnSpawn -= OnSpawn;
             Context.OnDeath -= OnDespawn;
@@ -50,6 +53,7 @@ namespace HunterPie.UI.Overlay.Widgets.Monster
             Context.OnNewPartFound -= OnNewPartFound;
             Context.OnNewAilmentFound -= OnNewAilmentFound;
             Context.OnCrownChange -= OnCrownChange;
+            Context.OnWeaknessesChange -= OnWeaknessesChange;
         }
         
         private void OnSpawn(object sender, EventArgs e)
@@ -80,6 +84,26 @@ namespace HunterPie.UI.Overlay.Widgets.Monster
             });
         }
 
+        private void OnCaptureThresholdChange(object sender, IMonster e)
+        {
+            CaptureThreshold = e.CaptureThreshold;
+            IsCapturable = CaptureThreshold >= (Health / MaxHealth);
+            CanBeCaptured = e.CaptureThreshold > 0;
+        }
+        private void OnWeaknessesChange(object sender, Element[] e)
+        {
+            Application.Current.Dispatcher.InvokeAsync(() =>
+            {
+                lock(Weaknesses)
+                {
+                    Weaknesses.Clear();
+
+                    foreach (var weakness in e)
+                        Weaknesses.Add(weakness);
+                }
+            });
+        }
+
         private void OnStaminaUpdate(object sender, EventArgs e)
         {
             MaxStamina = Context.MaxStamina;
@@ -99,7 +123,7 @@ namespace HunterPie.UI.Overlay.Widgets.Monster
             {
                 bool contains = Ailments.ToArray()
                             .Cast<MonsterAilmentContextHandler>()
-                            .Where(p => p.Context == e).Count() > 0;
+                            .Count(p => p.Context == e) > 0;
 
                 if (contains)
                     return;
@@ -114,7 +138,7 @@ namespace HunterPie.UI.Overlay.Widgets.Monster
             {
                 bool contains = Parts.ToArray()
                             .Cast<MonsterPartContextHandler>()
-                            .Where(p => p.Context == e).Count() > 0;
+                            .Count(p => p.Context == e) > 0;
 
                 if (contains)
                     return;
@@ -133,6 +157,7 @@ namespace HunterPie.UI.Overlay.Widgets.Monster
         {
             MaxHealth = Context.MaxHealth;
             Health = Context.Health;
+            IsCapturable = CaptureThreshold >= (Health / MaxHealth);
         }
 
         private void UpdateData()
@@ -153,6 +178,10 @@ namespace HunterPie.UI.Overlay.Widgets.Monster
             Crown = Context.Crown;
             IsEnraged = Context.IsEnraged;
             IsAlive = Context.Health > 0;
+            CaptureThreshold = Context.CaptureThreshold;
+            CanBeCaptured = Context.CaptureThreshold > 0;
+            IsCapturable = CaptureThreshold >= (Health / MaxHealth);
+            
             
             if (Parts.Count != Context.Parts.Length || Ailments.Count != Context.Ailments.Length)
             {
@@ -181,6 +210,9 @@ namespace HunterPie.UI.Overlay.Widgets.Monster
 
                         Ailments.Add(new MonsterAilmentContextHandler(ailment, Config));
                     }
+
+                    foreach (Element weakness in Context.Weaknesses)
+                        Weaknesses.Add(weakness);
                 });
             }
         }

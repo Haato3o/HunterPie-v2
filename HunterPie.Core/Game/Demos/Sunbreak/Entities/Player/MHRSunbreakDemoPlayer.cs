@@ -53,6 +53,8 @@ namespace HunterPie.Core.Game.Demos.Sunbreak.Entities.Player
 
         public IReadOnlyCollection<IAbnormality> Abnormalities => abnormalities.Values;
 
+        public int MasterRank { get; private set; }
+
         public event EventHandler<EventArgs> OnLogin;
         public event EventHandler<EventArgs> OnLogout;
         public event EventHandler<EventArgs> OnHealthUpdate;

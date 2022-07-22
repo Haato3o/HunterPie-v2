@@ -10,6 +10,39 @@
         </DrawingImage.Drawing>
     </DrawingImage>
 
+    <DrawingImage x:Key="ICON_FUNNEL">
+        <DrawingImage.Drawing>
+            <DrawingGroup ClipGeometry="M0,0 V512 H512 V0 H0 Z">
+                <GeometryDrawing Brush="#FFFBB623" Geometry="F1 M512,512z M0,0z M0,48L192,288 192,416 320,464 320,288 512,48 0,48z" />
+            </DrawingGroup>
+        </DrawingImage.Drawing>
+    </DrawingImage>
+
+    <DrawingImage x:Key="ICON_TRAP">
+        <DrawingImage.Drawing>
+            <DrawingGroup ClipGeometry="M0,0 V64 H64 V0 H0 Z">
+                <DrawingGroup Opacity="1" Transform="1,0,0,1,-64,-320">
+                    <DrawingGroup Opacity="1" Transform="0.5,0,0,0.375,0,0">
+                        <DrawingGroup Opacity="1" Transform="2,0,0,2.66667,-1408,853.333">
+                            <DrawingGroup Opacity="1" Transform="0.923077,0,0,0.911765,61.5385,2.02941">
+                                <GeometryDrawing>
+                                    <GeometryDrawing.Brush>
+                                        <SolidColorBrush Color="#FF000000" Opacity="0.20" />
+                                    </GeometryDrawing.Brush>
+                                    <GeometryDrawing.Geometry>
+                                        <RectangleGeometry RadiusX="0" RadiusY="0" Rect="774,23,52,34" />
+                                    </GeometryDrawing.Geometry>
+                                </GeometryDrawing>
+                            </DrawingGroup>
+                            <GeometryDrawing Brush="#FFFBB623" Geometry="F0 M64,64z M0,0z M823,23L825,23C825,23,826,23,826,24L826,56C826,57,825,57,825,57L775,57C774,57,774,56,774,56L774,24C774,23,775,23,775,23L777,23C777,23,778,23,778,24L778,42 788,52 812,52 822,42 822,24C822,23,823,23,823,23z M776,49L781,49 781,54 776,49z M824,49L819,49 819,54 824,49z" />
+                            <GeometryDrawing Brush="#FFFBB623" Geometry="F0 M64,64z M0,0z M803,43L803,45C803,45,803,48,806,48L811,48C811,48 811,46 809,46 807,46 806,46 806,45 806,44 807,43 808,43 809,43 811,42 814,39 817,36 818,35 818,30L818,13C818,8 813,8 811,8 809,8 806,10 806,13 806,16 808,18 810,18 812,18 813,17 813,17 813,17 808,17 808,14 808,11 810,11 812,11 814,11 815,13 815,19 815,25 814,27 812,29 810,31 808,32 807,32 806,32 804,30 804,29 804,28 810,23 810,23L800,23C800,23 798,24.5 798,26.5 798,28.5 802,32 802,32L798,32 794,28 794,23C794,23,797,22,797,20L797,8C797,7,796,7,796,7L785,7C784,7,784,8,784,8L784,10 788,14 788,19C788,19 786.5,21 785.5,21 784.5,21 782,18 782,18L782,11C782,11 782,10 781,10 780,10 780,11 780,11L780,21C780,21,782,22,782,23L782,33C782,34,791,43,792,43L797,43 797,45C797,46,796,46,796,46L794,46C792,46,792,48,792,48L797,48C798,48,800,45,800,45L800,43 803,43z M792,16C793.104,16 794,16.896 794,18 794,19.104 793.104,20 792,20 790.896,20 790,19.104 790,18 790,16.896 790.896,16 792,16z" />
+                        </DrawingGroup>
+                    </DrawingGroup>
+                </DrawingGroup>
+            </DrawingGroup>
+        </DrawingImage.Drawing>
+    </DrawingImage>
+    
     <DrawingImage x:Key="ICON_CHATBOX">
         <DrawingImage.Drawing>
             <DrawingGroup ClipGeometry="M0,0 V512 H512 V0 H0 Z">
@@ -198,18 +231,32 @@
 
     <DrawingImage x:Key="ICON_HUNTERPIE">
         <DrawingImage.Drawing>
-            <DrawingGroup>
-                <DrawingGroup.Children>
-                    <GeometryDrawing Brush="{StaticResource HUNTERPIE_LOGO_PRIMARY}" Geometry="F1 M 31.7083,1.85034L 61.5247,31.6667L 31.7083,61.483L 1.892,31.6667L 31.7083,1.85034 Z "/>
-                    <GeometryDrawing Brush="{StaticResource HUNTERPIE_LOGO_SECONDARY}" Geometry="F1 M 24,17.5L 24,20.3333L 31.7083,28.3333L 40,20.25L 40,17.5L 31.7083,25.0729L 24,17.5 Z "/>
-                    <GeometryDrawing Brush="{StaticResource HUNTERPIE_LOGO_SECONDARY}" Geometry="F1 M 46.1875,23.8854L 43.3542,23.8854L 36.375,31.6667L 43.4375,39.8854L 46.1875,39.8854L 40,31.6667L 46.1875,23.8854 Z "/>
-                    <GeometryDrawing Brush="{StaticResource HUNTERPIE_LOGO_SECONDARY}" Geometry="F1 M 17.3541,23.6979L 20.1875,23.6979L 28.0833,31.6667L 20.1042,39.6979L 17.3542,39.6979L 24,31.6667L 17.3541,23.6979 Z "/>
-                    <GeometryDrawing Brush="{StaticResource HUNTERPIE_LOGO_SECONDARY}" Geometry="F1 M 24,46.6146L 24,43.7813L 31.7083,36.0208L 40,43.8646L 40,46.6146L 31.7083,39.7292L 24,46.6146 Z "/>
-                    <GeometryDrawing Brush="{StaticResource HUNTERPIE_LOGO_TERTIARY}" Geometry="F1 M 11.3481,10.9557L 13.7129,20.0224L 20.3825,13.4412L 11.3481,10.9557 Z "/>
-                    <GeometryDrawing Brush="{StaticResource HUNTERPIE_LOGO_TERTIARY}" Geometry="F1 M 52.0678,10.9635L 49.7031,20.0302L 43.0334,13.449L 52.0678,10.9635 Z "/>
-                    <GeometryDrawing Brush="{StaticResource HUNTERPIE_LOGO_TERTIARY}" Geometry="F1 M 11.3485,52.4748L 13.7132,43.4081L 20.3829,49.9893L 11.3485,52.4748 Z "/>
-                    <GeometryDrawing Brush="{StaticResource HUNTERPIE_LOGO_TERTIARY}" Geometry="F1 M 52.0681,52.4669L 49.7034,43.4003L 43.0338,49.9815L 52.0681,52.4669 Z "/>
-                </DrawingGroup.Children>
+            <DrawingGroup ClipGeometry="M0,0 V63.9971 H63.9971 V0 H0 Z">
+                <DrawingGroup Opacity="1">
+                    <GeometryDrawing Brush="#FFF8FFFF" Geometry="F1 M63.9971,63.9971z M0,0z M32.22191,0.73544039L44.070616,12.870286 53.522714,10.269987 51.048684,19.755867 63.416846,31.930267 51.048998,44.20636 53.523028,53.692251 44.071035,51.091941 32.22191,63.125203 20.372889,51.100101 10.920802,53.700412 13.394821,44.21452 1.0270783,31.930267 13.394507,19.747707 10.920415,10.261805 20.372471,12.862126z" />
+                    <DrawingGroup Opacity="1" Transform="1.0462342,0,0,1.0462342,2.5983717,0.73543333">
+                        <GeometryDrawing Geometry="F1 M63.9971,63.9971z M0,0z M20.605461,15.393366L20.605461,18.226666 28.313761,26.226666 36.605461,18.143366 36.605461,15.393366 28.313761,22.966266z">
+                            <GeometryDrawing.Brush>
+                                <SolidColorBrush Color="#FF070809" Opacity="0.803922" />
+                            </GeometryDrawing.Brush>
+                        </GeometryDrawing>
+                        <GeometryDrawing Geometry="F1 M63.9971,63.9971z M0,0z M20.605461,44.235362L20.605461,41.402062 28.313761,33.402062 36.605461,41.485362 36.605461,44.235362 28.313761,36.662462z">
+                            <GeometryDrawing.Brush>
+                                <SolidColorBrush Color="#FF070809" Opacity="0.803922" />
+                            </GeometryDrawing.Brush>
+                        </GeometryDrawing>
+                        <GeometryDrawing Geometry="F1 M63.9971,63.9971z M0,0z M13.892763,22.106064L16.726063,22.106064 24.726063,29.814364 16.642763,38.106064 13.892763,38.106064 21.465663,29.814364z">
+                            <GeometryDrawing.Brush>
+                                <SolidColorBrush Color="#FF070809" Opacity="0.803922" />
+                            </GeometryDrawing.Brush>
+                        </GeometryDrawing>
+                        <GeometryDrawing Geometry="F1 M63.9971,63.9971z M0,0z M42.734759,22.106064L39.901459,22.106064 31.901459,29.814364 39.984759,38.106064 42.734759,38.106064 35.161859,29.814364z">
+                            <GeometryDrawing.Brush>
+                                <SolidColorBrush Color="#FF070809" Opacity="0.803922" />
+                            </GeometryDrawing.Brush>
+                        </GeometryDrawing>
+                    </DrawingGroup>
+                </DrawingGroup>
             </DrawingGroup>
         </DrawingImage.Drawing>
     </DrawingImage>

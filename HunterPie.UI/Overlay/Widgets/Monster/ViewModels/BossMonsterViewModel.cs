@@ -3,14 +3,15 @@ using HunterPie.Core.Client;
 using HunterPie.Core.Client.Configuration.Overlay;
 using HunterPie.Core.Game.Enums;
 using HunterPie.Core.Remote;
+using HunterPie.UI.Architecture;
 using System.Collections.ObjectModel;
 using System.IO;
 
 namespace HunterPie.UI.Overlay.Widgets.Monster.ViewModels
 {
-    public class BossMonsterViewModel : Bindable
+    public class BossMonsterViewModel : ViewModel
     {
-        private MonsterWidgetConfig _config;
+        private readonly MonsterWidgetConfig _config;
         private string name;
         private string em;
         private double health;
@@ -25,12 +26,17 @@ namespace HunterPie.UI.Overlay.Widgets.Monster.ViewModels
         private string _icon;
         private bool _isLoadingIcon = true;
         private bool _isAlive;
+        private double _captureThreshold;
+        private bool _isCapturable;
+        private bool _canBeCaptured;
+
         public MonsterWidgetConfig Config => _config;
-        private readonly ObservableCollection<MonsterPartViewModel> parts = new();
-        private readonly ObservableCollection<MonsterAilmentViewModel> ailments = new();
+        private readonly ObservableCollection<MonsterPartViewModel> _parts = new();
+        private readonly ObservableCollection<MonsterAilmentViewModel> _ailments = new();
+        private readonly ObservableCollection<Element> _weaknesses = new();
 
         public BossMonsterViewModel(MonsterWidgetConfig config) => _config = config;
-
+        
         // Monster data
         public string Name
         {
@@ -89,8 +95,26 @@ namespace HunterPie.UI.Overlay.Widgets.Monster.ViewModels
             set { SetValue(ref _targetType, value); }
         }
 
-        public ref readonly ObservableCollection<MonsterPartViewModel> Parts => ref parts;
-        public ref readonly ObservableCollection<MonsterAilmentViewModel> Ailments => ref ailments;
+        public double CaptureThreshold
+        {
+            get => _captureThreshold;
+            set { SetValue(ref _captureThreshold, value); }
+        }
+        public bool IsCapturable
+        {
+            get => _isCapturable;
+            set { SetValue(ref _isCapturable, value); }
+        }
+
+        public bool CanBeCaptured
+        {
+            get => _canBeCaptured;
+            set { SetValue(ref _canBeCaptured, value); }
+        }
+
+        public ref readonly ObservableCollection<MonsterPartViewModel> Parts => ref _parts;
+        public ref readonly ObservableCollection<MonsterAilmentViewModel> Ailments => ref _ailments;
+        public ref readonly ObservableCollection<Element> Weaknesses => ref _weaknesses;
 
         // Monster states
         public bool IsEnraged

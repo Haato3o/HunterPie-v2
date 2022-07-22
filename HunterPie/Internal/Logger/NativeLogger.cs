@@ -17,7 +17,8 @@ namespace HunterPie.Internal.Logger
             Debug = ConsoleColor.DarkGreen,
             Warn = ConsoleColor.DarkYellow,
             Error = ConsoleColor.DarkRed,
-            Info = ConsoleColor.DarkCyan
+            Info = ConsoleColor.DarkCyan,
+            Native = ConsoleColor.Magenta
         }
 
         public NativeLogger()
@@ -41,6 +42,9 @@ namespace HunterPie.Internal.Logger
 
         public Task Error(string message) => WriteToStdout(LogLevel.Error, message);
         public Task Error(string format, params object[] args) => WriteToStdout(LogLevel.Error, string.Format(format, args));
+        
+        public Task Native(string message) => WriteToStdout(LogLevel.Error, message);
+        public Task Native(string format, params object[] args) => WriteToStdout(LogLevel.Native, string.Format(format, args));
 
         private Task WriteToStdout(LogLevel level, string message)
         {
@@ -53,5 +57,7 @@ namespace HunterPie.Internal.Logger
 
             return Task.FromResult(true);
         }
+
+        
     }
 }

@@ -1,6 +1,5 @@
 ﻿using HunterPie.Core.Client;
 using HunterPie.Core.Game;
-using HunterPie.Core.Game.World;
 using HunterPie.Core.System;
 using HunterPie.UI.Architecture.Overlay;
 using HunterPie.UI.Overlay;
@@ -17,9 +16,6 @@ namespace HunterPie.Features.Overlay
             var config = ClientConfigHelper.GetOverlayConfigFrom(ProcessManager.Game);
 
             if (!config.DamageMeterWidget.Initialize)
-                return;
-
-            if (context is not MHWContext)
                 return;
 
             _handler = new DamageMeterWidgetContextHandler(context);

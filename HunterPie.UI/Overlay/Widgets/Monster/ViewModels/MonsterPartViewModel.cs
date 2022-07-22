@@ -1,17 +1,11 @@
-﻿using HunterPie.Core.Architecture;
-using HunterPie.Core.Client.Configuration.Overlay;
+﻿using HunterPie.Core.Client.Configuration.Overlay;
 using HunterPie.Core.Game.Enums;
-using System;
-using System.ComponentModel;
-using System.Timers;
+using HunterPie.UI.Architecture;
 
 namespace HunterPie.UI.Overlay.Widgets.Monster.ViewModels
 {
-    public class MonsterPartViewModel : Bindable, IDisposable
+    public class MonsterPartViewModel : AutoVisibilityViewModel
     {
-        private readonly Timer timeout;
-        private MonsterWidgetConfig _config;
-
         private string _name;
         private double _health;
         private double _maxHealth;
@@ -23,7 +17,6 @@ namespace HunterPie.UI.Overlay.Widgets.Monster.ViewModels
         private double _maxSever;
         private int _breaks;
         private int _maxBreaks;
-        private bool _isActive;
         private bool _isPartBroken;
         private bool _isPartSevered;
         private bool _isKnownPart;
@@ -91,55 +84,11 @@ namespace HunterPie.UI.Overlay.Widgets.Monster.ViewModels
             } 
         }
         public int MaxBreaks { get => _maxBreaks; set { SetValue(ref _maxBreaks, value); } }
-        public bool IsActive { get => _isActive; set { SetValue(ref _isActive, value); } }
         public bool IsPartBroken { get => _isPartBroken; set { SetValue(ref _isPartBroken, value); } }
         public bool IsPartSevered { get => _isPartSevered; set { SetValue(ref _isPartSevered, value); } }
         public bool IsKnownPart { get => _isKnownPart; set { SetValue(ref _isKnownPart, value); } }
         public PartType Type { get => _type; set { SetValue(ref _type, value); } }
 
-        public MonsterPartViewModel(MonsterWidgetConfig config)
-        {
-            _config = config;
-            timeout = new(config.AutoHidePartsDelay.Current * 1000)
-            {
-                AutoReset = true
-            };
-            timeout.Elapsed += OnHideTimerTick;
-            timeout.Start();
-
-            config.AutoHidePartsDelay.PropertyChanged += OnDelayTimeUpdate;
-        }
-
-        private void OnHideTimerTick(object sender, ElapsedEventArgs e)
-        {
-            if (!IsActive)
-                return;
-
-            IsActive = false;
-        }
-
-        private void OnDelayTimeUpdate(object sender, PropertyChangedEventArgs e)
-        {
-            timeout.Interval = _config.AutoHidePartsDelay.Current * 1000;
-            RefreshTimer();
-        }
-
-        private void RefreshTimer()
-        {
-            IsActive = true;
-            timeout.Stop();
-            timeout.Start();
-        }
-
-        protected virtual void DisposeResources()
-        {
-            _config.AutoHidePartsDelay.PropertyChanged -= OnDelayTimeUpdate;
-            timeout.Dispose();
-        }
-
-        public void Dispose()
-        {
-            DisposeResources();
-        }
+        public MonsterPartViewModel(MonsterWidgetConfig config) : base(config.AutoHidePartsDelay) { }
     }
 }

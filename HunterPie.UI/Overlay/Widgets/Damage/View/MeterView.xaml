@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:HunterPie.UI.Overlay.Widgets.Damage.View"
-             xmlns:viewmodels="clr-namespace:HunterPie.UI.Overlay.Widgets.Damage.ViewModel"
+             xmlns:viewmodels="clr-namespace:HunterPie.UI.Overlay.Widgets.Damage.ViewModels"
              d:DataContext="{d:DesignInstance Type=viewmodels:MeterViewModel}"
              xmlns:overlay="clr-namespace:HunterPie.UI.Overlay.Components"
              xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
@@ -16,13 +16,11 @@
              Width="300">
     <UserControl.Resources>
         <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+        <viewmodels:MockMeterViewModel x:Key="MockViewModel"/>
+        <converters:SecondsToTimeString x:Key="SecondsToTimeString"/>
     </UserControl.Resources>
     <Grid Background="#CC111215"
           Visibility="{Binding InHuntingZone, Converter={StaticResource BooleanToVisibilityConverter}}">
-        <Grid.Resources>
-            <viewmodels:MockMeterViewModel x:Key="MockViewModel"/>
-            <converters:SecondsToTimeString x:Key="SecondsToTimeString"/>
-        </Grid.Resources>
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
             <RowDefinition/>
@@ -51,7 +49,7 @@
                            Margin="0,0,3,0"
                            Height="18"/>
                     <TextBlock d:Text="2"
-                               Text="{Binding Deaths}"
+                               Text="{Binding Deaths, Mode=OneWay}"
                                Foreground="{StaticResource HUNTERPIE_FOREGROUND_PRIMARY}"
                                FontFamily="{StaticResource HUNTERPIE_DEFAULT_FONT}"
                                VerticalAlignment="Center"
@@ -70,27 +68,25 @@
         <!-- Players display -->
         <StackPanel Grid.Row="1"
                     Orientation="Vertical">
-            <ItemsControl ItemsSource="{Binding Players, Mode=OneWay}"
+            <ItemsControl ItemsSource="{Binding Players, Mode=OneTime}"
                           Margin="1,1,1,1" 
                           Grid.Row="1"
                           d:DataContext="{StaticResource MockViewModel}">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
-                        <WrapPanel ItemHeight="40"
-                                   Orientation="Vertical"
-                                   ItemWidth="{Binding ActualWidth, RelativeSource={RelativeSource Self}}"
-                                   IsItemsHost="True"/>
+                        <StackPanel Orientation="Vertical"
+                                    IsItemsHost="True"/>
                     </ItemsPanelTemplate>
                 </ItemsControl.ItemsPanel>
 
                 <ItemsControl.ItemTemplate>
                     <DataTemplate DataType="{x:Type viewmodels:PlayerViewModel}">
-                        <local:PlayerDamageView/>
+                        <local:PlayerDamageView Height="38"/>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
 
-            <lvc:CartesianChart Series="{Binding Series}"
+            <lvc:CartesianChart Series="{Binding Series, Mode=OneTime}"
                                 Height="120"
                                 DisableAnimations="True"
                                 Margin="1"
@@ -100,11 +96,11 @@
                                 DataTooltip="{x:Null}">
                 <lvc:CartesianChart.AxisY>
                     <lvc:Axis MinValue="0"
-                              LabelFormatter="{Binding DPSFormatter}"
+                              LabelFormatter="{Binding DamageFormatter, Mode=OneWay}"
                               FontFamily="{StaticResource HUNTERPIE_DEFAULT_FONT}"/>
                 </lvc:CartesianChart.AxisY>
                 <lvc:CartesianChart.AxisX>
-                    <lvc:Axis LabelFormatter="{Binding TimeFormatter}"
+                    <lvc:Axis LabelFormatter="{Binding TimeFormatter, Mode=OneTime}"
                               FontFamily="{StaticResource HUNTERPIE_DEFAULT_FONT}"/>
                 </lvc:CartesianChart.AxisX>
             </lvc:CartesianChart>

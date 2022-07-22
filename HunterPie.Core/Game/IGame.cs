@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace HunterPie.Core.Game
 {
-    public interface IGame
+    public interface IGame : IDisposable
     {
 
         public IPlayer Player { get; }

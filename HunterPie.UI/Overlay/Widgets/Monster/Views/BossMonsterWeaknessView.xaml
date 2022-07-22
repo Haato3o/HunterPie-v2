@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="HunterPie.UI.Overlay.Widgets.Monster.Views.BossMonsterWeaknessView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HunterPie.UI.Overlay.Widgets.Monster.Views"
+             xmlns:genums="clr-namespace:HunterPie.Core.Game.Enums;assembly=HunterPie.Core"
+             xmlns:converters="clr-namespace:HunterPie.UI.Architecture.Converters"
+             mc:Ignorable="d" 
+             d:DesignHeight="30"
+             d:DesignWidth="30"
+             d:DataContext="{d:DesignData Type=genums:Element}">
+    <UserControl.Resources>
+        <converters:ElementToIconConverter x:Key="ElementToIconConverter"/>
+    </UserControl.Resources>
+    <Grid>
+        <Ellipse Fill="{StaticResource GRAY_300}"
+                 StrokeThickness="1"
+                 Stroke="{StaticResource GRAY_100}"/>
+        <Image Source="{Binding ., Mode=OneTime, Converter={StaticResource ElementToIconConverter}}"
+               d:Source="{StaticResource ELEMENT_FIRE}"
+               Margin="2"/>
+    </Grid>
+</UserControl>

@@ -8,8 +8,6 @@ using HunterPie.Core.Extensions;
 using HunterPie.Core.Game.Data;
 using HunterPie.Core.Game.Enums;
 using HunterPie.Core.Game.Environment;
-using HunterPie.Core.Game.Rise;
-using HunterPie.Core.Game.Rise.Crypto;
 using HunterPie.Core.Game.Rise.Definitions;
 using HunterPie.Core.Game.Rise.Entities;
 using HunterPie.Core.Logger;
@@ -17,8 +15,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HunterPie.Core.Game.Demos.Sunbreak.Entities.Monster
 {
@@ -36,6 +32,7 @@ namespace HunterPie.Core.Game.Demos.Sunbreak.Entities.Monster
         private MHRMonsterAilment _enrage = new MHRMonsterAilment("STATUS_ENRAGE");
         private readonly Dictionary<long, MHRMonsterPart> parts = new();
         private readonly Dictionary<long, MHRMonsterAilment> ailments = new();
+        private readonly List<Element> _weaknesses = new();
 
         public int Id
         {
@@ -45,6 +42,8 @@ namespace HunterPie.Core.Game.Demos.Sunbreak.Entities.Monster
                 if (_id != value)
                 {
                     _id = value;
+                    GetMonsterWeaknesses();
+
                     this.Dispatch(OnSpawn);
                 }
             }
@@ -142,6 +141,10 @@ namespace HunterPie.Core.Game.Demos.Sunbreak.Entities.Monster
 
         public IMonsterAilment Enrage => _enrage;
 
+        public Element[] Weaknesses => _weaknesses.ToArray();
+
+        public float CaptureThreshold => 0;
+
         public event EventHandler<EventArgs> OnSpawn;
         public event EventHandler<EventArgs> OnLoad;
         public event EventHandler<EventArgs> OnDespawn;
@@ -156,12 +159,25 @@ namespace HunterPie.Core.Game.Demos.Sunbreak.Entities.Monster
         public event EventHandler<EventArgs> OnTargetChange;
         public event EventHandler<IMonsterPart> OnNewPartFound;
         public event EventHandler<IMonsterAilment> OnNewAilmentFound;
+        public event EventHandler<Element[]> OnWeaknessesChange;
+        public event EventHandler<IMonster> OnCaptureThresholdChange;
 
         public MHRSunbreakDemoMonster(IProcessManager process, long address) : base(process)
         {
             _address = address;
 
             Log.Debug($"Initialized monster at address {address:X}");
+        }
+
+        private void GetMonsterWeaknesses()
+        {
+            var data = MonsterData.GetMonsterData(Id);
+
+            if (data.HasValue)
+            {
+                _weaknesses.AddRange(data.Value.Weaknesses);
+                this.Dispatch(OnWeaknessesChange, Weaknesses);
+            }
         }
 
         [ScannableMethod(typeof(MonsterInformationData))]

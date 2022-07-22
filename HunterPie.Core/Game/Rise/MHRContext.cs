@@ -15,5 +15,10 @@ namespace HunterPie.Core.Game.Rise
             Game = new MHRGame(process);
             Process = process;
         }
+
+        override public void Dispose()
+        {
+            Game.Dispose();
+        }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using HunterPie.Core.Client;
 using HunterPie.Core.Domain.Dialog;
 using HunterPie.Core.Logger;
+using HunterPie.Internal.Poogie;
 using HunterPie.Update.Presentation;
 using System;
 using System.Threading.Tasks;
@@ -54,7 +55,13 @@ namespace HunterPie.Update
             var remoteFiles = await service.IndexAllFilesRecursively(ClientInfo.GetPathFor(@"temp/HunterPie"));
 
             vm.State = "Replacing old files";
-            service.ReplaceOldFiles(localFiles, remoteFiles);
+            try
+            {
+                service.ReplaceOldFiles(localFiles, remoteFiles);
+            } catch(Exception err)
+            {
+                RemoteCrashReporter.Send(err);
+            }
 
             return true;
         }

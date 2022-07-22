@@ -2,7 +2,7 @@
 using HunterPie.Core.Client.Configuration.Overlay;
 using HunterPie.UI.Overlay;
 using HunterPie.UI.Overlay.Widgets.Damage.View;
-using HunterPie.UI.Overlay.Widgets.Damage.ViewModel;
+using HunterPie.UI.Overlay.Widgets.Damage.ViewModels;
 
 namespace HunterPie.Features.Debug
 {

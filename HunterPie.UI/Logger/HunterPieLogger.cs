@@ -18,6 +18,9 @@ namespace HunterPie.UI.Logger
         public Task Debug(string message) => WriteToBuffer(LogLevel.Debug, message);
         public Task Debug(string format, params object[] args) => WriteToBuffer(LogLevel.Debug, string.Format(format, args));
 
+        public Task Native(string message) => WriteToBuffer(LogLevel.Native, message);
+        public Task Native(string format, params object[] args) => WriteToBuffer(LogLevel.Native, string.Format(format, args));
+
         public Task Info(string message) => WriteToBuffer(LogLevel.Info, message);
         public Task Info(string format, params object[] args) => WriteToBuffer(LogLevel.Info, string.Format(format, args));
 

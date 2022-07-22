@@ -25,6 +25,7 @@ namespace HunterPie.UI.Overlay.Widgets.Wirebug
         public void UnhookEvents()
         {
             Context.OnCooldownUpdate -= OnCooldownUpdate;
+            Context.OnTimerUpdate -= OnTimerUpdate;
             Context.OnAvailable -= OnAvailable;
         }
 

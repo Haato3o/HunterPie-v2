@@ -10,20 +10,20 @@ namespace HunterPie.UI.Architecture
     {
         public TViewModel ViewModel => (TViewModel)DataContext;
 
-        protected virtual TViewModel InitializeViewModel()
+        protected virtual TViewModel InitializeViewModel(params object[] args)
         {
             if (this is IWidgetWindow widget)
                 try
                 {
-                    return (TViewModel)Activator.CreateInstance(typeof(TViewModel), widget.Settings);
+                    return (TViewModel)Activator.CreateInstance(typeof(TViewModel), args);
                 } catch { };
 
             return Activator.CreateInstance<TViewModel>();
         }
 
-        public View()
+        public View(params object[] args)
         {
-            DataContext = InitializeViewModel();
+            DataContext = InitializeViewModel(args);
         }
     }
 }
